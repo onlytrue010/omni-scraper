@@ -1,2 +1,0 @@
-# omni-scraper
-smart scraper
