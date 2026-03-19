@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recovery &amp; Biometrics | The Precision Athlete</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-tint": "#27609d",
+                "on-error-container": "#93000a",
+                "error-container": "#ffdad6",
+                "surface-dim": "#dadada",
+                "surface-container-highest": "#e2e2e2",
+                "on-tertiary-fixed": "#321300",
+                "primary": "#003461",
+                "secondary-fixed": "#7df4ff",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed": "#001c38",
+                "tertiary-container": "#793701",
+                "tertiary-fixed": "#ffdbc8",
+                "secondary-container": "#7af1fc",
+                "on-primary-container": "#8abcff",
+                "tertiary-fixed-dim": "#ffb68b",
+                "on-background": "#1a1c1c",
+                "outline-variant": "#c2c6d1",
+                "inverse-primary": "#a3c9ff",
+                "tertiary": "#572500",
+                "primary-fixed": "#d3e4ff",
+                "on-tertiary-container": "#ffa46a",
+                "surface-bright": "#f9f9f9",
+                "secondary": "#006970",
+                "on-primary-fixed-variant": "#004882",
+                "background": "#f9f9f9",
+                "on-tertiary": "#ffffff",
+                "on-error": "#ffffff",
+                "primary-fixed-dim": "#a3c9ff",
+                "on-surface-variant": "#424750",
+                "error": "#ba1a1a",
+                "surface-container": "#eeeeee",
+                "on-tertiary-fixed-variant": "#753400",
+                "on-secondary-fixed": "#002022",
+                "on-secondary-fixed-variant": "#004f54",
+                "inverse-on-surface": "#f0f1f1",
+                "inverse-surface": "#2f3131",
+                "surface-variant": "#e2e2e2",
+                "on-primary": "#ffffff",
+                "surface-container-low": "#f3f3f4",
+                "on-secondary": "#ffffff",
+                "secondary-fixed-dim": "#5dd8e2",
+                "on-surface": "#1a1c1c",
+                "outline": "#727781",
+                "surface-container-high": "#e8e8e8",
+                "surface": "#f9f9f9",
+                "primary-container": "#004b87",
+                "on-secondary-container": "#006e75"
+              },
+              fontFamily: {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-gradient {
+            background: linear-gradient(135deg, #003461 0%, #004b87 100%);
+        }
+        .glass-overlay {
+            background: rgba(249, 249, 249, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-[#f9f9f9] dark:bg-slate-950 border-b border-slate-200/50 dark:border-slate-800/50 shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-8 h-16 max-w-screen-2xl mx-auto font-['Inter'] antialiased tracking-tight">
+<div class="text-lg font-bold tracking-tighter text-[#003461] dark:text-blue-200">The Precision Athlete</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#003461] transition-colors" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#003461] transition-colors" href="#">Performance</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#003461] transition-colors" href="#">Training</a>
+<a class="text-[#003461] dark:text-blue-400 font-semibold border-b-2 border-[#003461] pb-1" href="#">Recovery</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-900/50 transition-all active:scale-95 duration-200 rounded-full">
+<span class="material-symbols-outlined text-[#003461] dark:text-blue-400">notifications</span>
+</button>
+<button class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-900/50 transition-all active:scale-95 duration-200 rounded-full">
+<span class="material-symbols-outlined text-[#003461] dark:text-blue-400">settings</span>
+</button>
+<img alt="Jess's profile avatar" class="w-8 h-8 rounded-full border border-outline-variant/20" data-alt="Close up portrait of an athletic female" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Kn__4qzLRWAOqSIY5qQj207oL_wkGZYc1KlRppId94Igou3voF8Qpy8L20PK38vfS_SLe8YU9Pz2wU_kIb3EB3-AON8L5gbDMMDYQfO5S_kKDKZCsMFt5YYr8CqQjMfKKryoO7Zi5zgpNsJse_86OZ4OTbBX7xuG3midSDkRWR90RGQ_F9MK-eM8lAJk5pEMOmHaMQ5vsGBXd04SPDjlAF09tMYUTIRCAt78jv0NdA0gjVTrByvJNGgiZkOmjxmtVmYf_JPCEdc"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Hidden on small screens) -->
+<aside class="h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col bg-white dark:bg-slate-900 shadow-[0px_4px_20px_rgba(26,28,28,0.06)] py-6 justify-between z-40">
+<div>
+<div class="px-6 mb-10 flex items-center space-x-3">
+<img alt="Athlete Profile" class="w-10 h-10 rounded-full bg-surface-container" data-alt="Athletic profile icon for Jess" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxu5BTHiawhGSkkUI8U14w3n-j5YwVSK3RVyFnipGyfdDpixhemQP-26wYv6nRu4htigRODaf5NRADdLztKDzSy7UNUDYBzb8NPWPH-cHkecz2fNze77Bn3QtwDi4GjEM5aYYKx0DdNhKU4E7o9NtIu3S1MeHezayravntgB96ykioqEsmm-GDzR-aNqDBhrmp-3IZfHFbTL4tLOO2bpixM39JW_tP7JqRIqrkIYJhn0VEfOjxLRFNNJlBgccYtxr5HRYQlQazzMo"/>
+<div>
+<p class="font-bold text-sm text-[#003461]">Jess</p>
+<p class="text-xs text-on-surface-variant">Elite Skier</p>
+</div>
+</div>
+<nav class="space-y-1">
+<div class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 flex items-center space-x-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md cursor-pointer duration-150 transition-transform hover:translate-x-1 font-['Inter'] text-sm font-medium">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 flex items-center space-x-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md cursor-pointer duration-150 transition-transform hover:translate-x-1 font-['Inter'] text-sm font-medium">
+<span class="material-symbols-outlined">history</span>
+<span>History</span>
+</div>
+<div class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 flex items-center space-x-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md cursor-pointer duration-150 transition-transform hover:translate-x-1 font-['Inter'] text-sm font-medium">
+<span class="material-symbols-outlined">calendar_today</span>
+<span>Schedule</span>
+</div>
+<div class="bg-[#003461] text-white rounded-md mx-2 px-4 py-3 flex items-center space-x-3 cursor-pointer duration-150 transition-transform hover:translate-x-1 font-['Inter'] text-sm font-medium">
+<span class="material-symbols-outlined">monitor_heart</span>
+<span>Biometrics</span>
+</div>
+</nav>
+<div class="px-4 mt-8">
+<button class="w-full bg-primary-container text-on-primary py-2 rounded-md font-semibold active:scale-95 duration-200">
+                    Log Session
+                </button>
+</div>
+</div>
+<div class="space-y-1">
+<div class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 flex items-center space-x-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md cursor-pointer duration-150 transition-transform hover:translate-x-1 font-['Inter'] text-sm font-medium">
+<span class="material-symbols-outlined">help</span>
+<span>Support</span>
+</div>
+<div class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 flex items-center space-x-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md cursor-pointer duration-150 transition-transform hover:translate-x-1 font-['Inter'] text-sm font-medium">
+<span class="material-symbols-outlined">logout</span>
+<span>Sign Out</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 p-8 lg:p-12 min-h-screen">
+<div class="max-w-7xl mx-auto">
+<!-- Page Header -->
+<header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-3xl font-extrabold tracking-tight text-primary mb-2">Biometrics &amp; Recovery</h1>
+<p class="text-on-surface-variant max-w-xl">Real-time physiological tracking synchronized with your athletic load. Optimizing for peak performance window.</p>
+</div>
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-4 py-2 bg-surface-container-lowest text-primary text-xs font-bold rounded shadow-sm">24H</button>
+<button class="px-4 py-2 text-on-surface-variant text-xs font-bold hover:text-primary transition-colors">7D</button>
+<button class="px-4 py-2 text-on-surface-variant text-xs font-bold hover:text-primary transition-colors">30D</button>
+</div>
+</header>
+<!-- Asymmetric Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Readiness Card (Primary Focus) -->
+<section class="lg:col-span-8 group">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_4px_20px_rgba(26,28,28,0.06)] border border-outline-variant/10 relative overflow-hidden transition-all duration-300 hover:shadow-md">
+<div class="absolute top-0 right-0 w-64 h-64 technical-gradient opacity-5 rounded-bl-full -mr-20 -mt-20"></div>
+<div class="flex flex-col md:flex-row gap-10 relative z-10">
+<div class="flex-shrink-0 flex flex-col items-center justify-center">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-high" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="552.9" stroke-dashoffset="66.3" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-6xl font-black text-primary tracking-tighter">88</span>
+<span class="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-on-surface-variant">Readiness Score</span>
+</div>
+</div>
+<div class="mt-4 flex items-center space-x-1 text-secondary">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-xs font-bold">+4 from yesterday</span>
+</div>
+</div>
+<div class="flex-grow">
+<h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                                    Performance Insight
+                                    <span class="px-2 py-0.5 bg-secondary/10 text-secondary text-[0.65rem] font-black uppercase tracking-widest rounded-full">Optimal</span>
+</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                                    Your nervous system has fully recovered from Wednesday's threshold session. HRV is at 112% of baseline. You are cleared for high-intensity power development today.
+                                </p>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<div>
+<span class="text-[0.65rem] font-bold uppercase tracking-widest text-on-surface-variant block mb-1">HRV</span>
+<span class="text-2xl font-bold text-primary">84<span class="text-sm font-medium ml-1">ms</span></span>
+</div>
+<div>
+<span class="text-[0.65rem] font-bold uppercase tracking-widest text-on-surface-variant block mb-1">RHR</span>
+<span class="text-2xl font-bold text-primary">42<span class="text-sm font-medium ml-1">bpm</span></span>
+</div>
+<div>
+<span class="text-[0.65rem] font-bold uppercase tracking-widest text-on-surface-variant block mb-1">Temp</span>
+<span class="text-2xl font-bold text-primary">98.2<span class="text-sm font-medium ml-1">°F</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sleep Trend Chart Section -->
+<div class="mt-8 bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-lg font-bold text-primary">Sleep Architecture</h3>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-xs font-medium text-on-surface-variant">Deep</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-xs font-medium text-on-surface-variant">REM</span>
+</div>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between gap-2 px-4 border-b border-outline-variant/20 pb-2">
+<!-- Chart Bar Sim -->
+<div class="flex-1 flex flex-col justify-end gap-1 group/bar">
+<div class="w-full bg-secondary/80 rounded-t-sm h-[40%] transition-all hover:bg-secondary"></div>
+<div class="w-full bg-primary/80 rounded-t-sm h-[20%] transition-all hover:bg-primary"></div>
+<span class="text-[0.6rem] text-center mt-2 font-bold text-on-surface-variant">MON</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 group/bar">
+<div class="w-full bg-secondary/80 rounded-t-sm h-[35%] transition-all hover:bg-secondary"></div>
+<div class="w-full bg-primary/80 rounded-t-sm h-[25%] transition-all hover:bg-primary"></div>
+<span class="text-[0.6rem] text-center mt-2 font-bold text-on-surface-variant">TUE</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 group/bar">
+<div class="w-full bg-secondary/80 rounded-t-sm h-[45%] transition-all hover:bg-secondary"></div>
+<div class="w-full bg-primary/80 rounded-t-sm h-[30%] transition-all hover:bg-primary"></div>
+<span class="text-[0.6rem] text-center mt-2 font-bold text-on-surface-variant">WED</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 group/bar">
+<div class="w-full bg-secondary/80 rounded-t-sm h-[30%] transition-all hover:bg-secondary"></div>
+<div class="w-full bg-primary/80 rounded-t-sm h-[15%] transition-all hover:bg-primary"></div>
+<span class="text-[0.6rem] text-center mt-2 font-bold text-on-surface-variant">THU</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 group/bar">
+<div class="w-full bg-secondary/80 rounded-t-sm h-[50%] transition-all hover:bg-secondary"></div>
+<div class="w-full bg-primary/80 rounded-t-sm h-[35%] transition-all hover:bg-primary"></div>
+<span class="text-[0.6rem] text-center mt-2 font-bold text-on-surface-variant">FRI</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 group/bar">
+<div class="w-full bg-secondary/80 rounded-t-sm h-[55%] transition-all hover:bg-secondary"></div>
+<div class="w-full bg-primary/80 rounded-t-sm h-[40%] transition-all hover:bg-primary"></div>
+<span class="text-[0.6rem] text-center mt-2 font-bold text-on-surface-variant">SAT</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-1 group/bar">
+<div class="w-full bg-secondary/80 rounded-t-sm h-[42%] transition-all hover:bg-secondary"></div>
+<div class="w-full bg-primary/80 rounded-t-sm h-[28%] transition-all hover:bg-primary"></div>
+<span class="text-[0.6rem] text-center mt-2 font-bold text-on-surface-variant">SUN</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column Stats -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Muscle Readiness -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 shadow-sm">
+<h4 class="text-sm font-bold text-primary uppercase tracking-widest mb-6">Muscle Readiness</h4>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-semibold text-on-surface">Quadriceps</span>
+<span class="text-xs font-black text-secondary">92%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-semibold text-on-surface">Lower Back</span>
+<span class="text-xs font-black text-on-error-container">64%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error-container rounded-full" style="width: 64%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-semibold text-on-surface">Shoulders</span>
+<span class="text-xs font-black text-primary">88%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stress Management Tile -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 shadow-sm relative group overflow-hidden">
+<div class="relative z-10">
+<h4 class="text-sm font-bold text-primary uppercase tracking-widest mb-4">Metabolic Stress</h4>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="text-4xl font-black text-primary">Low</span>
+<span class="text-xs font-medium text-on-surface-variant">(1.2 mmol/L)</span>
+</div>
+<p class="text-xs text-on-surface-variant">Cortisol levels are stabilizing. Autonomic balance shifting toward parasympathetic.</p>
+</div>
+<div class="absolute -bottom-4 -right-4 text-primary/5">
+<span class="material-symbols-outlined !text-9xl">psychology</span>
+</div>
+</div>
+<!-- Recommended Protocol Card -->
+<div class="technical-gradient p-6 rounded-xl shadow-lg text-white">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary-container">bolt</span>
+<h4 class="text-sm font-black uppercase tracking-widest">Protocol Recommendation</h4>
+</div>
+<p class="text-sm font-light leading-relaxed mb-6 text-on-primary-container">
+                            Focus on eccentric loading today. Immediate post-session 15min contrast bath (10°C / 38°C) is highly recommended for lower back metabolic clearance.
+                        </p>
+<button class="w-full py-3 bg-secondary text-on-secondary text-xs font-bold uppercase tracking-widest rounded transition-all hover:bg-on-secondary-container active:scale-95">
+                            Sync to Calendar
+                        </button>
+</div>
+</aside>
+</div>
+<!-- Detailed Biometrics Section -->
+<section class="mt-12">
+<h3 class="text-xl font-bold text-primary mb-8 px-2 border-l-4 border-secondary">Biometric Core Indicators</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Metric Tile: HRV -->
+<div class="bg-white p-6 rounded border border-outline-variant/10 hover:border-secondary/30 transition-colors">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary">ecg</span>
+<span class="text-[0.65rem] font-bold uppercase tracking-widest text-on-surface-variant">HRV Range</span>
+</div>
+<div class="text-3xl font-black text-primary mb-1">78-92</div>
+<div class="text-[0.65rem] font-bold text-secondary uppercase tracking-tighter">Normal Baseline</div>
+</div>
+<!-- Metric Tile: Oxygen -->
+<div class="bg-white p-6 rounded border border-outline-variant/10 hover:border-secondary/30 transition-colors">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary">air</span>
+<span class="text-[0.65rem] font-bold uppercase tracking-widest text-on-surface-variant">SpO2 (Sleep)</span>
+</div>
+<div class="text-3xl font-black text-primary mb-1">98.5%</div>
+<div class="text-[0.65rem] font-bold text-secondary uppercase tracking-tighter">Optimal Saturation</div>
+</div>
+<!-- Metric Tile: Efficiency -->
+<div class="bg-white p-6 rounded border border-outline-variant/10 hover:border-secondary/30 transition-colors">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary">timer</span>
+<span class="text-[0.65rem] font-bold uppercase tracking-widest text-on-surface-variant">Sleep Latency</span>
+</div>
+<div class="text-3xl font-black text-primary mb-1">14<span class="text-sm font-medium">min</span></div>
+<div class="text-[0.65rem] font-bold text-secondary uppercase tracking-tighter">High Efficiency</div>
+</div>
+<!-- Metric Tile: Respiratory -->
+<div class="bg-white p-6 rounded border border-outline-variant/10 hover:border-secondary/30 transition-colors">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary">vital_signs</span>
+<span class="text-[0.65rem] font-bold uppercase tracking-widest text-on-surface-variant">Resp. Rate</span>
+</div>
+<div class="text-3xl font-black text-primary mb-1">12.4<span class="text-sm font-medium">rpm</span></div>
+<div class="text-[0.65rem] font-bold text-secondary uppercase tracking-tighter">Stable Rhythm</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Navigation Shell Logic for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200/50 flex justify-around items-center h-16 px-4 z-50">
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Stats</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">monitor_heart</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Bio</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</button>
+</nav>
+</body></html>

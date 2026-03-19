@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Athlete Profile - Jess | Precision Athlete</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#d3e4ff",
+              "on-tertiary-fixed": "#321300",
+              "primary-container": "#004b87",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#753400",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#004882",
+              "outline-variant": "#c2c6d1",
+              "outline": "#727781",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#8abcff",
+              "tertiary-fixed-dim": "#ffb68b",
+              "surface-container": "#eeeeee",
+              "on-secondary": "#ffffff",
+              "tertiary": "#572500",
+              "secondary-container": "#7af1fc",
+              "surface-variant": "#e2e2e2",
+              "on-primary-fixed": "#001c38",
+              "surface-dim": "#dadada",
+              "surface-container-highest": "#e2e2e2",
+              "surface-container-high": "#e8e8e8",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#a3c9ff",
+              "surface-bright": "#f9f9f9",
+              "on-surface": "#1a1c1c",
+              "inverse-primary": "#a3c9ff",
+              "secondary": "#006970",
+              "secondary-fixed-dim": "#5dd8e2",
+              "primary": "#003461",
+              "secondary-fixed": "#7df4ff",
+              "on-surface-variant": "#424750",
+              "on-secondary-fixed-variant": "#004f54",
+              "on-secondary-container": "#006e75",
+              "on-tertiary-container": "#ffa46a",
+              "inverse-on-surface": "#f0f1f1",
+              "on-primary": "#ffffff",
+              "background": "#f9f9f9",
+              "on-secondary-fixed": "#002022",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#793701",
+              "surface": "#f9f9f9",
+              "on-background": "#1a1c1c",
+              "surface-container-low": "#f3f3f4",
+              "surface-tint": "#27609d",
+              "inverse-surface": "#2f3131",
+              "tertiary-fixed": "#ffdbc8",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-gradient {
+            background: linear-gradient(135deg, #003461 0%, #004b87 100%);
+        }
+        .glass-overlay {
+            background: rgba(249, 249, 249, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-slate-100 shadow-[0px_4px_20px_rgba(26,28,28,0.06)] flex justify-between items-center px-8 h-16 w-full font-['Inter'] antialiased">
+<div class="text-xl font-bold tracking-tight text-[#003461]">Precision Athlete</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-500 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Performance</a>
+<a class="text-slate-500 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Inventory</a>
+<a class="text-slate-500 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Analysis</a>
+<a class="text-slate-500 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Network</a>
+</div>
+<div class="flex items-center space-x-6">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:scale-95 transition-transform" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:scale-95 transition-transform" data-icon="settings">settings</span>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden border border-outline-variant">
+<img alt="Athlete Profile" data-alt="Close up professional portrait of female athlete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi6OjuLlLLCNT-BuEK_NefYqt51c-58EiURtLeftDtPL36DlZRZFu4xnFvjHp7E-totGQtJ0nQK347qW8dP2BIih7JQBZkH3eWusuzlC18dZxB7QaZYt87f3gcGrS3JbrxpklC0nG_anBCsgpEm_6EOLtDYZO4eFcjHGIc1Xd9T4xAnz7ANauhLidnnRET41Qk_GugaiS1IBqh2A_jxsvH3iev_o9w_RzclyK3YGsjA_P7WQHTMurM9CEfsXYZqrIIbh6HHIF7zJ0"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 bg-[#f3f3f4] flex flex-col p-4 space-y-2 font-['Inter'] text-sm tracking-wide hidden md:flex">
+<div class="flex items-center space-x-3 mb-6 px-2">
+<div class="w-10 h-10 rounded-lg technical-gradient flex items-center justify-center text-white font-bold">MV</div>
+<div>
+<div class="font-bold text-[#003461]">Max Velocity</div>
+<div class="text-xs text-on-surface-variant">Elite Slalom</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center space-x-3 px-3 py-2 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Gear Log</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+<span>Video Library</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-slate-600 hover:bg-slate-200/50 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span>Coaching</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 bg-white text-[#003461] font-bold rounded-lg shadow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<button class="w-full py-2.5 technical-gradient text-white font-bold rounded-lg mb-4 active:scale-95 transition-transform shadow-lg shadow-primary/20">
+            Start Session
+        </button>
+<div class="pt-4 border-t border-slate-200 space-y-1">
+<a class="flex items-center space-x-3 px-3 py-2 text-slate-600 hover:bg-slate-200/50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-slate-600 hover:bg-slate-200/50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 mt-16 p-8 min-h-screen">
+<div class="max-w-7xl mx-auto space-y-12">
+<!-- Hero Section: Asymmetric Profile Header -->
+<section class="flex flex-col lg:flex-row gap-12 items-start">
+<div class="w-full lg:w-1/3">
+<div class="relative group">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Athlete Action" class="w-full h-full object-cover" data-alt="High action shot of female skier carving through slalom gates" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGBx8Cl8icIZ-oj0IfG8aJTOVDZk8AwpFpRI4I6BeaMtRW1Cut3JrhGdk71EKN5qSu9E3bK4sxEsvWoH8X3zMjZV8flslYoLPRQckRsqIOxRBREQoYKBuenJK1SFUc4tVejJfYo4qYLGiLGqfbp4mxQoC6PFXFJ9zcxtdxYIfPDnzcPDgJFvfM338ms3CjWYVGcahDFsDUJLS_zpMulKJBWjl1yc6yKM7JDZFnA4XJWYcr3M2RlWsjLLZlv0PT7rtLhNypflUhOTg"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-white p-2 rounded-xl shadow-xl">
+<div class="w-full h-full technical-gradient rounded-lg flex flex-col items-center justify-center text-white">
+<span class="text-3xl font-extrabold tracking-tighter">#14</span>
+<span class="text-[10px] uppercase tracking-widest font-bold opacity-80">World Rank</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-2/3 space-y-8">
+<header>
+<div class="flex items-center space-x-4 mb-2">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase rounded-full">Pro Athlete</span>
+<span class="text-on-surface-variant font-medium flex items-center">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="location_on">location_on</span>
+                                Innsbruck, Austria
+                            </span>
+</div>
+<h1 class="text-6xl font-extrabold text-primary tracking-tight mb-2">Jess Valerius</h1>
+<p class="text-xl text-on-surface-variant font-light max-w-2xl leading-relaxed">
+                            Elite Alpine Skier specializing in Giant Slalom. Pushing the boundaries of kinetic efficiency and high-speed precision through data-driven performance.
+                        </p>
+</header>
+<!-- Key Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm">
+<div class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-4">FIS Points</div>
+<div class="text-4xl font-extrabold text-primary tracking-tighter">4.28</div>
+<div class="mt-2 flex items-center text-secondary text-sm font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="trending_down">trending_down</span>
+                                -0.12 pts improve
+                            </div>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm">
+<div class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-4">Giant Slalom Rank</div>
+<div class="text-4xl font-extrabold text-primary tracking-tighter">8<sup class="text-xl font-medium">th</sup></div>
+<div class="mt-2 text-on-surface-variant text-sm font-medium">Top 10 Global Elite</div>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/20 shadow-sm">
+<div class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-4">Total Podiums</div>
+<div class="text-4xl font-extrabold text-primary tracking-tighter">18</div>
+<div class="mt-2 text-on-surface-variant text-sm font-medium">Across all FIS events</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trophy Cabinet Section -->
+<section class="space-y-8">
+<div class="flex justify-between items-end border-b border-surface-container py-4">
+<h2 class="text-2xl font-bold text-primary tracking-tight">Trophy Cabinet</h2>
+<span class="text-sm font-bold text-secondary uppercase tracking-widest cursor-pointer hover:underline">View All Honors</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Medal Item -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center space-y-4 hover:bg-white transition-all duration-300 group cursor-default">
+<div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="emoji_events" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">2023 W-Cup</div>
+<div class="text-sm font-bold text-primary">Gold: Val d'Isère</div>
+</div>
+</div>
+<!-- Medal Item -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center space-y-4 hover:bg-white transition-all duration-300 group cursor-default">
+<div class="w-16 h-16 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="emoji_events" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">2023 Euro Cup</div>
+<div class="text-sm font-bold text-primary">Silver: Flachau</div>
+</div>
+</div>
+<!-- Medal Item -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center space-y-4 hover:bg-white transition-all duration-300 group cursor-default">
+<div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="emoji_events" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">2022 Olympics</div>
+<div class="text-sm font-bold text-primary">Bronze: GS</div>
+</div>
+</div>
+<!-- Trophy Item -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center space-y-4 hover:bg-white transition-all duration-300 group cursor-default">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="military_tech" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">2022 Season</div>
+<div class="text-sm font-bold text-primary">Athlete of Year</div>
+</div>
+</div>
+<!-- Medal Item -->
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center space-y-4 hover:bg-white transition-all duration-300 group cursor-default">
+<div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="emoji_events" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">2021 Nat Champs</div>
+<div class="text-sm font-bold text-primary">Gold: Slalom</div>
+</div>
+</div>
+<!-- Placeholder/Slot -->
+<div class="bg-surface border-2 border-dashed border-outline-variant/30 p-6 rounded-xl flex flex-col items-center justify-center text-center opacity-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add_circle">add_circle</span>
+<span class="text-[10px] font-bold uppercase mt-2">Next Podium</span>
+</div>
+</div>
+</section>
+<!-- Career Timeline & Personal Details -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Career Timeline -->
+<div class="lg:col-span-2 space-y-8">
+<h3 class="text-xl font-bold text-primary">Career Timeline</h3>
+<div class="space-y-0">
+<!-- Timeline Entry -->
+<div class="relative pl-8 pb-10 border-l-2 border-surface-container">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-secondary border-4 border-white"></div>
+<div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+<h4 class="font-bold text-primary">World Cup Victory - Val d'Isère</h4>
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container-high px-2 py-1 rounded">Dec 2023</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Secured first career World Cup gold in the Giant Slalom, finishing with a combined time of 2:12.45, beating the field by 0.18 seconds.
+                            </p>
+</div>
+<!-- Timeline Entry -->
+<div class="relative pl-8 pb-10 border-l-2 border-surface-container">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary-fixed-dim border-4 border-white"></div>
+<div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+<h4 class="font-bold text-primary">Olympic Bronze Debut</h4>
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container-high px-2 py-1 rounded">Feb 2022</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Represented the national team in Beijing, capturing a bronze medal in the Giant Slalom in a tightly contested final run.
+                            </p>
+</div>
+<!-- Timeline Entry -->
+<div class="relative pl-8 pb-10 border-l-2 border-surface-container">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary-fixed-dim border-4 border-white"></div>
+<div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+<h4 class="font-bold text-primary">Full Professional Induction</h4>
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container-high px-2 py-1 rounded">Sept 2020</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                Signed official sponsorship with Atomic Skis and Red Bull, transitioning to the full World Cup circuit schedule.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Personal Details Side-Card -->
+<div class="space-y-6">
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl overflow-hidden shadow-sm">
+<div class="p-6 bg-surface-container-low border-b border-outline-variant/10">
+<h3 class="font-bold text-primary">Athlete Biometrics</h3>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-center py-2 border-b border-surface-container last:border-0">
+<span class="text-xs font-medium text-on-surface-variant">Height</span>
+<span class="font-bold text-primary">174 cm</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-surface-container last:border-0">
+<span class="text-xs font-medium text-on-surface-variant">Weight</span>
+<span class="font-bold text-primary">68 kg</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-surface-container last:border-0">
+<span class="text-xs font-medium text-on-surface-variant">VO2 Max</span>
+<span class="font-bold text-secondary">64 ml/kg/min</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-surface-container last:border-0">
+<span class="text-xs font-medium text-on-surface-variant">Stance</span>
+<span class="font-bold text-primary">Neutral / Aggressive</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-surface-container last:border-0">
+<span class="text-xs font-medium text-on-surface-variant">Active Since</span>
+<span class="font-bold text-primary">2016</span>
+</div>
+</div>
+</div>
+<!-- Social Presence -->
+<div class="p-6 bg-primary rounded-xl text-white space-y-4">
+<div class="text-[10px] font-bold uppercase tracking-widest opacity-70">Media Reach</div>
+<div class="flex justify-between items-end">
+<div class="text-3xl font-extrabold">1.2M</div>
+<div class="flex space-x-2">
+<div class="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 cursor-pointer">
+<span class="material-symbols-outlined text-lg" data-icon="photo_camera">photo_camera</span>
+</div>
+<div class="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-white/20 cursor-pointer">
+<span class="material-symbols-outlined text-lg" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+</div>
+<p class="text-xs opacity-80 leading-relaxed">Top engaged alpine athlete in Europe for 2023.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Floating Footer for Mobile (BottomNavBar Simulation) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-100 h-16 flex items-center justify-around z-50">
+<span class="material-symbols-outlined text-slate-400" data-icon="dashboard">dashboard</span>
+<span class="material-symbols-outlined text-slate-400" data-icon="inventory_2">inventory_2</span>
+<span class="material-symbols-outlined text-slate-400" data-icon="video_library">video_library</span>
+<span class="material-symbols-outlined text-primary font-bold" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+</nav>
+</body></html>

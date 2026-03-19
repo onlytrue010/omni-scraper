@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Precision Athlete | Communication Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#d3e4ff",
+              "on-tertiary-fixed": "#321300",
+              "primary-container": "#004b87",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#753400",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#004882",
+              "outline-variant": "#c2c6d1",
+              "outline": "#727781",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#8abcff",
+              "tertiary-fixed-dim": "#ffb68b",
+              "surface-container": "#eeeeee",
+              "on-secondary": "#ffffff",
+              "tertiary": "#572500",
+              "secondary-container": "#7af1fc",
+              "surface-variant": "#e2e2e2",
+              "on-primary-fixed": "#001c38",
+              "surface-dim": "#dadada",
+              "surface-container-highest": "#e2e2e2",
+              "surface-container-high": "#e8e8e8",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#a3c9ff",
+              "surface-bright": "#f9f9f9",
+              "on-surface": "#1a1c1c",
+              "inverse-primary": "#a3c9ff",
+              "secondary": "#006970",
+              "secondary-fixed-dim": "#5dd8e2",
+              "primary": "#003461",
+              "secondary-fixed": "#7df4ff",
+              "on-surface-variant": "#424750",
+              "on-secondary-fixed-variant": "#004f54",
+              "on-secondary-container": "#006e75",
+              "on-tertiary-container": "#ffa46a",
+              "inverse-on-surface": "#f0f1f1",
+              "on-primary": "#ffffff",
+              "background": "#f9f9f9",
+              "on-secondary-fixed": "#002022",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#793701",
+              "surface": "#f9f9f9",
+              "on-background": "#1a1c1c",
+              "surface-container-low": "#f3f3f4",
+              "surface-tint": "#27609d",
+              "inverse-surface": "#2f3131",
+              "tertiary-fixed": "#ffdbc8",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white dark:bg-slate-950 flex justify-between items-center px-8 h-16 w-full border-b border-slate-100 dark:border-slate-800 shadow-[0px_4px_20px_rgba(26,28,28,0.06)]">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-[#003461] dark:text-[#f9f9f9]">Precision Athlete</span>
+<div class="hidden md:flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Performance</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Inventory</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Analysis</a>
+<a class="text-[#003461] dark:text-[#a3c9ff] border-b-2 border-[#003461] dark:border-[#a3c9ff] pb-1" href="#">Network</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-slate-200">
+<img class="w-full h-full object-cover" data-alt="Athlete Profile Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9zEqne6G9GknZ8B0gnaQn9Vqy3_Mtd9BEF3a9nozTqXK_8SJI2KUvgE-Z7RC0kCKZfavOc2p6HI7oymG_348tXfmMfp-hsovoezrdlVZtsCg3fhuV-XS4F9w9dXZpUJVdxxqEAALJdphBcVc1IaJfUDagRmKtUFnQUKAQc2Hr33qBC2_z9fTNJK94H3yhrACUIbjItm3TpkHB91-UyAOIjGZOIgjuuKfxV5Y1Ng8AC4cS9u2PtKDWVniyUjO8CUBB90T9hd_NEDs"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 bg-[#f3f3f4] dark:bg-slate-900 flex flex-col p-4 space-y-2 hidden md:flex">
+<div class="px-4 py-6 mb-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+</div>
+<div>
+<p class="font-bold text-sm text-[#003461] dark:text-[#a3c9ff]">Max Velocity</p>
+<p class="text-xs text-slate-500">Elite Slalom</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-medium text-sm">Gear Log</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+<span class="font-medium text-sm">Video Library</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-[#003461] dark:text-[#006970] font-bold rounded-lg shadow-sm transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-medium text-sm">Coaching</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-medium text-sm">Profile</span>
+</a>
+</nav>
+<div class="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-1">
+<button class="w-full bg-primary-container text-white py-3 rounded-lg text-sm font-bold shadow-sm active:scale-95 transition-transform mb-4">
+                Start Session
+            </button>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-medium text-sm">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-medium text-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:pl-64 pt-16 min-h-screen bg-surface">
+<div class="max-w-7xl mx-auto p-8 lg:p-12">
+<!-- Header Narrative -->
+<header class="mb-12">
+<div class="flex justify-between items-end">
+<div>
+<h1 class="text-3xl font-extrabold tracking-tight text-primary mb-2">Communication Hub</h1>
+<p class="text-on-surface-variant font-medium">Collaborate with Coach Mika and the technical team.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2.5 bg-white border border-outline-variant text-primary font-bold rounded-md hover:bg-surface-container-low transition-colors active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="videocam">videocam</span>
+                            Request Video Feedback
+                        </button>
+</div>
+</div>
+</header>
+<!-- Grid Layout: Asymmetric Bento Style -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Center Column: Messaging & Chat (8 Columns) -->
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-8">
+<!-- Messaging Interface -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(26,28,28,0.06)] flex flex-col h-[600px] overflow-hidden border border-outline-variant/20">
+<!-- Chat Header -->
+<div class="p-4 border-b border-surface-container flex justify-between items-center bg-white/50 backdrop-blur-sm">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Coach Mika Portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqVMnasZQa5eoEDVPMZz7JOdFcQztyJ-pUWYxfwqyglbCp5aW1yJ3z4xBiHSDKcj_kIGs-jJ4w-VMNYKvmyfKYOXFd0Mh-BnKmxOtopofbG0obT1LHr3HXP3OElznJTUy96CDtYn78XpWbxDBO_7cOsOnU5WDi3rvbQ3PTz8X2EAj08V6CFrIKrgIM5ygVPi7fBwBvTP2j4eXnfKuki4TxRjy5x4HoJ6u40j0r051MDPYUnlPus8mJ7KZVmsJeepMh91j7VgqmpT8"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-secondary rounded-full border-2 border-white"></span>
+</div>
+<div>
+<h3 class="font-bold text-primary">Coach Mika</h3>
+<p class="text-xs text-secondary font-semibold uppercase tracking-wider">Active Now</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant"><span class="material-symbols-outlined" data-icon="search">search</span></button>
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant"><span class="material-symbols-outlined" data-icon="more_vert">more_vert</span></button>
+</div>
+</div>
+<!-- Messages Container -->
+<div class="flex-1 overflow-y-auto p-6 space-y-6 hide-scrollbar bg-surface-container-low/30">
+<!-- Message: Received -->
+<div class="flex gap-3 max-w-[80%]">
+<img class="w-8 h-8 rounded-full object-cover mt-1" data-alt="Coach Mika Small Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh9LhBRVg-AI5oQeDIVCRmEmJsbr1bxzNSRqYjeS37bFlHOxPtXQj-rDyYJOMeqXSROIju0AqxXc_Jdh3lGr-JzNuk_sbawClf8vwcJpNm30Z65Lz1ZML_l0Uxqvl3hjmO-u5IEYGR_ekkRzTpG4mSfSnPkk-LgfDjj5haSHs-jwjv3MfOgsR5WIqm0jQW0DtfcNwYI4sNlaNP_BWW01VpjeQE0Ja1R784vq75ssmhp-WkG1Neqo5YYHefAqLsJoQKOPvKeWgG9-g"/>
+<div>
+<div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-outline-variant/10 text-on-surface text-sm leading-relaxed">
+                                        Jess, great work on the slalom gate exits yesterday. Your hip positioning is significantly more stable. Have you reviewed the last three runs in the video library?
+                                    </div>
+<span class="text-[10px] text-on-surface-variant mt-1 block px-1">Coach Mika • 09:15 AM</span>
+</div>
+</div>
+<!-- Message: Sent -->
+<div class="flex gap-3 flex-row-reverse max-w-[80%] ml-auto">
+<div class="flex flex-col items-end">
+<div class="bg-primary-container text-white p-4 rounded-2xl rounded-tr-none shadow-sm text-sm leading-relaxed">
+                                        Thanks Mika! Yes, I noticed the improvement in the second run. I'm still feeling a bit of hesitation on the left-side transitions though. Should we focus on that during tomorrow's session?
+                                    </div>
+<span class="text-[10px] text-on-surface-variant mt-1 block px-1">You • 10:22 AM</span>
+</div>
+</div>
+<!-- Message: Received with Attachment -->
+<div class="flex gap-3 max-w-[80%]">
+<img class="w-8 h-8 rounded-full object-cover mt-1" data-alt="Coach Mika Small Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzozM6Xfc-txOh-T22l8qh7NuJhpzp8RrRvxKW55deG2_ECrfBTgYx63shWIaaSy-lGmWYIT1vfNPTGU7Iu-O5MGvRKB6CC2ZGKHax4cbp7vcHZaPkf_FeQzC6cyeGx2VPI6g6diYxmgPZDaEcuoqtsQTRtv9GaDBszj3mO9nzv4e4ENblzwiI74g90VqL2D8shqDDh_vDVMhxIIOxREWSUvZd4CB2ZP0TmVWN7EmFmOqvDDZA4bDAl3SZoaVVR_4pE2BE-CGylWk"/>
+<div>
+<div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-outline-variant/10 text-on-surface text-sm">
+                                        Absolutely. I've pinned a note on the training plan for tomorrow. Check out this reference clip for the transition angle I want you to hit.
+                                        <div class="mt-3 rounded-lg overflow-hidden border border-outline-variant/30 relative group cursor-pointer">
+<img class="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Slalom skiing reference video thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNUMcjGVzeD82iq0CDLBXDgRPHYfDWpiuKvE5xbnzz2xiBYLi4WiHs-43x2QfjiSMM7gkYMHn94IdaGgW295ugzKvwfKRDrp4SAf21f3JIY9kcJIADeRvTCIJlKj5kWnEjL27bPlcK7HUSCeIyDmNntzQqmL7XENpCIEMu6LUignRB7SjdjsC20VAGiYUKjjSotAMDdWVmMl9joel2v0C72nenlnA4ZJ9oMt8Skh_9mmzQ2FnQxwRKEhq_cSRIJ-nI-81kb0-irsg"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+</div>
+<span class="text-[10px] text-on-surface-variant mt-1 block px-1">Coach Mika • 11:05 AM</span>
+</div>
+</div>
+</div>
+<!-- Chat Input -->
+<div class="p-4 bg-white border-t border-surface-container">
+<div class="flex items-center gap-3 bg-surface-container-low rounded-lg px-4 py-2 border border-outline-variant/20 focus-within:border-primary/40 transition-colors">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="add_circle">add_circle</span></button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-2" placeholder="Send a message to Mika..." type="text"/>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="mood">mood</span></button>
+<button class="bg-primary-container text-white px-4 py-1.5 rounded-md text-sm font-bold active:scale-95 transition-transform flex items-center gap-2">
+                                    Send
+                                    <span class="material-symbols-outlined text-xs" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Feedback Request Feature Quick-Access -->
+<section class="grid grid-cols-2 gap-6">
+<div class="bg-white p-6 rounded-xl border border-outline-variant/10 shadow-sm flex items-center gap-4 hover:bg-surface-bright transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm">Feedback History</h4>
+<p class="text-xs text-on-surface-variant">Review 12 previous reviews</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="bg-white p-6 rounded-xl border border-outline-variant/10 shadow-sm flex items-center gap-4 hover:bg-surface-bright transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm">Team Announcements</h4>
+<p class="text-xs text-on-surface-variant">2 new updates from the club</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</section>
+</div>
+<!-- Right Column: Context & Notes (4 Columns) -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-8">
+<!-- Pinned Coach's Note -->
+<section class="bg-[#003461] text-white p-8 rounded-xl relative overflow-hidden shadow-lg">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="push_pin" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+<h2 class="uppercase text-[10px] tracking-[0.2em] font-bold text-primary-fixed-dim">Coach's Focus Note</h2>
+</div>
+<p class="text-lg font-medium leading-relaxed mb-6">
+                                "Focus on the weight transfer timing in the mid-gate phase. Your exit speed depends on that early pressure application."
+                            </p>
+<div class="flex items-center gap-3 pt-4 border-t border-white/10">
+<img class="w-8 h-8 rounded-full border border-white/20" data-alt="Coach Mika Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm-WBWXBqv221L30o0VM4LmMD_7HHe5NEZSsabMWHISvRyz_NoqQpldcfzEYLDWzzyCE5oGPbfJNe1Z41T4DKHeTtu91sDAUwuUAqBb2mHUAXtWafS0JZzXc5a7zm4AP0aG68opQfzOnh_AuU2anUzwrHc9G9MWBHAOg7oy2pu6EgMTaL51fSk61GkhYTLNqT5bK5U2VR8Jaf0C9cSY4vbOx2wuD4WKaCAjKEkDSCas_-j1n39w9pO4VPlj6LwPWsBX2R-me-XASU"/>
+<div>
+<p class="text-xs font-bold">Mika Sorensen</p>
+<p class="text-[10px] text-primary-fixed-dim">Updated 2 hours ago</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Shared Notebook / Session Goals -->
+<section class="bg-surface-container-low p-8 rounded-xl flex flex-col gap-6">
+<div class="flex justify-between items-center">
+<h3 class="font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="event_note">event_note</span>
+                                Session Goals
+                            </h3>
+<button class="text-secondary font-bold text-xs uppercase tracking-wider hover:underline">Edit</button>
+</div>
+<div class="space-y-4">
+<!-- Goal Item -->
+<div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary mt-0.5" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Hip Stabilization</p>
+<p class="text-xs text-on-surface-variant">Maintain level pelvis through turns 4-8.</p>
+</div>
+</div>
+<!-- Goal Item -->
+<div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-outline-variant mt-0.5" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Early Edge Engagement</p>
+<p class="text-xs text-on-surface-variant">Initiate pressure 0.2s earlier.</p>
+</div>
+</div>
+<!-- Goal Item -->
+<div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm opacity-60">
+<span class="material-symbols-outlined text-secondary mt-0.5" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="text-sm font-bold text-on-surface line-through">Stance Width</p>
+<p class="text-xs text-on-surface-variant">Keep boots consistent 10cm apart.</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 border-2 border-dashed border-outline-variant text-on-surface-variant text-xs font-bold rounded-lg hover:bg-surface-container-high hover:border-outline transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="add">add</span>
+                            Add New Performance Goal
+                        </button>
+</section>
+<!-- Technical Team Status -->
+<section class="bg-white border border-outline-variant/10 p-6 rounded-xl">
+<h4 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4">Tech Support &amp; Gear</h4>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="handyman">handyman</span>
+</div>
+<span class="text-sm font-medium">Lars (Skis)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="monitoring">monitoring</span>
+</div>
+<span class="text-sm font-medium">Dr. Chen (Bio)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB Suppression: Not rendered on focused Network/Coaching page per mandate -->
+</body></html>

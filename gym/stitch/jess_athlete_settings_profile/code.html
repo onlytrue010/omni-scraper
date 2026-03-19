@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Precision Athlete - Profile Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#727781",
+              "on-background": "#1a1c1c",
+              "surface-bright": "#f9f9f9",
+              "secondary-fixed": "#7df4ff",
+              "primary-container": "#004b87",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#5dd8e2",
+              "surface-dim": "#dadada",
+              "outline-variant": "#c2c6d1",
+              "primary-fixed-dim": "#a3c9ff",
+              "inverse-on-surface": "#f0f1f1",
+              "on-secondary-fixed": "#002022",
+              "surface-container-high": "#e8e8e8",
+              "on-tertiary-fixed": "#321300",
+              "background": "#f9f9f9",
+              "inverse-surface": "#2f3131",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#004f54",
+              "primary-fixed": "#d3e4ff",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#7af1fc",
+              "inverse-primary": "#a3c9ff",
+              "tertiary-container": "#793701",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#1a1c1c",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed-variant": "#753400",
+              "tertiary-fixed-dim": "#ffb68b",
+              "tertiary-fixed": "#ffdbc8",
+              "surface": "#f9f9f9",
+              "surface-container-low": "#f3f3f4",
+              "on-surface-variant": "#424750",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#e2e2e2",
+              "surface-container": "#eeeeee",
+              "secondary": "#006970",
+              "on-primary-fixed-variant": "#004882",
+              "on-secondary-container": "#006e75",
+              "tertiary": "#572500",
+              "primary": "#003461",
+              "on-tertiary-container": "#ffa46a",
+              "on-primary-container": "#8abcff",
+              "error-container": "#ffdad6",
+              "surface-tint": "#27609d",
+              "surface-variant": "#e2e2e2",
+              "on-primary-fixed": "#001c38",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .tonal-shift {
+            background: linear-gradient(135deg, #f9f9f9 0%, #f3f3f4 100%);
+        }
+        .machined-finish {
+            background: linear-gradient(135deg, #003461 0%, #004b87 100%);
+        }
+        .ghost-border {
+            border: 1px solid rgba(194, 198, 209, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f9f9f9] dark:bg-slate-950 border-b border-[#f3f3f4] dark:border-slate-800 shadow-sm flex justify-between items-center h-16 px-8 w-full">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black text-[#003461] dark:text-[#a3c9ff] tracking-tighter">The Precision Athlete</span>
+<nav class="hidden md:flex gap-6 font-['Inter'] font-semibold tracking-tight">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#003461] transition-colors" href="#">Performance</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#003461] transition-colors" href="#">Inventory</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#003461] transition-colors" href="#">Analysis</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#003461] transition-colors" href="#">Network</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-1.5 text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Search analytics..." type="text"/>
+</div>
+<button class="p-2 text-slate-500 hover:bg-[#f3f3f4] rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-[#003461] hover:bg-[#f3f3f4] rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<img alt="Jess's profile picture" class="w-8 h-8 rounded-full border-2 border-primary-fixed" data-alt="Close up of professional female athlete Jess" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ2UE-i6BLMmDYVTxLdlPmcdcRol0BkhW3m8oH-k0X8BLhdWZyJzeNtiaomb-ki3QLBus1SsE3NYY9MwtyVNMngkX7yiD-d0rvxps1GfGXFftho9YBbZ0qOpJIrh5TA-F_cGyXDdtALifX9vv0TWRRUo9v8Dk4UfdX0QVwoM6eWXgwLbCNcqTktfx0gpclIyHcH3lwhqhcspnthnzDp1U70iSb1Lw0IJkVrysWSgd-z2Gd4ia970pO7NgJHlMbCRx9sK265t7NDIM"/>
+</div>
+</header>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="hidden md:flex flex-col gap-2 p-4 border-r border-[#f3f3f4] dark:border-slate-800 h-screen w-64 fixed left-0 top-0 pt-20 bg-[#f3f3f4] dark:bg-slate-900 font-['Inter'] text-sm font-medium">
+<div class="flex items-center gap-3 px-2 py-4 mb-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">skateboarding</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">Jess Precision</div>
+<div class="text-xs text-on-surface-variant">Elite GS Specialist</div>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-[#ffffff] dark:hover:bg-slate-800/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-[#ffffff] dark:hover:bg-slate-800/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span>Training Logs</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-[#ffffff] dark:hover:bg-slate-800/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="self_care">self_care</span>
+<span>Recovery</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-[#ffffff] dark:hover:bg-slate-800/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Gear</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-[#ffffff] dark:hover:bg-slate-800/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="sports">sports</span>
+<span>Coaching</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-[#ffffff] dark:hover:bg-slate-800/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+<span>Video Library</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 bg-[#ffffff] dark:bg-slate-800 text-[#003461] dark:text-[#a3c9ff] rounded-lg shadow-sm font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span>Career Profile</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-[#ffffff] dark:hover:bg-slate-800/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:pl-64 pt-16 min-h-screen">
+<div class="max-w-7xl mx-auto p-8 lg:p-12">
+<!-- Page Header -->
+<header class="mb-12">
+<h1 class="text-3xl font-headline font-extrabold tracking-tight text-primary mb-2">Athlete Settings</h1>
+<p class="text-on-surface-variant font-medium">Fine-tune your physiological parameters and system environment.</p>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Kinetic Profile & System Prefs (8 cols) -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Section: Kinetic Profile -->
+<section class="bg-surface-container-low p-8 rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h2 class="text-xl font-headline font-bold text-on-surface">Kinetic Profile</h2>
+</div>
+<span class="text-[0.65rem] font-bold tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1 rounded uppercase">System Calibrated</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-4">
+<div>
+<label class="block text-[0.75rem] font-bold text-on-surface-variant tracking-wider uppercase mb-1.5">Weight (Race Ready)</label>
+<div class="flex items-center gap-3 bg-surface-container-lowest p-3 rounded-lg ghost-border">
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-mono text-lg font-bold" type="text" value="68.4"/>
+<span class="text-on-surface-variant font-bold text-sm">KG</span>
+</div>
+</div>
+<div>
+<label class="block text-[0.75rem] font-bold text-on-surface-variant tracking-wider uppercase mb-1.5">Height</label>
+<div class="flex items-center gap-3 bg-surface-container-lowest p-3 rounded-lg ghost-border">
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-mono text-lg font-bold" type="text" value="172"/>
+<span class="text-on-surface-variant font-bold text-sm">CM</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block text-[0.75rem] font-bold text-on-surface-variant tracking-wider uppercase mb-1.5">Stance Width</label>
+<div class="flex items-center gap-3 bg-surface-container-lowest p-3 rounded-lg ghost-border">
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-mono text-lg font-bold" type="text" value="342"/>
+<span class="text-on-surface-variant font-bold text-sm">MM</span>
+</div>
+</div>
+<div>
+<label class="block text-[0.75rem] font-bold text-on-surface-variant tracking-wider uppercase mb-1.5">Boot Flex Index</label>
+<div class="flex items-center gap-3 bg-surface-container-lowest p-3 rounded-lg ghost-border">
+<select class="w-full bg-transparent border-none p-0 focus:ring-0 font-mono text-lg font-bold appearance-none">
+<option>130 (Standard)</option>
+<option selected="">150 (Race)</option>
+<option>170 (Hard)</option>
+</select>
+<span class="material-symbols-outlined text-outline-variant">unfold_more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: System Preferences -->
+<section class="bg-surface-container-low p-8 rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">tune</span>
+<h2 class="text-xl font-headline font-bold text-on-surface">System Preferences</h2>
+</div>
+<div class="space-y-6">
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg ghost-border hover:bg-surface-bright transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded bg-primary-fixed-dim/20 text-primary">
+<span class="material-symbols-outlined">straighten</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">Measurement Units</div>
+<div class="text-xs text-on-surface-variant">Metric (km/h, kg, mm)</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg ghost-border">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded bg-primary-fixed-dim/20 text-primary">
+<span class="material-symbols-outlined">notifications_active</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">Biometric Alerts</div>
+<div class="text-xs text-on-surface-variant">Notify when fatigue index &gt; 75%</div>
+</div>
+</div>
+<div class="w-12 h-6 bg-secondary rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-white rounded-full ml-auto"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg ghost-border">
+<div class="flex items-center gap-4">
+<div class="p-2 rounded bg-primary-fixed-dim/20 text-primary">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<div>
+<div class="font-bold text-on-surface">Interface Theme</div>
+<div class="text-xs text-on-surface-variant">Adaptive (Sunset Trigger)</div>
+</div>
+</div>
+<div class="flex bg-surface-container rounded-full p-1">
+<button class="px-3 py-1 text-[0.7rem] font-bold uppercase tracking-widest bg-white rounded-full shadow-sm">Light</button>
+<button class="px-3 py-1 text-[0.7rem] font-bold uppercase tracking-widest text-on-surface-variant">Dark</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Connected Devices -->
+<section class="bg-surface-container-low p-8 rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">sensors</span>
+<h2 class="text-xl font-headline font-bold text-on-surface">Connected Devices</h2>
+</div>
+<button class="text-xs font-bold text-primary flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-sm">add</span> Pair New
+                            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Device Card 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg ghost-border flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-2xl text-secondary">watch</span>
+<div>
+<div class="font-bold text-sm">Suunto Race Pro</div>
+<div class="text-[0.65rem] text-secondary font-bold uppercase tracking-tighter">Active Sync</div>
+</div>
+</div>
+<div class="flex items-center gap-1 text-[0.65rem] font-bold text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">battery_full</span> 82%
+                                </div>
+</div>
+<!-- Device Card 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg ghost-border flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-2xl text-secondary">monitor_heart</span>
+<div>
+<div class="font-bold text-sm">Polar H10 Chest</div>
+<div class="text-[0.65rem] text-secondary font-bold uppercase tracking-tighter">Connected</div>
+</div>
+</div>
+<div class="flex items-center gap-1 text-[0.65rem] font-bold text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">battery_3_bar</span> 45%
+                                </div>
+</div>
+<!-- Device Card 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg ghost-border flex items-center justify-between opacity-60">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-2xl text-outline">snowboarding</span>
+<div>
+<div class="font-bold text-sm">Atomic G-Force Sensors</div>
+<div class="text-[0.65rem] text-on-surface-variant font-bold uppercase tracking-tighter">Offline</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-sm text-outline-variant">error</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Privacy, Account & Profile Summary (4 cols) -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Profile Card Overlay -->
+<div class="machined-finish p-8 rounded-xl text-on-primary shadow-xl relative overflow-hidden">
+<div class="relative z-10">
+<div class="w-16 h-16 rounded-full border-4 border-primary-fixed-dim/30 overflow-hidden mb-4">
+<img alt="Jess" class="w-full h-full object-cover" data-alt="Close up of Jess looking focused" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvWXrrAzwecXzPZeR8YJLTcHwKDQ2yiK7xg6-h0RhCGe3n6qJmAKgcY-KZ71u7PDI17URYNE6se-OnoXGYlDuV00PlBDa8sVi6jf-1WFbMO3ekTOH1E0cK03wfYhjlC-maTdR3LsRZuOb9ccCryoKjOI0FY4JFvJn2j-kqc8tf9wT38EDN7YmHa-s2nC0E6GA5buFKVbx37FJiU-QAurjuFyAuVAAsCoxjaYtNImgo262NHGVUXBkPVWjaD-VSKneQn9SMtmgHUHA"/>
+</div>
+<h3 class="text-2xl font-black tracking-tight mb-1">Jess Precision</h3>
+<p class="text-primary-fixed-dim text-sm font-semibold mb-6">GS Specialized • FIS ID: 492011</p>
+<div class="space-y-3 pt-4 border-t border-white/10">
+<div class="flex justify-between text-sm">
+<span class="text-white/60">Membership</span>
+<span class="font-bold">Elite Performance</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-white/60">Last Sync</span>
+<span class="font-bold">4m ago</span>
+</div>
+</div>
+</div>
+<!-- Abstract pulse background decoration -->
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'wght' 100;">monitoring</span>
+</div>
+</div>
+<!-- Privacy & Team Sharing -->
+<section class="bg-surface-container p-8 rounded-xl border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary">security</span>
+<h2 class="text-lg font-headline font-bold text-on-surface">Data Transparency</h2>
+</div>
+<p class="text-xs text-on-surface-variant mb-6 leading-relaxed">Control which segments of your kinetic data are visible to your support network.</p>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm font-semibold">Head Coach (L. Vogel)</span>
+<div class="w-10 h-5 bg-secondary rounded-full flex items-center px-1">
+<div class="w-3 h-3 bg-white rounded-full ml-auto"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-semibold">Physio Team</span>
+<div class="w-10 h-5 bg-secondary rounded-full flex items-center px-1">
+<div class="w-3 h-3 bg-white rounded-full ml-auto"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-semibold">Equipment Tech</span>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full flex items-center px-1">
+<div class="w-3 h-3 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-semibold">Public Leaderboard</span>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full flex items-center px-1">
+<div class="w-3 h-3 bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Account Security -->
+<section class="bg-surface-container-low p-8 rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary">lock</span>
+<h2 class="text-lg font-headline font-bold text-on-surface">Account</h2>
+</div>
+<div class="space-y-2">
+<button class="w-full text-left px-4 py-3 text-sm font-bold bg-surface-container-lowest rounded-lg ghost-border flex items-center justify-between hover:bg-surface-bright transition-colors">
+                                Change Password
+                                <span class="material-symbols-outlined text-sm">key</span>
+</button>
+<button class="w-full text-left px-4 py-3 text-sm font-bold bg-surface-container-lowest rounded-lg ghost-border flex items-center justify-between hover:bg-surface-bright transition-colors">
+                                Two-Factor Auth
+                                <span class="text-[0.6rem] bg-secondary/10 text-secondary px-2 py-0.5 rounded">Enabled</span>
+</button>
+<button class="w-full text-left px-4 py-3 text-sm font-bold text-error bg-error-container/20 rounded-lg flex items-center justify-between hover:bg-error-container/30 transition-colors mt-4">
+                                Delete Account
+                                <span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer Action Bar -->
+<footer class="mt-12 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4 text-[0.7rem] font-bold text-on-surface-variant uppercase tracking-widest">
+<span>Precision Engine v4.2.0</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>Last calibrated 22.10.2023</span>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2.5 text-sm font-bold text-on-surface hover:bg-surface-container transition-colors rounded-lg">Discard Changes</button>
+<button class="px-8 py-2.5 text-sm font-bold text-on-primary machined-finish rounded-lg shadow-lg active:scale-95 transition-all">Update Athlete Profile</button>
+</div>
+</footer>
+</div>
+</main>
+<!-- Contextual FAB Suppression (Hiding based on task specs for Profile screen) -->
+</body></html>

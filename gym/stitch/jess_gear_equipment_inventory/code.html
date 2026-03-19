@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#d3e4ff",
+              "on-tertiary-fixed": "#321300",
+              "primary-container": "#004b87",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#753400",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#004882",
+              "outline-variant": "#c2c6d1",
+              "outline": "#727781",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#8abcff",
+              "tertiary-fixed-dim": "#ffb68b",
+              "surface-container": "#eeeeee",
+              "on-secondary": "#ffffff",
+              "tertiary": "#572500",
+              "secondary-container": "#7af1fc",
+              "surface-variant": "#e2e2e2",
+              "on-primary-fixed": "#001c38",
+              "surface-dim": "#dadada",
+              "surface-container-highest": "#e2e2e2",
+              "surface-container-high": "#e8e8e8",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#a3c9ff",
+              "surface-bright": "#f9f9f9",
+              "on-surface": "#1a1c1c",
+              "inverse-primary": "#a3c9ff",
+              "secondary": "#006970",
+              "secondary-fixed-dim": "#5dd8e2",
+              "primary": "#003461",
+              "secondary-fixed": "#7df4ff",
+              "on-surface-variant": "#424750",
+              "on-secondary-fixed-variant": "#004f54",
+              "on-secondary-container": "#006e75",
+              "on-tertiary-container": "#ffa46a",
+              "inverse-on-surface": "#f0f1f1",
+              "on-primary": "#ffffff",
+              "background": "#f9f9f9",
+              "on-secondary-fixed": "#002022",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#793701",
+              "surface": "#f9f9f9",
+              "on-background": "#1a1c1c",
+              "surface-container-low": "#f3f3f4",
+              "surface-tint": "#27609d",
+              "inverse-surface": "#2f3131",
+              "tertiary-fixed": "#ffdbc8",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .satin-gradient { background: linear-gradient(135deg, #003461 0%, #004b87 100%); }
+        .ghost-border { border: 1px solid rgba(194, 198, 209, 0.2); }
+    </style>
+</head>
+<body class="text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 shadow-[0px_4px_20px_rgba(26,28,28,0.06)] flex justify-between items-center px-8 h-16 w-full">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-[#003461] dark:text-[#f9f9f9]">Precision Athlete</span>
+<div class="hidden md:flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Performance</a>
+<a class="text-[#003461] dark:text-[#a3c9ff] border-b-2 border-[#003461] dark:border-[#a3c9ff] pb-1" href="#">Inventory</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Analysis</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Network</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors">notifications</button>
+<button class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors">settings</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+<img alt="Athlete Profile" data-alt="Portrait of professional female athlete Jess" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpwfUdOinO49oSaDuV5i-gv3rJVgzjQnFK_wIgdFMJegE9kG9BVLJhTg1E518Qmd017N9Lhso4A_x9uIAv0F1voQI0rpCw18WnyjjVRN7Xw151I9BxS9dffh1MzdWmL5CNihCfmlJoutgWJXcGjv2gZmmLbjqjiyNX2hh2FhtPWPl5A6Ozxer5HME1YfjLrIXL9-NtKmSZY736mJOAj4mFfICzZEWqRepzsIyjvkcrPoeZXE0rvIDqHIvDT-1z1t0B8dw36gJc-5U"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 bg-[#f3f3f4] dark:bg-slate-900 flex flex-col p-4 space-y-2 hidden lg:flex">
+<div class="px-4 py-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white font-bold">MV</div>
+<div>
+<p class="text-sm font-bold text-primary dark:text-[#a3c9ff]">Max Velocity</p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Elite Slalom</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<div class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg cursor-pointer active:opacity-80 transition-all duration-200 hover:translate-x-1">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-[#003461] dark:text-[#006970] font-bold rounded-lg shadow-sm cursor-pointer active:opacity-80 transition-all duration-200 hover:translate-x-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-medium">Gear Log</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg cursor-pointer active:opacity-80 transition-all duration-200 hover:translate-x-1">
+<span class="material-symbols-outlined">video_library</span>
+<span class="font-medium">Video Library</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg cursor-pointer active:opacity-80 transition-all duration-200 hover:translate-x-1">
+<span class="material-symbols-outlined">forum</span>
+<span class="font-medium">Coaching</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg cursor-pointer active:opacity-80 transition-all duration-200 hover:translate-x-1">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium">Profile</span>
+</div>
+</nav>
+<button class="mx-2 mb-4 py-3 satin-gradient text-white rounded-lg font-bold text-sm tracking-wide shadow-lg active:scale-95 transition-transform">
+            Start Session
+        </button>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-4 space-y-1">
+<div class="flex items-center gap-3 px-4 py-2 text-slate-500 text-sm hover:text-primary cursor-pointer">
+<span class="material-symbols-outlined text-lg">help</span>
+<span>Support</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-2 text-slate-500 text-sm hover:text-error cursor-pointer">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span>Logout</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="lg:ml-64 mt-16 p-8 lg:p-12 max-w-[1600px]">
+<!-- Header Section -->
+<header class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-3xl font-bold tracking-tight text-primary mb-2">Equipment &amp; Gear Inventory</h1>
+<p class="text-on-surface-variant max-w-2xl">Precision management for elite performance. Track every run, every wax, and every edge optimization for Jess.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 bg-surface-container-low text-primary font-bold rounded-md hover:bg-surface-container transition-colors">Export Logs</button>
+<button class="px-6 py-2.5 satin-gradient text-white font-bold rounded-md active:scale-95 transition-transform">Add New Gear</button>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Primary Gear Card (Featured) -->
+<div class="md:col-span-8 group">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(26,28,28,0.06)] ghost-border flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 relative h-64 md:h-auto overflow-hidden">
+<img alt="Rossignol GS Master Skis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High performance Rossignol GS Master racing skis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkhEtGV1pebJwZ9wbTG64NRZKf49umWo-re2X8JA7luF3g0w0fYBkpMKcXlDqAzE85MDR9DfmwcNnKUIoRE6xNT_U2UZ1faHPT-IY5uB9wDCHMVKA-Tnh0--1NwTLtvKjCQOncVP7DkjQY3Yvu8HPFBbwPbCInCBSNVV8adeo2YGzpjfWUzDku0UcaBgPTene7bMojSGRgprhQD6rtsMSBkuxKETUyjzgUKVvQ0bx4Fl3-hGOZmNRUjaTxq19jqBB9cr8iwGpzpNI"/>
+<div class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-full">Primary Active</div>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col">
+<div class="mb-6">
+<span class="text-xs font-bold text-secondary tracking-widest uppercase mb-1 block">Racing Series</span>
+<h2 class="text-2xl font-bold text-primary">Rossignol GS Master</h2>
+<p class="text-sm text-on-surface-variant italic">ID: RS-GS-2024-J01</p>
+</div>
+<div class="grid grid-cols-2 gap-6 mb-8">
+<div>
+<p class="text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold">Total Runs</p>
+<p class="text-3xl font-bold text-primary tracking-tighter">142</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold">Edge Life</p>
+<div class="flex items-center gap-2">
+<p class="text-3xl font-bold text-secondary tracking-tighter">84%</p>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+</div>
+</div>
+<div class="mt-auto space-y-4">
+<div class="p-4 bg-surface-container-low rounded-lg border-l-4 border-secondary">
+<p class="text-[10px] uppercase font-bold text-on-secondary-container mb-1">Current Wax Protocol</p>
+<p class="text-sm font-bold text-primary">HF07 Glacial Tundra</p>
+<p class="text-xs text-on-surface-variant mt-1">Applied: Oct 14, 2023 • Low Humidity</p>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-colors rounded-md">View Maintenance History</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Wax Inventory / Stats Column -->
+<div class="md:col-span-4 space-y-8">
+<!-- Wax Protocol Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_20px_rgba(26,28,28,0.06)] ghost-border">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-bold text-primary uppercase text-xs tracking-widest">Wax Integrity</h3>
+<span class="material-symbols-outlined text-secondary">science</span>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="font-bold">HF07 Glacial Tundra</span>
+<span class="text-secondary font-bold">92%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[92%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="font-bold">LF08 Polar Flow</span>
+<span class="text-on-surface-variant font-bold">Base Saturated</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-fixed-dim w-full"></div>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-2 text-xs font-bold text-primary border-b border-primary-fixed hover:border-primary transition-all">Optimize Protocols</button>
+</div>
+<!-- Maintenance Alert Card -->
+<div class="bg-primary text-white p-6 rounded-xl shadow-lg relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary-fixed">error</span>
+<span class="text-[10px] uppercase font-bold tracking-widest">Maintenance Due</span>
+</div>
+<h4 class="text-xl font-bold mb-2">Edge Tune: Slalom 02</h4>
+<p class="text-primary-fixed text-sm mb-6">Current burr count detected via vibration analysis exceeds threshold for elite racing.</p>
+<button class="w-full py-3 bg-secondary-fixed text-on-secondary-fixed font-bold text-sm rounded-md active:scale-95 transition-transform">Schedule Tuning</button>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-4 -right-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'wght' 700;">build</span>
+</div>
+</div>
+</div>
+<!-- Maintenance Log Table Section -->
+<div class="md:col-span-12">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(26,28,28,0.06)] ghost-border overflow-hidden">
+<div class="px-8 py-6 flex justify-between items-center bg-surface-bright">
+<h3 class="text-lg font-bold text-primary">Global Maintenance Log</h3>
+<div class="flex gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-md text-sm focus:ring-1 focus:ring-primary w-64" placeholder="Filter by gear ID..." type="text"/>
+</div>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container rounded-md">tune</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low border-b border-outline-variant/10">
+<tr>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Date</th>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Gear Item</th>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Action</th>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Technician</th>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Status</th>
+<th class="px-8 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Impact</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-8 py-5 text-sm font-medium">Oct 14, 2023</td>
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">Rossignol GS Master</span>
+<span class="text-[10px] text-on-surface-variant">J01-Racing</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm">Wax Protocol: HF07</td>
+<td class="px-8 py-5 text-sm">M. Schmidt</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-secondary/10 text-secondary text-[10px] font-bold rounded-full uppercase">Optimal</span>
+</td>
+<td class="px-8 py-5 text-sm text-secondary font-bold">+0.12s Avg</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-8 py-5 text-sm font-medium">Oct 12, 2023</td>
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">Atomic Redster G9</span>
+<span class="text-[10px] text-on-surface-variant">A04-Training</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm">Base Grind &amp; Structuring</td>
+<td class="px-8 py-5 text-sm">K. Weber</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-primary text-[10px] font-bold rounded-full uppercase">Complete</span>
+</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">Baseline Reset</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-8 py-5 text-sm font-medium">Oct 10, 2023</td>
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">Marker Xcell 24</span>
+<span class="text-[10px] text-on-surface-variant">B01-Bindings</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm">DIN Calibration Check</td>
+<td class="px-8 py-5 text-sm">M. Schmidt</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-secondary/10 text-secondary text-[10px] font-bold rounded-full uppercase">Certified</span>
+</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">Safety Validated</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors group">
+<td class="px-8 py-5 text-sm font-medium">Oct 05, 2023</td>
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-primary">Rossignol GS Master</span>
+<span class="text-[10px] text-on-surface-variant">J01-Racing</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm">Edge Sharpening (0.5°/3°)</td>
+<td class="px-8 py-5 text-sm">K. Weber</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-primary text-[10px] font-bold rounded-full uppercase">Complete</span>
+</td>
+<td class="px-8 py-5 text-sm text-secondary font-bold">+5% Lateral Grip</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Detailed Gear Cards (Secondary items) -->
+<div class="md:col-span-4">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(26,28,28,0.06)] ghost-border p-6 hover:shadow-md transition-all">
+<div class="flex items-start justify-between mb-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container-low flex items-center justify-center overflow-hidden">
+<img alt="Atomic Redster G9" class="w-full h-full object-cover" data-alt="Atomic Redster G9 training skis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwH7GhbL-mWnqJ9-2Pma-xNuncBLDCT8hPzviGO1QhNr8j-7xrFAYHOs5NU-HTe-COIM0t-qmm2R07CW_bAUJznx8z_JNK5LFV1HVbcS_eD7x6ibD_HJWluI_Zbdl77k-0-wktYnwc280A0riUVMtktJEiDnvaAUFLfR1KylKgICGkvRoEcayAs2P2TUVUPW87WyDU1k30HiKLNySWnAK3yR4fozTeYQzbIDCovmsG76hg4sMxrDxwgwQL4qN4RP4vZ-vnTpXN1nI"/>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</div>
+<h4 class="font-bold text-primary">Atomic Redster G9</h4>
+<p class="text-xs text-on-surface-variant mb-4">Training / Hard Pack Focus</p>
+<div class="flex justify-between items-end">
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant">Runs</p>
+<p class="text-xl font-bold text-primary">312</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase font-bold text-on-surface-variant">Status</p>
+<p class="text-sm font-bold text-secondary">Maintenance OK</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-4">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(26,28,28,0.06)] ghost-border p-6 hover:shadow-md transition-all">
+<div class="flex items-start justify-between mb-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container-low flex items-center justify-center overflow-hidden">
+<img alt="Lange World Cup RP" class="w-full h-full object-cover" data-alt="High performance Lange ski boots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyLW_Fs4jMtMoFceubgqc4zo-w3apXYjzst774daXmmdTDhoi_wnk3bPWPXBlXQ4cioul_pkXbUf6prgJEmaxe_wsuh8CG1w4tMfnUniU8DynB6Qj6yJIiy_P1LA9MzNXPh6bw8CU5Ypuv9Xjh11DC17XX9dXHoOcjpqYgvMEp6y2n9s0Qbk1OwHEge6XCS32Ni8vUjPKxcC-3UkV2ZMNZmuGpyXYkyt-YAii_W3KVPTxjFh2g5eDa9dfCqy9o78ePUy8xr6AUtIo"/>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</div>
+<h4 class="font-bold text-primary">Lange World Cup RP</h4>
+<p class="text-xs text-on-surface-variant mb-4">Stiffness: 140 • Custom Liner</p>
+<div class="flex justify-between items-end">
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant">Sessions</p>
+<p class="text-xl font-bold text-primary">88</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] uppercase font-bold text-on-surface-variant">Status</p>
+<p class="text-sm font-bold text-primary">Liner Refresh Due</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-4">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(26,28,28,0.06)] ghost-border p-6 border-dashed border-2 flex flex-col items-center justify-center gap-4 text-on-surface-variant hover:text-primary hover:border-primary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-4xl group-hover:scale-110 transition-transform">add_circle</span>
+<p class="font-bold text-sm">Register New Equipment</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-slate-100 flex justify-around items-center h-16 z-50 px-4">
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold">Dash</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="text-[10px] font-bold">Gear</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">video_library</span>
+<span class="text-[10px] font-bold">Video</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">forum</span>
+<span class="text-[10px] font-bold">Chat</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Me</span>
+</button>
+</nav>
+</body></html>

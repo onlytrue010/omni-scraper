@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Video Analysis - Precision Athlete</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#d3e4ff",
+              "on-tertiary-fixed": "#321300",
+              "primary-container": "#004b87",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#753400",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#004882",
+              "outline-variant": "#c2c6d1",
+              "outline": "#727781",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#8abcff",
+              "tertiary-fixed-dim": "#ffb68b",
+              "surface-container": "#eeeeee",
+              "on-secondary": "#ffffff",
+              "tertiary": "#572500",
+              "secondary-container": "#7af1fc",
+              "surface-variant": "#e2e2e2",
+              "on-primary-fixed": "#001c38",
+              "surface-dim": "#dadada",
+              "surface-container-highest": "#e2e2e2",
+              "surface-container-high": "#e8e8e8",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#a3c9ff",
+              "surface-bright": "#f9f9f9",
+              "on-surface": "#1a1c1c",
+              "inverse-primary": "#a3c9ff",
+              "secondary": "#006970",
+              "secondary-fixed-dim": "#5dd8e2",
+              "primary": "#003461",
+              "secondary-fixed": "#7df4ff",
+              "on-surface-variant": "#424750",
+              "on-secondary-fixed-variant": "#004f54",
+              "on-secondary-container": "#006e75",
+              "on-tertiary-container": "#ffa46a",
+              "inverse-on-surface": "#f0f1f1",
+              "on-primary": "#ffffff",
+              "background": "#f9f9f9",
+              "on-secondary-fixed": "#002022",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#793701",
+              "surface": "#f9f9f9",
+              "on-background": "#1a1c1c",
+              "surface-container-low": "#f3f3f4",
+              "surface-tint": "#27609d",
+              "inverse-surface": "#2f3131",
+              "tertiary-fixed": "#ffdbc8",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #1a1c1c; }
+    </style>
+</head>
+<body class="antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 shadow-[0px_4px_20px_rgba(26,28,28,0.06)] flex justify-between items-center px-8 h-16 w-full">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-[#003461] dark:text-[#f9f9f9]">Precision Athlete</span>
+<div class="hidden md:flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Performance</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Inventory</a>
+<a class="text-[#003461] dark:text-[#a3c9ff] border-b-2 border-[#003461] dark:border-[#a3c9ff] pb-1 font-medium" href="#">Analysis</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-[#006970] transition-colors duration-200" href="#">Network</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-secondary rounded-full"></span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="settings">settings</span>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img alt="Athlete Profile" class="w-full h-full object-cover" data-alt="Close up of a professional athlete profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsxcKQcTuJFP_L9TtUVDTwTyuoz1HutZiqzLV8sg2kY8-mrkMli9i-vheRMqQWxRdJKs4FMkPj6jtUGkKahFBTc8lJEcOtd-eo_bAC1jLebTh8yVGwO4t3a6HdyXvgMQZ2IERt4OdwGbsA8y8NsFsqmYAEnI10l5SMARpAB5Qjk8Z1DjYJM_4EHhJWKR2hUEn27o-yEzc5y9L2z8jmlLTR_OZjuugvwUO0ZvXVxzWAljEtaNHSnf3eAfmXwEcLIELM0ypZ_6HslJM"/>
+</div>
+</div>
+</nav>
+<!-- Side Navigation Bar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 bg-[#f3f3f4] dark:bg-slate-900 flex flex-col p-4 space-y-2">
+<div class="px-2 py-4 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+</div>
+<div>
+<h3 class="font-bold text-sm text-[#003461] dark:text-[#a3c9ff]">Max Velocity</h3>
+<p class="text-xs text-slate-500">Elite Slalom</p>
+</div>
+</div>
+</div>
+<a class="flex items-center gap-3 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-medium text-sm">Gear Log</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-white dark:bg-slate-800 text-[#003461] dark:text-[#006970] font-bold rounded-lg shadow-sm transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="video_library" style="font-variation-settings: 'FILL' 1;">video_library</span>
+<span class="font-medium text-sm">Video Library</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-medium text-sm">Coaching</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-medium text-sm">Profile</span>
+</a>
+<div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
+<button class="w-full bg-primary-container text-white rounded-lg py-2 text-sm font-bold flex items-center justify-center gap-2 mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                Start Session
+            </button>
+<a class="flex items-center gap-3 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-medium text-sm">Support</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-medium text-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 mt-16 p-10 min-h-screen">
+<header class="flex justify-between items-end mb-10">
+<div>
+<nav class="flex text-xs font-label uppercase tracking-widest text-on-surface-variant mb-2 gap-2">
+<span>Library</span>
+<span>/</span>
+<span class="text-secondary">Analysis Mode</span>
+</nav>
+<h1 class="text-4xl font-headline font-bold text-primary tracking-tight">Video Analysis: Jess P.</h1>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 bg-surface-container-low text-on-surface text-sm font-bold rounded-md hover:bg-surface-container-high transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                    Filter
+                </button>
+<button class="px-4 py-2 bg-primary-container text-on-primary text-sm font-bold rounded-md hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="upload">upload</span>
+                    New Footage
+                </button>
+</div>
+</header>
+<!-- Featured Video Player (The Anchor) -->
+<section class="grid grid-cols-12 gap-8 mb-12">
+<div class="col-span-12 lg:col-span-8">
+<div class="relative group bg-black rounded-xl overflow-hidden shadow-xl aspect-video">
+<img alt="Training run" class="w-full h-full object-cover opacity-90" data-alt="High speed alpine skiing training footage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xVNjCuNa_eZFqdRZXRisiAmtGhcIEpKtenuXEIm64XkuPol1ti3waIhcFYQdw05SlRbJNNirnohGATmAP-w5hxFxaQbEkRD_PPOUGlHTYtREM9YijX7nlUHYU_I47qZmy3qqmtO2_z0Zso1uFl-jN9INNzxWArwjlUwHCV0IGs0foq9KzdqL_1RA_Oy4WOP8yn_lCFEpV2yynG2RMa1MHadjkN6JOJFPH-GntuXzrRHrsPIRSaLxp00XyX6YyE7tpSLD7GO8Z_0"/>
+<!-- Telemetry Overlays -->
+<div class="absolute inset-0 p-6 flex flex-col justify-between pointer-events-none">
+<div class="flex justify-between">
+<div class="bg-black/40 backdrop-blur-md p-4 rounded-lg border border-white/10">
+<p class="text-[10px] uppercase tracking-tighter text-white/60 mb-1">Max Velocity</p>
+<p class="text-3xl font-headline font-bold text-secondary tracking-tight">84.2<span class="text-sm ml-1 font-normal text-white/80">km/h</span></p>
+</div>
+<div class="bg-black/40 backdrop-blur-md p-4 rounded-lg border border-white/10 text-right">
+<p class="text-[10px] uppercase tracking-tighter text-white/60 mb-1">Edge Angle</p>
+<p class="text-3xl font-headline font-bold text-primary-fixed-dim tracking-tight">62.5<span class="text-sm ml-1 font-normal text-white/80">°</span></p>
+</div>
+</div>
+<!-- Frame Control / Seek -->
+<div class="w-full flex flex-col gap-4 pointer-events-auto">
+<div class="bg-black/40 backdrop-blur-md p-4 rounded-lg border border-white/10">
+<div class="h-1 bg-white/20 rounded-full w-full relative mb-4">
+<div class="absolute left-0 top-0 h-full bg-secondary w-1/3"></div>
+<div class="absolute left-1/3 top-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full border-2 border-secondary shadow-lg"></div>
+</div>
+<div class="flex justify-between items-center text-white">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary" data-icon="skip_previous">skip_previous</span>
+<span class="material-symbols-outlined text-4xl cursor-pointer hover:text-secondary" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary" data-icon="skip_next">skip_next</span>
+</div>
+<div class="flex items-center gap-6 text-xs font-mono uppercase tracking-widest text-white/80">
+<span>FRM: 1042 / 3120</span>
+<span>T: 00:14.24</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer" data-icon="slow_motion_video">slow_motion_video</span>
+<span class="material-symbols-outlined cursor-pointer" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Annotation Panel -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_20px_rgba(26,28,28,0.06)] border border-slate-50">
+<h3 class="text-sm font-bold text-primary mb-4 uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="comment">comment</span>
+                        Coach Annotations
+                    </h3>
+<div class="space-y-6">
+<div class="flex gap-3">
+<div class="w-1 h-auto bg-secondary rounded-full"></div>
+<div>
+<p class="text-xs font-mono text-secondary mb-1">00:08.12</p>
+<p class="text-sm text-on-surface leading-relaxed">Early pressure on the outside ski here is excellent. Maintain this center of mass through the transition.</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="w-1 h-auto bg-error rounded-full opacity-50"></div>
+<div>
+<p class="text-xs font-mono text-error mb-1">00:12.45</p>
+<p class="text-sm text-on-surface leading-relaxed">Slight rotation in the upper body. Keep the shoulders square to the fall line for more stability.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl">
+<h3 class="text-sm font-bold text-primary mb-4 uppercase tracking-wider">Run Telemetry Data</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-2 border-b border-slate-200/50">
+<span class="text-xs text-on-surface-variant">Avg G-Force</span>
+<span class="text-sm font-bold text-primary">2.4 G</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-slate-200/50">
+<span class="text-xs text-on-surface-variant">Turn Initiation Delay</span>
+<span class="text-sm font-bold text-primary">0.14s</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="text-xs text-on-surface-variant">Gate Consistency</span>
+<span class="text-sm font-bold text-secondary">94%</span>
+</div>
+</div>
+<button class="w-full mt-6 py-2 border border-primary text-primary text-xs font-bold rounded hover:bg-primary/5 transition-colors">Export Telemetry CSV</button>
+</div>
+</div>
+</section>
+<!-- Recent Runs Gallery -->
+<section>
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-xl font-bold text-primary">Recent Sessions</h2>
+<div class="flex gap-2">
+<span class="text-xs font-medium text-slate-400">Sort by:</span>
+<span class="text-xs font-bold text-primary cursor-pointer hover:underline">Newest First</span>
+</div>
+</div>
+<!-- Bento Grid Gallery -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+<!-- Video Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-transparent hover:border-outline-variant/30 hover:shadow-lg transition-all cursor-pointer">
+<div class="relative h-40">
+<img alt="Run 4" class="w-full h-full object-cover" data-alt="Action shot of a skier carving through gates" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvvMK0SMhZZBavgMgGyj-WPH-wSt1ELEr3XC5rMEEdWSbNwff_-yPf56u3nOdVF3JrIgcIzPJpJBQh1DPsIccINXhkhJulIVkYAq1Fai1HXxBWbwgDd1swRr_PSeFlVn1xcY2y7gEI1ynFDEkMbxaGW0c1cAn1lUj71A-0GZuzT2NgF6PLR7iqipQfeDB1ZTmkjhvTnN50ffWjPg2xd-FerHRrcOuv3dLoNHvhVCDtWt4XALy739WzmBfy2injxYgueWn32BQaRLc"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-1 rounded font-mono">03:42</span>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-bold text-primary text-sm">Run #14 - Giant Slalom</h4>
+<p class="text-[10px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="location_on">location_on</span>
+                                    Zermatt, SUI
+                                </p>
+</div>
+<span class="text-[10px] font-bold text-secondary bg-secondary/10 px-2 py-0.5 rounded">PR</span>
+</div>
+<div class="flex justify-between items-center mt-4">
+<span class="text-[10px] text-slate-400">Oct 24, 2023</span>
+<span class="material-symbols-outlined text-primary text-lg" data-icon="analytics">analytics</span>
+</div>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-transparent hover:border-outline-variant/30 hover:shadow-lg transition-all cursor-pointer">
+<div class="relative h-40">
+<img alt="Run 3" class="w-full h-full object-cover" data-alt="Skier on a snowy mountain ridge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5_SAX3scvx61gQBK2PBJl0SwVLF29LGplsOVcC7m7AgMkZ72EYJmgNSGQEdqBv06BGG5h8QS5JYE4EfA1UDVUHadToMIK1f5QREPjhB-fyrq3qtL4icObh7TkhZ1L7rY6ptVnqIkxlkjw1fDNErzCIodrJLj-cTiSbKU7lklDbY7wAUzTj3NuxoIUF_Sbt0ZLzqXtcv-ttFhgzRg9s_NfX5BbkswXcZEr5bdwp1zfbyZ0SBz4uM7Srsj2J8jiEiJPjRrApizwCEU"/>
+<span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-1 rounded font-mono">01:15</span>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-bold text-primary text-sm">Warm-up Technicals</h4>
+<p class="text-[10px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="location_on">location_on</span>
+                                    Zermatt, SUI
+                                </p>
+</div>
+</div>
+<div class="flex justify-between items-center mt-4">
+<span class="text-[10px] text-slate-400">Oct 24, 2023</span>
+<span class="material-symbols-outlined text-primary text-lg" data-icon="analytics">analytics</span>
+</div>
+</div>
+</div>
+<!-- Video Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-transparent hover:border-outline-variant/30 hover:shadow-lg transition-all cursor-pointer">
+<div class="relative h-40">
+<img alt="Run 2" class="w-full h-full object-cover" data-alt="Close up of ski goggles reflecting a mountain landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJGKK4oEsP0bIzbgcySSoIBo-1hsQ4olL_s7Ld4tXYNCd6kjY3xeBbVIepG1hhIzXKbX1sBY7_v0UPt--gmCwjDR755y4RxJPrcsXs4hF5b7fWkrAldGiqCA41HiE7--ApwypIS17N7qCxT1GgAvbQzd8q0d1NOrkDDJO3W85_-Ma4GcKL2u1ob41j47eu-jccNudcpXZnEQcNNgi1iGyWtwPDRSY-oxsPZUiw4epKejF5J9ECo2nXFLf7A0i143xdZi-UleqGfuo"/>
+<span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-1 rounded font-mono">04:20</span>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-bold text-primary text-sm">Gate Interval Drills</h4>
+<p class="text-[10px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="location_on">location_on</span>
+                                    Hintertux, AUT
+                                </p>
+</div>
+</div>
+<div class="flex justify-between items-center mt-4">
+<span class="text-[10px] text-slate-400">Oct 21, 2023</span>
+<span class="material-symbols-outlined text-primary text-lg" data-icon="analytics">analytics</span>
+</div>
+</div>
+</div>
+<!-- Video Card 4 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-transparent hover:border-outline-variant/30 hover:shadow-lg transition-all cursor-pointer">
+<div class="relative h-40">
+<img alt="Run 1" class="w-full h-full object-cover" data-alt="Aerial view of a snowy slalom course" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmR36d8WWrc96V_yVElp4XzZ3wTzkhDdD6vSmylIN8kUS_grfLuNDAb9RS5cOXHkIcAwRV05Z77cOeLDTLunHHo8DEDpFQi7kRnRdI1ZWKqikK2KVk7_5wwhvFkygG6JmmV5QM0kpPGowdsWtXTa1BGRMdIfi-v82mTxNh2Cvu9wJi_bdTKt9EaBv0FCxOOm8yP8J5zbclyx7WR53dpAbmueruH1PHrYW9ypx4goxZBAK-Y-ioifdT0Sv83Tq2T_JJLARBTi8HzD8"/>
+<span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2 py-1 rounded font-mono">02:55</span>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="font-bold text-primary text-sm">Slalom Full Run B</h4>
+<p class="text-[10px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" data-icon="location_on">location_on</span>
+                                    Hintertux, AUT
+                                </p>
+</div>
+</div>
+<div class="flex justify-between items-center mt-4">
+<span class="text-[10px] text-slate-400">Oct 21, 2023</span>
+<span class="material-symbols-outlined text-primary text-lg" data-icon="analytics">analytics</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating Data Insight -->
+<div class="fixed bottom-10 right-10 bg-white/80 backdrop-blur-xl border border-slate-200 p-4 rounded-xl shadow-2xl max-w-xs z-40">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="insights" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<h4 class="text-xs font-bold text-primary uppercase tracking-wider">Weekly Progression</h4>
+</div>
+<p class="text-sm text-on-surface mb-3">Your edge angle consistency has improved by <span class="text-secondary font-bold">12.4%</span> since last Tuesday's session.</p>
+<div class="w-full h-1 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/4"></div>
+</div>
+</div>
+</main>
+</body></html>

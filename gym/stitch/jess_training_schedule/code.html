@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Training Schedule - The Precision Athlete</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#27609d",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "surface-dim": "#dadada",
+              "surface-container-highest": "#e2e2e2",
+              "on-tertiary-fixed": "#321300",
+              "primary": "#003461",
+              "secondary-fixed": "#7df4ff",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#001c38",
+              "tertiary-container": "#793701",
+              "tertiary-fixed": "#ffdbc8",
+              "secondary-container": "#7af1fc",
+              "on-primary-container": "#8abcff",
+              "tertiary-fixed-dim": "#ffb68b",
+              "on-background": "#1a1c1c",
+              "outline-variant": "#c2c6d1",
+              "inverse-primary": "#a3c9ff",
+              "tertiary": "#572500",
+              "primary-fixed": "#d3e4ff",
+              "on-tertiary-container": "#ffa46a",
+              "surface-bright": "#f9f9f9",
+              "secondary": "#006970",
+              "on-primary-fixed-variant": "#004882",
+              "background": "#f9f9f9",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#a3c9ff",
+              "on-surface-variant": "#424750",
+              "error": "#ba1a1a",
+              "surface-container": "#eeeeee",
+              "on-tertiary-fixed-variant": "#753400",
+              "on-secondary-fixed": "#002022",
+              "on-secondary-fixed-variant": "#004f54",
+              "inverse-on-surface": "#f0f1f1",
+              "inverse-surface": "#2f3131",
+              "surface-variant": "#e2e2e2",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#f3f3f4",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#5dd8e2",
+              "on-surface": "#1a1c1c",
+              "outline": "#727781",
+              "surface-container-high": "#e8e8e8",
+              "surface": "#f9f9f9",
+              "primary-container": "#004b87",
+              "on-secondary-container": "#006e75"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<nav class="w-full sticky top-0 z-50 bg-[#f9f9f9] dark:bg-slate-950 border-b border-slate-200/50 dark:border-slate-800/50 shadow-sm dark:shadow-none font-['Inter'] antialiased tracking-tight">
+<div class="flex items-center justify-between px-8 h-16 max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold tracking-tighter text-[#003461] dark:text-blue-200">The Precision Athlete</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#003461] transition-colors" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#003461] transition-colors" href="#">Performance</a>
+<a class="text-[#003461] dark:text-blue-400 font-semibold border-b-2 border-[#003461] pb-1" href="#">Training</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#003461] transition-colors" href="#">Recovery</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100/50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100/50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="Jess's profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9_AdyFd6l9xSP6MFxKBulHRSXedNcYWEVIB79oXlcULHbOeZNFm6kF1gMAduMc2r0mv_9_V9ab_A5S99Fh56fvucbZ7dUfj-iuo8eXghoAS6ncTZ-TL3a8ChXeznfG7Pdogjzex3tHQ220EMzMeVJLeJ2lxRjccTkaeRvXNrXbqbwUbpUJI63VBtg8fILaignzFjg8i9rhGzQaiGGAkxwVG6MkdH5Wi3MzbMF69b1HSUxJg2DZcH3v5RBCDwyMJeB5xuo7dEKmJQ"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Side Navigation Bar (Desktop) -->
+<aside class="h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col bg-white dark:bg-slate-900 shadow-[0px_4px_20px_rgba(26,28,28,0.06)] py-6 justify-between z-40">
+<div class="mt-16">
+<div class="px-6 mb-8 flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Athlete Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhvReyjsRFXzCnmUQbX7M4eooCyo-YbD3DSzYmOxaHJryvzINnYCQnQ0ZBwW-CvKivG2nHxAPjNaN2gNUOgITQvSnK2dLZrPF1Dx701WD_uQhT9OD9xQFdYUSya8ch1ZnJbj8HQZypj1G1oaLWNln_TYeM28TwsJ3Y3zUtJtXrivgBleM54GdJCfYboVTqHr3w6nwNjLhSe4kJ1xZJoCSLMWoV8P4p7OwwqyCcwE61Lxd51GhvlvbjsasFk0JUJ7xekBCfY7erxok"/>
+</div>
+<div>
+<div class="text-sm font-bold text-primary">Jess</div>
+<div class="text-[10px] uppercase tracking-wider text-on-surface-variant font-medium">Elite Skier</div>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 flex items-center space-x-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-transform hover:translate-x-1 cursor-pointer duration-150 font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 flex items-center space-x-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-transform hover:translate-x-1 cursor-pointer duration-150 font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">history</span>
+<span>History</span>
+</a>
+<a class="bg-[#003461] text-white rounded-md mx-2 px-4 py-3 flex items-center space-x-3 transition-transform hover:translate-x-1 cursor-pointer duration-150 font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span>Schedule</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 flex items-center space-x-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-transform hover:translate-x-1 cursor-pointer duration-150 font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">monitor_heart</span>
+<span>Biometrics</span>
+</a>
+</nav>
+<div class="px-4 mt-8">
+<button class="w-full py-3 bg-secondary text-white rounded-md font-semibold text-sm shadow-sm active:scale-95 transition-all">
+                    Log Session
+                </button>
+</div>
+</div>
+<div class="space-y-1">
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 flex items-center space-x-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">help</span>
+<span>Support</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 mx-2 px-4 py-3 flex items-center space-x-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:pl-64 min-h-screen">
+<div class="max-w-screen-2xl mx-auto p-8 md:p-12 space-y-10">
+<!-- Hero Header Section -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-[3.5rem] font-bold tracking-tighter text-primary leading-none mb-2">Training Schedule</h1>
+<p class="text-on-surface-variant font-medium text-lg">Peak Performance Prep • Week 42</p>
+</div>
+<div class="flex items-center space-x-4 bg-surface-container-low p-2 rounded-xl">
+<button class="px-6 py-2 bg-white text-primary font-bold rounded-lg shadow-sm">Calendar View</button>
+<button class="px-6 py-2 text-on-surface-variant font-medium">List View</button>
+</div>
+</header>
+<!-- Main Asymmetrical Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Calendar (Wide Column) -->
+<div class="xl:col-span-2 space-y-8">
+<section class="bg-surface-container-low p-1 rounded-2xl">
+<div class="bg-surface-container-lowest rounded-xl p-6">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-xl font-bold text-primary flex items-center">
+<span class="material-symbols-outlined mr-2">calendar_month</span> October 2024
+                                </h2>
+<div class="flex space-x-2">
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-2 hover:bg-surface-container rounded-lg transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<!-- Calendar Grid -->
+<div class="grid grid-cols-7 gap-px bg-outline-variant/20 border border-outline-variant/20 rounded-lg overflow-hidden">
+<!-- Day Headers -->
+<div class="bg-surface-container-low p-3 text-center text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant">Mon</div>
+<div class="bg-surface-container-low p-3 text-center text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant">Tue</div>
+<div class="bg-surface-container-low p-3 text-center text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant">Wed</div>
+<div class="bg-surface-container-low p-3 text-center text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant">Thu</div>
+<div class="bg-surface-container-low p-3 text-center text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant">Fri</div>
+<div class="bg-surface-container-low p-3 text-center text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant">Sat</div>
+<div class="bg-surface-container-low p-3 text-center text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant">Sun</div>
+<!-- Placeholder days (simplified for layout) -->
+<div class="bg-white min-h-[120px] p-3 text-on-surface-variant opacity-40">28</div>
+<div class="bg-white min-h-[120px] p-3 text-on-surface-variant opacity-40">29</div>
+<div class="bg-white min-h-[120px] p-3 text-on-surface-variant opacity-40">30</div>
+<div class="bg-white min-h-[120px] p-3 text-on-surface-variant opacity-40">31</div>
+<!-- Current Month Starts -->
+<div class="bg-white min-h-[120px] p-3 font-semibold group cursor-pointer hover:bg-surface-bright transition-colors">
+<span class="block mb-2">1</span>
+<div class="p-1.5 bg-secondary/10 border-l-2 border-secondary text-[10px] font-bold text-secondary mb-1">On-Snow Drills</div>
+</div>
+<div class="bg-white min-h-[120px] p-3 font-semibold group cursor-pointer hover:bg-surface-bright transition-colors">
+<span class="block mb-2">2</span>
+<div class="p-1.5 bg-primary/10 border-l-2 border-primary text-[10px] font-bold text-primary mb-1">Strength &amp; Cond.</div>
+</div>
+<div class="bg-white min-h-[120px] p-3 font-semibold group cursor-pointer hover:bg-surface-bright transition-colors">
+<span class="block mb-2">3</span>
+<div class="p-1.5 bg-amber-100 border-l-2 border-amber-500 text-[10px] font-bold text-amber-800 mb-1">Video Analysis</div>
+</div>
+<!-- Current Day Highlight -->
+<div class="bg-primary/5 min-h-[120px] p-3 font-bold border-2 border-primary ring-2 ring-primary/20 relative">
+<span class="block mb-2 text-primary">4</span>
+<div class="p-1.5 bg-secondary text-[10px] font-bold text-white mb-1 rounded-sm shadow-sm">Giant Slalom Drills</div>
+<div class="absolute bottom-2 right-2 flex items-center text-[10px] text-primary">
+<span class="material-symbols-outlined text-sm mr-1">location_on</span> Sölden
+                                    </div>
+</div>
+<div class="bg-white min-h-[120px] p-3 font-semibold">5</div>
+<div class="bg-white min-h-[120px] p-3 font-semibold">
+<span class="block mb-2">6</span>
+<div class="p-1.5 bg-primary/10 border-l-2 border-primary text-[10px] font-bold text-primary mb-1">Active Recovery</div>
+</div>
+<div class="bg-white min-h-[120px] p-3 font-semibold">7</div>
+<!-- Continued calendar cells... -->
+<div class="bg-white min-h-[120px] p-3 font-semibold opacity-40" colspan="7">...</div>
+</div>
+</div>
+</section>
+<!-- Session Details Section (Editorial Layout) -->
+<section class="bg-primary-container bg-gradient-to-br from-primary to-primary-container p-8 rounded-2xl text-white relative overflow-hidden">
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="max-w-md">
+<div class="inline-flex items-center px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold tracking-widest uppercase mb-4">Next Session • Upcoming</div>
+<h3 class="text-3xl font-extrabold tracking-tight mb-2">Giant Slalom Intensive</h3>
+<div class="flex items-center space-x-6 text-on-primary-container">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-sm mr-2">schedule</span>
+<span class="text-sm font-medium">08:00 AM - 11:30 AM</span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-sm mr-2">location_on</span>
+<span class="text-sm font-medium">Rettenbach Glacier, Sölden</span>
+</div>
+</div>
+</div>
+<div class="flex -space-x-3">
+<img class="w-12 h-12 rounded-full border-2 border-primary object-cover shadow-lg" data-alt="Coach profile image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRRTG-Ng3vLEsE78FwicN6p-0z4kmVGXdepEH4-jFBiEo0i9dhjXqh00_vkCxOgWyM6hrJuy_J_f0ZhejOu0QUhtIqaDnZHJp7MRNeYe1bxFg0CDMKySVpd6xUM_BQt0yQsXOPktNgnLxN6V5M1g5m8KnrPJJIiYAmFmOXzNDRj3Vi5oMp4mTM8bWBi14xkNASEylzCpA0PFBo4VhkHRS-CSJzTIGABRi7cqUOXvFbYCNSGf-0p0SLyE-GtRXxDT2-C8n8c7tNFpM"/>
+<img class="w-12 h-12 rounded-full border-2 border-primary object-cover shadow-lg" data-alt="Technical analyst profile image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqtqhJjC65ru-jVihS8OHPfuKQoEqmJfjwmcoOn-cYsri1_BrS_GK7EBfHgSZAlXjqVEzZ7IiZfrYDlO_HZaaBTW63G8xdfSXVmI-bREMiITKUx1d0Alq90vczwbDhFGppJ7HUOqSGtKbqQmMj05Yg_UDvEcg7jyQL3U1qH4BOdztsF126oIz9xycTxV2JbwXjyHsf6txVp4qWaeifTh73eohc3zG3RFM_c7vgTJ2tuciIVgT9b2cUlv2TvUPW44wqWcQZmNr3Y40"/>
+<div class="w-12 h-12 rounded-full border-2 border-primary bg-secondary flex items-center justify-center text-xs font-bold shadow-lg">+2</div>
+</div>
+</div>
+<!-- Abstract Pattern -->
+<div class="absolute top-0 right-0 w-64 h-full bg-white/5 skew-x-[-20deg] translate-x-32"></div>
+</section>
+</div>
+<!-- Side Panel (Narrow Column) -->
+<div class="space-y-8">
+<!-- Weekly Goals Checklist -->
+<section class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_4px_20px_rgba(26,28,28,0.06)] border border-outline-variant/10">
+<h4 class="text-sm font-extrabold uppercase tracking-[0.2em] text-on-surface-variant mb-8 flex items-center">
+                             Weekly Focus Goals
+                        </h4>
+<ul class="space-y-6">
+<li class="flex items-start group">
+<div class="mt-0.5 w-6 h-6 rounded-full border-2 border-secondary flex-shrink-0 flex items-center justify-center bg-secondary">
+<span class="material-symbols-outlined text-white text-lg" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="ml-4">
+<div class="text-sm font-bold text-primary line-through opacity-50">Ankle Mobility: 15° Flexion</div>
+<div class="text-[10px] text-on-surface-variant mt-0.5">Physical Therapy • Completed</div>
+</div>
+</li>
+<li class="flex items-start group">
+<div class="mt-0.5 w-6 h-6 rounded-full border-2 border-secondary flex-shrink-0 flex items-center justify-center">
+<!-- Empty circle for pending -->
+</div>
+<div class="ml-4">
+<div class="text-sm font-bold text-primary">Weight Transfer Timing &lt; 0.2s</div>
+<div class="text-[10px] text-on-surface-variant mt-0.5">Technique Goal • Primary focus for Sölden</div>
+</div>
+</li>
+<li class="flex items-start group">
+<div class="mt-0.5 w-6 h-6 rounded-full border-2 border-secondary flex-shrink-0 flex items-center justify-center"></div>
+<div class="ml-4">
+<div class="text-sm font-bold text-primary">Consistent Core Engagement</div>
+<div class="text-[10px] text-on-surface-variant mt-0.5">Stability • Integrated across all sessions</div>
+</div>
+</li>
+<li class="flex items-start group">
+<div class="mt-0.5 w-6 h-6 rounded-full border-2 border-secondary flex-shrink-0 flex items-center justify-center"></div>
+<div class="ml-4">
+<div class="text-sm font-bold text-primary">Video Review: Turn Entry Phase</div>
+<div class="text-[10px] text-on-surface-variant mt-0.5">Analysis • Scheduled for Thursday</div>
+</div>
+</li>
+</ul>
+</section>
+<!-- Location Visual Card -->
+<section class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0px_4px_20px_rgba(26,28,28,0.06)] border border-outline-variant/10">
+<div class="h-40 relative">
+<img class="w-full h-full object-cover" data-alt="Scenic mountain range of Sölden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDypIRzi_lZKA8Nyep3WyyD9y1ogBtBd6IsmNU1tQfqJJ468gv9NhBQpwzjpoU4t5BRSpnqHytzQAS_Nzlt9D9iwL4vGmS6eeRrNvokLOLLYPUz3qP3WoWxq9zdxUnINgwHgpKaZEPG9lo0vqZxQxB6dlQX7o8T3yT_NHmA3IxIT0C5kpR5flVt7Q6mxW_ov9Gx6pJLuhriazvQaHlXRv097kdCjXX9SBq9K00tLJ3R_1iLyI5GSdhEPzQxreeqQjOIoMUGWRR4R-U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<div class="text-[10px] uppercase font-bold tracking-widest opacity-80">Current Base</div>
+<div class="text-lg font-bold">Sölden, Austria</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary">ac_unit</span>
+<span class="text-sm font-bold text-primary">-4°C / -10°C</span>
+</div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase">Perfect Snow Quality</div>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="w-[85%] h-full bg-secondary"></div>
+</div>
+<div class="mt-2 text-[10px] text-on-surface-variant flex justify-between">
+<span>Training Conditions</span>
+<span class="font-bold">85% Optimal</span>
+</div>
+</div>
+</section>
+<!-- Quote/Motivation Widget -->
+<section class="p-8 bg-surface-container rounded-2xl border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary/30 text-4xl mb-2">format_quote</span>
+<p class="text-primary italic font-medium leading-relaxed">"Precision is not about being perfect, it's about being consistent where it matters most."</p>
+<div class="mt-4 text-[10px] font-extrabold uppercase tracking-widest text-primary/60">— Head Coach Mika</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Navigation (Visible only on small screens) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-outline-variant/20 px-6 py-3 flex justify-between items-center z-50">
+<button class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="text-[10px] mt-1 font-bold">Schedule</span>
+</button>
+<div class="relative -mt-10">
+<button class="w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<button class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] mt-1">Data</span>
+</button>
+<button class="flex flex-col items-center text-on-surface-variant">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] mt-1">Profile</span>
+</button>
+</nav>
+</body></html>
