@@ -183,10 +183,28 @@ class DatasetRow:
         attack:    str = "none",
         gen_ms:    int = 0,
     ) -> Optional["DatasetRow"]:
-        """Create an AI-generated (label=1) row. Returns None if ai_text fails bounds."""
+        """
+        Create an AI-generated (label=1) row.
+        Returns None if ai_text fails EITHER:
+          - global word bounds [WORD_MIN, WORD_MAX]
+          - relative bound: must be within ±15% of the human document's word count
+        Both checks must pass for a row to be written to the dataset.
+        """
+        # Step 1 — global bounds check (truncates if over WORD_MAX)
         clean = enforce_bounds(ai_text)
         if clean is None:
-            return None
+            return None  # below WORD_MIN — discard
+
+        ai_wc     = word_count(clean)
+        human_wc  = doc.word_count
+
+        # Step 2 — relative bound: AI output must be within ±15% of human length
+        lower = human_wc * 0.85
+        upper = human_wc * 1.15
+        within_relative = lower <= ai_wc <= upper
+
+        if not within_relative:
+            return None  # too short or too long relative to human — discard
 
         row_id = hashlib.sha256(
             f"{doc.id}_{model}_{decoding['name']}_{attack}".encode()
@@ -200,10 +218,10 @@ class DatasetRow:
             human_id           = doc.id,
             title              = doc.title,
             human_text         = doc.human_text,
-            human_word_count   = doc.word_count,
+            human_word_count   = human_wc,
             label              = 1,
             ai_text            = clean,
-            ai_word_count      = word_count(clean),
+            ai_word_count      = ai_wc,
             model              = model,
             provider           = provider,
             decoding_strategy  = decoding["name"],
@@ -212,6 +230,8 @@ class DatasetRow:
             prompt_used        = prompt,
             generation_ms      = gen_ms,
             attack             = attack,
+            within_word_bounds = True,   # guaranteed true — we returned None above if not
+            passed_quality     = True,
         )
 
 

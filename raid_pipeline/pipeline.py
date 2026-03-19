@@ -195,6 +195,27 @@ def run_pipeline(
                         )
                         continue
 
+                    # ── Word count validation BEFORE applying attacks ──────────
+                    # Reject if AI output is outside ±15% of human word count.
+                    # Done here so we don't waste time on 12 attack variants
+                    # of text that will be discarded anyway.
+                    from schema import word_count as _wc, enforce_bounds as _eb
+                    raw_clean = _eb(ai_text)
+                    if raw_clean is None:
+                        stats.ai_out_of_bounds += 1
+                        continue
+                    ai_wc    = _wc(raw_clean)
+                    human_wc = doc.word_count
+                    if not (human_wc * 0.85 <= ai_wc <= human_wc * 1.15):
+                        stats.ai_out_of_bounds += 1
+                        print(
+                            f"[pipeline] BOUNDS {model_cfg['name']} "
+                            f"{decoding['name']} on {doc.id[:8]} "
+                            f"(human={human_wc} ai={ai_wc} "
+                            f"allowed={int(human_wc*0.85)}-{int(human_wc*1.15)})"
+                        )
+                        continue
+
                     # ── 3. Apply all adversarial attacks ──────────────────────
                     for attack_name in active_attacks:
 
