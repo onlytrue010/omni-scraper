@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#fed488",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed-variant": "#4f4537",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#ffdea5",
+              "on-surface": "#1c1c19",
+              "outline-variant": "#d3c3c0",
+              "on-secondary-fixed": "#261900",
+              "surface-dim": "#dcdad5",
+              "inverse-primary": "#e0c0af",
+              "surface-container-low": "#f6f3ee",
+              "on-background": "#1c1c19",
+              "primary-container": "#3c281d",
+              "inverse-on-surface": "#f3f0eb",
+              "on-secondary-fixed-variant": "#5d4201",
+              "on-secondary-container": "#785a1a",
+              "tertiary-fixed-dim": "#d3c4b2",
+              "on-error": "#ffffff",
+              "on-primary-container": "#ab8e7e",
+              "background": "#fcf9f4",
+              "tertiary-container": "#342c1f",
+              "primary-fixed": "#fedcca",
+              "tertiary-fixed": "#efe0cd",
+              "secondary-fixed-dim": "#e9c176",
+              "on-primary-fixed-variant": "#594235",
+              "secondary": "#775a19",
+              "surface-bright": "#fcf9f4",
+              "surface-tint": "#72594b",
+              "surface-container-highest": "#e5e2dd",
+              "on-primary-fixed": "#29170d",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#9f9382",
+              "inverse-surface": "#31302d",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#221a0f",
+              "error-container": "#ffdad6",
+              "primary": "#25140a",
+              "tertiary": "#1f170c",
+              "on-surface-variant": "#504442",
+              "surface-variant": "#e5e2dd",
+              "surface": "#fcf9f4",
+              "primary-fixed-dim": "#e0c0af",
+              "outline": "#827472",
+              "surface-container-high": "#ebe8e3",
+              "surface-container": "#f0ede8"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-transition-bg {
+        background-image: linear-gradient(to bottom, #fcf9f4, #f6f3ee);
+      }
+      .tonal-contrast {
+        background-color: #25140a;
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background selection:bg-secondary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 backdrop-blur-md font-['Noto_Serif'] antialiased tracking-tight">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#25140a]">Estate &amp; Bean</div>
+<nav class="hidden md:flex items-center space-x-12">
+<a class="text-[#504442] hover:text-[#25140a] transition-colors" href="#">Shop</a>
+<a class="text-[#504442] hover:text-[#25140a] transition-colors" href="#">Origin</a>
+<a class="text-[#504442] hover:text-[#25140a] transition-colors" href="#">Brewing</a>
+<a class="text-[#504442] hover:text-[#25140a] transition-colors" href="#">Journal</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="text-[#25140a] hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="text-[#25140a] hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="min-h-screen flex flex-col justify-center pt-24 pb-16 px-6 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
+<!-- Visual Content -->
+<div class="lg:col-span-7 order-2 lg:order-1">
+<div class="relative group">
+<div class="aspect-[4/5] overflow-hidden rounded-md bg-surface-container shadow-2xl">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Single high-contrast coffee bean resting on a textured stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP85GzIU96adw90r0TCI_DCPzNsUBuF8RKZ1DhuojbPaxrSYlpHI9REGszPWZlvDEF7sWgVcl4oAbW-no6j8HsFmm7hgtDJHqbgw61DBCJuSSg6jnJhFwxpx4xD8_ya6tqeyypLhHUXhSSC0u-9JjWpKgRZYd2Y_cMscmNivC32tVK82V8xrYcoV0upu-gZgu4qDlNqXwi3YOvYq5zLxaVG8Dg0F9WuivVD56QYfchoGp38vF55PUMXl65nmoUCkwm6UOhVKAaAlo"/>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-secondary-container/20 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+<!-- Error Message & Navigation -->
+<div class="lg:col-span-5 order-1 lg:order-2 space-y-12">
+<div class="space-y-4">
+<span class="font-label text-sm uppercase tracking-[0.3em] text-secondary">Error 404</span>
+<h1 class="font-headline text-5xl lg:text-7xl font-bold tracking-tighter text-primary leading-tight">
+                        The ritual was interrupted.
+                    </h1>
+<p class="text-on-surface-variant text-lg lg:text-xl font-light leading-relaxed max-w-md">
+                        Like a bean misplaced during a slow-pour, this page has wandered from the path. Let us guide you back to the source.
+                    </p>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-1 gap-4">
+<a class="group flex items-center justify-between p-6 bg-surface-container-low hover:bg-surface-container-highest rounded-md transition-all duration-300 border border-transparent hover:border-outline-variant/30" href="#">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-secondary" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-body font-semibold text-primary">Return to Shop</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="group flex items-center justify-between p-6 bg-surface-container-low hover:bg-surface-container-highest rounded-md transition-all duration-300 border border-transparent hover:border-outline-variant/30" href="#">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-secondary" data-icon="menu_book">menu_book</span>
+<span class="font-body font-semibold text-primary">Explore the Journal</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="group flex items-center justify-between p-6 bg-surface-container-low hover:bg-surface-container-highest rounded-md transition-all duration-300 border border-transparent hover:border-outline-variant/30" href="#">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-secondary" data-icon="public">public</span>
+<span class="font-body font-semibold text-primary">Discover our Origins</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<div class="pt-8">
+<a class="inline-flex items-center text-primary font-bold group" href="/">
+<span class="border-b-2 border-secondary pb-1 group-hover:border-primary transition-colors">Go back to Home</span>
+<span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 mt-auto bg-[#25140a] text-[#fcf9f4]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-end w-full max-w-screen-2xl mx-auto">
+<div class="space-y-4">
+<div class="font-['Noto_Serif'] text-lg text-[#fed488]">Estate &amp; Bean</div>
+<p class="font-['Manrope'] text-sm tracking-wide text-[#ebe8e3]/60 max-w-xs">
+                    Curating the world's most exceptional coffee experiences through origin-driven roasting.
+                </p>
+</div>
+<nav class="flex flex-wrap gap-8 font-['Manrope'] text-sm tracking-wide">
+<a class="text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Privacy</a>
+<a class="text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Terms</a>
+<a class="text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Wholesale</a>
+<a class="text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Contact</a>
+</nav>
+<div class="text-right md:text-right font-['Manrope'] text-sm tracking-wide text-[#ebe8e3]/60">
+                © 2024 Estate &amp; Bean. Curating the Ritual.
+            </div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-6 pb-safe md:hidden bg-[#fcf9f4] shadow-[0_-10px_30px_rgba(37,20,10,0.04)] z-50">
+<a class="flex flex-col items-center justify-center text-[#504442] opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="local_coffe">local_cafe</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#504442] opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest mt-1">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#504442] opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#504442] opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

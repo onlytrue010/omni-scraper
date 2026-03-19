@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#342c1f",
+                        "on-background": "#1c1c19",
+                        "background": "#fcf9f4",
+                        "surface-variant": "#e5e2dd",
+                        "primary-fixed-dim": "#e0c0af",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "surface": "#fcf9f4",
+                        "secondary-fixed": "#ffdea5",
+                        "primary": "#25140a",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#261900",
+                        "on-primary-fixed-variant": "#594235",
+                        "outline": "#827472",
+                        "surface-container-high": "#ebe8e3",
+                        "primary-container": "#3c281d",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#1f170c",
+                        "on-primary-fixed": "#29170d",
+                        "secondary-container": "#fed488",
+                        "surface-container": "#f0ede8",
+                        "surface-tint": "#72594b",
+                        "surface-container-low": "#f6f3ee",
+                        "on-tertiary-fixed-variant": "#4f4537",
+                        "on-surface-variant": "#504442",
+                        "inverse-surface": "#31302d",
+                        "on-tertiary-container": "#9f9382",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#e0c0af",
+                        "surface-dim": "#dcdad5",
+                        "inverse-on-surface": "#f3f0eb",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fcf9f4",
+                        "secondary": "#775a19",
+                        "on-primary-container": "#ab8e7e",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-tertiary-fixed": "#221a0f",
+                        "on-secondary-container": "#785a1a",
+                        "primary-fixed": "#fedcca",
+                        "tertiary-fixed-dim": "#d3c4b2",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d3c3c0",
+                        "on-surface": "#1c1c19",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#efe0cd",
+                        "secondary-fixed-dim": "#e9c176"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .serif-font { font-family: 'Noto Serif', serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="font-serif text-2xl font-bold text-stone-900 dark:text-stone-50">Estate &amp; Bean</div>
+<div class="hidden md:flex space-x-8 font-serif text-lg tracking-tight items-center">
+<a class="text-stone-600 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="#">Shop</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="#">Origins</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="#">Process</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="#">Journal</a>
+</div>
+<div class="flex items-center space-x-6 text-stone-900 dark:text-stone-100">
+<button class="hover:text-amber-700 transition-colors duration-300"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span></button>
+<button class="hover:text-amber-700 transition-colors duration-300"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-screen-xl mx-auto">
+<!-- Hero Confirmation Section -->
+<section class="mb-20 text-center">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container mb-6">
+<span class="material-symbols-outlined scale-125" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold text-primary tracking-tight leading-tight mb-6">Your Ritual is Set</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed">
+                Thank you for choosing Estate &amp; Bean. Your selection is now entering our artisanal roasting phase. We've sent a detailed confirmation to your email.
+            </p>
+<div class="mt-8 flex flex-col items-center gap-2">
+<span class="text-sm uppercase tracking-widest text-secondary font-semibold">Order Number</span>
+<span class="text-2xl font-serif text-primary">#EB-8829410</span>
+</div>
+</section>
+<!-- Main Content Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Delivery & Details (Left Column) -->
+<div class="md:col-span-7 space-y-8">
+<!-- Delivery Estimation Card -->
+<div class="bg-surface-container-low p-8 rounded-lg relative overflow-hidden">
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div>
+<h3 class="text-secondary font-semibold tracking-wide uppercase text-xs mb-2">Estimated Arrival</h3>
+<p class="text-3xl font-serif text-primary">October 24 — October 26</p>
+<p class="text-on-surface-variant text-sm mt-1">Standard Boutique Shipping</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary" data-icon="local_shipping">local_shipping</span>
+<div class="text-sm">
+<p class="font-bold text-primary">Shipping to London</p>
+<p class="text-on-surface-variant">22 High Street, W1U</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Summary List -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant/10 rounded-lg">
+<h2 class="text-2xl font-serif text-primary mb-8 border-b border-surface-variant pb-4">Order Summary</h2>
+<div class="space-y-8">
+<!-- Item 1 -->
+<div class="flex gap-6 items-center">
+<div class="w-24 h-24 bg-surface-container-high rounded-md flex-shrink-0 overflow-hidden">
+<img alt="Coffee beans in a bag" class="w-full h-full object-cover" data-alt="High quality coffee beans in artisanal packaging" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMG5_WoN07m4AaBzu_e3rOE-sTK9bb--ETAQmD7nG3HIgBdobrrObC34K6hGf0R5LIJ9l_eYOSMha3IhWpBXuw3MCOBVDW0_pQpJ2ZqtN4u0vhncybkw2QxKTt_7nCwr4NZfhCSgFYm_rCljP2Gc5MnESKkfkQX0-Kq-Jt9EvVKPP2Ac79Is2VRUtjtKfYUi32lY2lw_DKNCPBoA6VVgt-H4rpCH1Xkkh5KTAnMyTRfri6hWLbojG3d0n0r0Dxt8B9hnqez0qKty4"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-primary text-lg">Ethiopian Yirgacheffe</h4>
+<div class="flex gap-2 mt-1">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold px-2 py-0.5 rounded-full">Single Origin</span>
+<span class="text-on-surface-variant text-xs font-medium">Whole Bean · 250g</span>
+</div>
+</div>
+<span class="font-serif text-primary font-bold">£24.00</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-6 items-center">
+<div class="w-24 h-24 bg-surface-container-high rounded-md flex-shrink-0 overflow-hidden">
+<img alt="Coffee equipment" class="w-full h-full object-cover" data-alt="Minimalist brass coffee scoop tool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA20osn6dPUNHHCCg2Hdip6NE9JbT-UnyypVAS1jIOxErlMjnPo4NZU193WqIKYO_jBKT5UUAcorkCt2VkdbjmHJathv9kLf8BQwlykcwlVcCo6DLB_DuLATjeV4x668jBXbFe1Na1TZZKdgaZrHeYUPObXT3NjYmK40uQkRwsHY-3ekNezrNuaVMh49JZi3cr6wdm3lhCk3wNt8g7jf7N_RVDIEiGiwqozAyV5Wq3ukQYfsvCp0rKxwiMl-4mGr5hfDcuZ-hyRHfE"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-primary text-lg">Brass Measurement Scoop</h4>
+<div class="flex gap-2 mt-1">
+<span class="text-on-surface-variant text-xs font-medium">Limited Edition Accessory</span>
+</div>
+</div>
+<span class="font-serif text-primary font-bold">£18.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Totals -->
+<div class="mt-12 pt-8 border-t border-surface-variant space-y-3">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal</span>
+<span>£42.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Shipping</span>
+<span class="text-secondary font-medium uppercase text-xs tracking-tighter">Complimentary</span>
+</div>
+<div class="flex justify-between text-primary font-bold text-xl pt-4">
+<span class="font-serif">Total Charged</span>
+<span class="font-serif">£42.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Dashboard Action & Context (Right Column) -->
+<div class="md:col-span-5 space-y-8">
+<!-- Action Card -->
+<div class="bg-primary text-on-primary p-10 rounded-lg text-center shadow-xl shadow-primary/10">
+<h3 class="text-2xl font-serif mb-4">Track Your Roast</h3>
+<p class="text-on-primary-container text-sm leading-relaxed mb-8">
+                        Access your dashboard to view roasting updates, track shipping in real-time, and download your brewing guide.
+                    </p>
+<a class="block w-full py-4 px-6 bg-secondary text-on-secondary font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-secondary-fixed-dim transition-all duration-300" href="#">
+                        Visit Your Dashboard
+                    </a>
+<button class="mt-4 text-xs text-on-primary-container hover:text-white transition-colors underline underline-offset-4">
+                        Print Receipt
+                    </button>
+</div>
+<!-- Secondary Info Widget -->
+<div class="bg-surface-container p-8 rounded-lg">
+<h4 class="font-bold text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="auto_awesome">auto_awesome</span>
+                        While You Wait
+                    </h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        Explore our "Journal" to learn the specific chemistry behind your Ethiopian beans and how to achieve the perfect floral profile.
+                    </p>
+<a class="inline-flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest hover:translate-x-1 transition-transform" href="#">
+                        Read the Journal
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Support -->
+<div class="flex items-center gap-4 px-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="headset_mic">headset_mic</span>
+<p class="text-xs text-on-surface-variant">Need assistance with your order? Our concierge is available at <a class="text-primary font-bold underline" href="#">support@estateandbean.com</a></p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-900 dark:bg-black w-full pt-20 pb-10 mt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-screen-2xl mx-auto text-stone-100 font-serif">
+<div class="md:col-span-1">
+<div class="text-3xl font-bold text-stone-100 mb-6">Estate &amp; Bean</div>
+<p class="text-stone-400 text-sm tracking-wide font-body">Crafting intentional rituals for the discerning palate.</p>
+</div>
+<div>
+<h4 class="text-amber-400 mb-6 font-bold uppercase text-xs tracking-widest">Experience</h4>
+<ul class="space-y-4 text-sm font-body">
+<li><a class="text-stone-400 hover:text-stone-100 transition-all" href="#">Sustainability</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 transition-all" href="#">Wholesale</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 transition-all" href="#">Shipping</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 transition-all" href="#">Terms</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-amber-400 mb-6 font-bold uppercase text-xs tracking-widest">Connect</h4>
+<ul class="space-y-4 text-sm font-body">
+<li><a class="text-stone-400 hover:text-stone-100 transition-all" href="#">Instagram</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 transition-all" href="#">The Journal</a></li>
+<li><a class="text-stone-400 hover:text-stone-100 transition-all" href="#">Direct Trade</a></li>
+</ul>
+</div>
+<div class="bg-stone-800/50 p-6 rounded-lg font-body">
+<h4 class="text-white mb-4 text-sm font-bold">Join the Circle</h4>
+<p class="text-stone-400 text-xs mb-4">Receive invitations to private cupping sessions and limited releases.</p>
+<div class="flex">
+<input class="bg-stone-900 border-none rounded-l text-xs w-full focus:ring-0" placeholder="Email Address" type="text"/>
+<button class="bg-amber-800 px-4 py-2 rounded-r text-xs font-bold uppercase tracking-tighter">Join</button>
+</div>
+</div>
+</div>
+<div class="px-12 max-w-screen-2xl mx-auto mt-20 pt-10 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-stone-500 text-xs tracking-wide">© 2024 Estate &amp; Bean. Crafted with Intent.</p>
+<div class="flex gap-8 text-stone-500 text-xs tracking-widest">
+<a class="hover:text-amber-400 transition-colors" href="#">PRIVACY</a>
+<a class="hover:text-amber-400 transition-colors" href="#">COOKIES</a>
+</div>
+</div>
+</footer>
+</body></html>

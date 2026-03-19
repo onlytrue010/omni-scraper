@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Results | Estate &amp; Bean</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-container": "#fed488",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4f4537",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#ffdea5",
+                        "on-surface": "#1c1c19",
+                        "outline-variant": "#d3c3c0",
+                        "on-secondary-fixed": "#261900",
+                        "surface-dim": "#dcdad5",
+                        "inverse-primary": "#e0c0af",
+                        "surface-container-low": "#f6f3ee",
+                        "on-background": "#1c1c19",
+                        "primary-container": "#3c281d",
+                        "inverse-on-surface": "#f3f0eb",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-secondary-container": "#785a1a",
+                        "tertiary-fixed-dim": "#d3c4b2",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#ab8e7e",
+                        "background": "#fcf9f4",
+                        "tertiary-container": "#342c1f",
+                        "primary-fixed": "#fedcca",
+                        "tertiary-fixed": "#efe0cd",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-primary-fixed-variant": "#594235",
+                        "secondary": "#775a19",
+                        "surface-bright": "#fcf9f4",
+                        "surface-tint": "#72594b",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-primary-fixed": "#29170d",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#9f9382",
+                        "inverse-surface": "#31302d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#221a0f",
+                        "error-container": "#ffdad6",
+                        "primary": "#25140a",
+                        "tertiary": "#1f170c",
+                        "on-surface-variant": "#504442",
+                        "surface-variant": "#e5e2dd",
+                        "surface": "#fcf9f4",
+                        "primary-fixed-dim": "#e0c0af",
+                        "outline": "#827472",
+                        "surface-container-high": "#ebe8e3",
+                        "surface-container": "#f0ede8"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-transition-bg {
+            background: linear-gradient(180deg, rgba(252,249,244,1) 0%, rgba(252,249,244,0.8) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-secondary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-[#25140a]/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#25140a] dark:text-[#fcf9f4] font-headline">
+                Estate &amp; Bean
+            </div>
+<div class="hidden md:flex items-center space-x-10 font-['Noto_Serif'] antialiased tracking-tight">
+<a class="text-[#504442] dark:text-[#ebe8e3] hover:text-[#25140a] dark:hover:text-[#ffffff] transition-colors" href="#">Shop</a>
+<a class="text-[#504442] dark:text-[#ebe8e3] hover:text-[#25140a] dark:hover:text-[#ffffff] transition-colors" href="#">Origin</a>
+<a class="text-[#504442] dark:text-[#ebe8e3] hover:text-[#25140a] dark:hover:text-[#ffffff] transition-colors" href="#">Brewing</a>
+<a class="text-[#504442] dark:text-[#ebe8e3] hover:text-[#25140a] dark:hover:text-[#ffffff] transition-colors" href="#">Journal</a>
+</div>
+<div class="flex items-center space-x-6 text-[#25140a] dark:text-[#fcf9f4]">
+<button class="hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-32 pb-24 px-8 max-w-screen-2xl mx-auto min-h-screen">
+<!-- Search Header Section -->
+<header class="mb-16 max-w-3xl">
+<div class="relative group">
+<input class="w-full bg-surface-container-high border-none rounded-md py-6 px-8 text-2xl font-headline tracking-tight focus:ring-secondary/20 focus:bg-surface-container-highest transition-all duration-300 placeholder-on-surface-variant/50" placeholder="Search for origins, notes, or journals..." type="text" value="Ethiopian"/>
+<div class="absolute right-6 top-1/2 -translate-y-1/2 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="search">search</span>
+</div>
+</div>
+<div class="mt-6 flex items-center gap-4 text-sm font-label uppercase tracking-widest text-on-surface-variant">
+<span>12 Results Found</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-secondary font-bold">Refined for Quality</span>
+</div>
+</header>
+<!-- Asymmetric Results Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Featured Result (Large Card) -->
+<div class="md:col-span-7 group">
+<div class="relative overflow-hidden rounded-md bg-surface-container-low aspect-[4/5] md:aspect-video mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of Ethiopian coffee cherries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtnc5ITAfChO9Uy_DurVGjyaKAiITQT2zH22IVKxpSO7IgqrbROUA2GwOGJOgCWXEEvK61Qnu2jSZZ--jrRO-RNDdcxlXycl7Cjdm6eauTSM4jUu9Wn0DUoJCRP2SGvg5_O-0W4t0rW_y94dI-5zg56vHJlslqZKjvO9FqU_y1VYFoXip9YbJocHyu4H9hSuKuMLnIVdTNgm0g-7u0NFWW35LfhH6ZoVRq0y2L5AGUlNprdPaoglRQHhiqhym4vDywxA6smq22p5k"/>
+<div class="absolute top-6 left-6 flex flex-col gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-tighter">98% Match</span>
+<span class="bg-primary/90 text-on-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-tighter backdrop-blur-sm">Limited Release</span>
+</div>
+</div>
+<div class="max-w-xl">
+<div class="flex gap-2 mb-3">
+<span class="text-secondary text-xs font-bold uppercase tracking-[0.2em]">Single Origin</span>
+</div>
+<h2 class="text-4xl font-headline font-bold mb-4 tracking-tight leading-tight">Ethiopia Yirgacheffe: Aricha Station</h2>
+<p class="text-on-surface-variant font-body leading-relaxed mb-6">A complex profile featuring notes of jasmine, lemon zest, and a tea-like finish. This sun-dried natural process represents the pinnacle of the Aricha Highlands.</p>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary px-8 py-4 text-sm font-bold uppercase tracking-widest rounded-sm hover:bg-primary-container transition-all hover:shadow-xl active:scale-95">Explore Profile</button>
+<span class="text-secondary font-headline italic">$32.00 / 250g</span>
+</div>
+</div>
+</div>
+<!-- Side Results (Vertical Stack) -->
+<div class="md:col-span-5 flex flex-col gap-12">
+<!-- Product Card -->
+<div class="group flex gap-6 items-start">
+<div class="w-1/3 aspect-square overflow-hidden rounded-md bg-surface-container-high shrink-0">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Lightly roasted coffee beans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVy08C-pqIAapZo5xiZpiDs2ttT4nfWIxj9YXlXW3C5FGqfKnsjrfPGpz0Tnv7kpWpTC2M1s7u3Kr7Fj5SIPpQSREbvUUZBtEr-b7tPIlRybKh5TQjZ12Zl4Tu93RkHzlye2v2X9VpUoqD_vfkithnqJozTE81h6pWoHZHcCg6f-Jvo3EMzX4MQvZ7_L5axjEF--TFXAUWB9FKNw-aAAI2Uel3W9PZDqKt3KAUDHjD-aBblh8tq7fhnDSaWvni3AMGohI2WB-iWBk"/>
+</div>
+<div>
+<span class="text-on-secondary-container bg-secondary-container/30 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest mb-2 inline-block">High Acidity</span>
+<h3 class="font-headline text-xl font-bold mb-1">Guji Uraga G1</h3>
+<p class="text-sm text-on-surface-variant font-body line-clamp-2 mb-3">Stone fruit and bergamot sweetness with a balanced citrus punch.</p>
+<div class="flex items-center justify-between">
+<span class="font-headline italic text-on-surface">$28.00</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-60">84% Match</span>
+</div>
+</div>
+</div>
+<!-- Journal Entry -->
+<div class="p-8 bg-surface-container-low rounded-md border-l-4 border-secondary/20">
+<span class="text-secondary text-[10px] font-bold uppercase tracking-[0.2em] mb-3 block">From the Journal</span>
+<h3 class="font-headline text-2xl font-bold mb-4 leading-snug">The Heirloom Varietals of Ethiopia: A Genetic Map</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Discover why Ethiopian 'Heirloom' isn't just one variety, but a thousands-strong tapestry of wild coffee genetics.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest group" href="#">
+                        Read Investigation
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Another Product Card -->
+<div class="group flex gap-6 items-start">
+<div class="w-1/3 aspect-square overflow-hidden rounded-md bg-surface-container-high shrink-0">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="V60 pour over setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9lLaujhtxtAuCYpHbVmh6nPdLkiyVfVQ46j3QCtZB-8AdjRr_zb49efTYocsYWOXEj3mXCm7Y9C3nirCvBOSxtxLarxP5L7CfrQ6n8KzW_jKlVAPOwTMHJ9cc0r2oR0oAkG9bNxv7oFA2q8LDus-WM4OdROOBJSkrAuZ6TjcHopSKFk5V4enQEB3gNrguoJmQJFhBYT4Q77IsU-0J2Ln13RhvZ2LqXYfMk-v6UolsmG3mTOM--tBj78QptdAiQ1rN_EOE14Fh0oU"/>
+</div>
+<div>
+<span class="text-on-secondary-container bg-secondary-container/30 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest mb-2 inline-block">Floral</span>
+<h3 class="font-headline text-xl font-bold mb-1">Sidama Bensa</h3>
+<p class="text-sm text-on-surface-variant font-body line-clamp-2 mb-3">Elegant rose aromas and sweet peach nectar notes.</p>
+<div class="flex items-center justify-between">
+<span class="font-headline italic text-on-surface">$26.00</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-60">92% Match</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Grid (Bento Style) -->
+<section class="mt-24">
+<h4 class="font-headline text-2xl font-bold mb-12 flex items-center gap-4">
+                Recommended Pairings
+                <span class="h-[1px] flex-grow bg-surface-container-highest"></span>
+</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-md flex flex-col justify-between hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 group">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="local_cafe">local_cafe</span>
+<h5 class="font-headline text-xl font-bold mb-2">Hario V60 Starter Kit</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">The ideal brewer for highlighting Ethiopian clarity.</p>
+</div>
+<div class="mt-8 flex justify-between items-center">
+<span class="font-headline italic">$45.00</span>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-2 relative overflow-hidden rounded-md bg-primary-container p-12 text-on-primary group">
+<div class="relative z-10 flex flex-col h-full justify-center max-w-md">
+<h5 class="font-headline text-3xl font-bold mb-4 tracking-tight">The Origin Subscription</h5>
+<p class="text-on-primary-container leading-relaxed mb-8">Receive the rarest Ethiopian harvests before they hit the general shop. Tailored to your acidity preferences.</p>
+<button class="bg-secondary-container text-on-secondary-container w-max px-8 py-4 text-xs font-bold uppercase tracking-widest rounded-sm hover:scale-105 transition-transform">Subscribe to Origin</button>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/2 opacity-30 grayscale mix-blend-overlay">
+<img class="w-full h-full object-cover" data-alt="Dark roasted coffee beans pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL_kYRysGJlN6_grZtn2FZ9Ksdm8eZ61G9do3Ohjw2M8R0TaQ9vAanBXB8lC-JyCajs3pYO0C_MGYuGjiWurRdm3i0ZoyIyJWuM_zoSejQ9wbpD3cgus3nwcEfApcp3Dp9trXR5E_ETWKrAo3Fysd7H5LDlo0sUs9_eXEAKF34s7umAzxboqBmaL3xAEvJszlngfsXP3faoUsW_gag2Cn44xSw3pUjwxEDg3LOgkPOkZzk_gwBanXtaac73DBU0Y7WJPMdbd33qFo"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-6 pb-safe md:hidden bg-[#fcf9f4] dark:bg-[#25140a] shadow-[0_-10px_30px_rgba(37,20,10,0.04)] z-50 tonal-shift bg-[#f6f3ee] dark:bg-[#3c281d]">
+<a class="flex flex-col items-center justify-center text-[#504442] dark:text-[#ebe8e3] opacity-60 font-['Manrope'] text-[10px] uppercase tracking-widest hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="local_coffe">local_cafe</span>
+            Explore
+        </a>
+<a class="flex flex-col items-center justify-center text-[#775a19] dark:text-[#fed488] scale-110 transition-transform font-['Manrope'] text-[10px] uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="search" style="font-variation-settings: 'FILL' 1;">search</span>
+            Search
+        </a>
+<a class="flex flex-col items-center justify-center text-[#504442] dark:text-[#ebe8e3] opacity-60 font-['Manrope'] text-[10px] uppercase tracking-widest hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_cart">shopping_cart</span>
+            Cart
+        </a>
+<a class="flex flex-col items-center justify-center text-[#504442] dark:text-[#ebe8e3] opacity-60 font-['Manrope'] text-[10px] uppercase tracking-widest hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="account_circle">account_circle</span>
+            Profile
+        </a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 mt-auto bg-[#25140a] dark:bg-[#1a0e07] text-[#fcf9f4]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-end w-full max-w-screen-2xl mx-auto">
+<div>
+<div class="font-['Noto_Serif'] text-lg text-[#fed488] mb-4">Estate &amp; Bean</div>
+<p class="font-['Manrope'] text-sm tracking-wide text-[#ebe8e3]/60 max-w-xs leading-relaxed">
+                    Dedicated to the meticulous pursuit of extraordinary origin. Every bean tells a story of earth, altitude, and artisanal craft.
+                </p>
+</div>
+<div class="flex flex-wrap gap-8 font-['Manrope'] text-sm tracking-wide">
+<a class="text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Privacy</a>
+<a class="text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Terms</a>
+<a class="text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Wholesale</a>
+<a class="text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="md:text-right font-['Manrope'] text-sm tracking-wide text-[#ebe8e3]/60">
+                © 2024 Estate &amp; Bean. Curating the Ritual.
+            </div>
+</div>
+</footer>
+</body></html>

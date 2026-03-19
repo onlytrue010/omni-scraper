@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Journal | Estate &amp; Bean</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-bright": "#fcf9f4",
+                        "outline": "#827472",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#ebe8e3",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#d3c4b2",
+                        "surface-variant": "#e5e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "background": "#fcf9f4",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "surface": "#fcf9f4",
+                        "secondary": "#775a19",
+                        "on-secondary-container": "#785a1a",
+                        "primary-fixed": "#fedcca",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-surface-variant": "#504442",
+                        "on-secondary-fixed": "#261900",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#3c281d",
+                        "surface-dim": "#dcdad5",
+                        "surface-tint": "#72594b",
+                        "tertiary-container": "#342c1f",
+                        "primary": "#25140a",
+                        "outline-variant": "#d3c3c0",
+                        "inverse-on-surface": "#f3f0eb",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#1f170c",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-surface": "#1c1c19",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f0ede8",
+                        "on-primary-container": "#ab8e7e",
+                        "inverse-primary": "#e0c0af",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#e0c0af",
+                        "surface-container-low": "#f6f3ee",
+                        "on-background": "#1c1c19",
+                        "on-tertiary-fixed": "#221a0f",
+                        "secondary-fixed": "#ffdea5",
+                        "on-tertiary-container": "#9f9382",
+                        "on-primary-fixed-variant": "#594235",
+                        "tertiary-fixed": "#efe0cd",
+                        "on-tertiary-fixed-variant": "#4f4537",
+                        "secondary-container": "#fed488",
+                        "inverse-surface": "#31302d",
+                        "on-primary-fixed": "#29170d"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .serif-font { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-50 tracking-tighter">Estate &amp; Bean</div>
+<div class="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Shop</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Origins</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Process</a>
+<a class="text-amber-700 dark:text-amber-500 border-b border-amber-700 dark:border-amber-500 pb-1" href="#">Journal</a>
+</div>
+<div class="flex items-center space-x-6 text-stone-900 dark:text-stone-50">
+<button class="hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24">
+<!-- Journal Hero / Featured Article -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 overflow-hidden rounded-lg">
+<div class="aspect-[16/10] bg-surface-container-high relative group overflow-hidden">
+<img alt="Featured Article" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic shot of coffee harvesting in Gedeo Zone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpRmFieWO83kAaoOzr2VfZ56_gpPAxJ9QdRRSxh9ZvniOa1iM8tOVTyHIYYKxBsJ8NdVG1pIvQNpC9o5glIu9fL2ooK8NhSA7Pwuujks4agknAayxya5kyXZt_k7o5aoKasncvNG0lYswo9bkKFHiKaCsSRDXpgmPw-3J8zDHhz_v4ZFpxmlxUa-nw2i4XWRPuaaf36dVvFk42WeQJiDdqhDRS8ItxC3IZc6koAUR7VSYdlsKwUL2JknkTz1WxbWstELIB9jFrGHk"/>
+<div class="absolute top-6 left-6">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Direct Trade</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-center">
+<span class="text-secondary font-semibold tracking-[0.2em] uppercase text-xs mb-4">Origin Series</span>
+<h1 class="text-5xl md:text-6xl font-headline font-bold text-primary leading-tight tracking-tighter mb-6">
+                        Behind the Harvest: Gedeo Zone
+                    </h1>
+<p class="text-on-surface-variant text-lg font-body leading-relaxed mb-8 max-w-lg">
+                        An intimate journey into the heart of Ethiopia's coffee heritage, exploring the families and traditions that define the world's most aromatic beans.
+                    </p>
+<div class="flex items-center gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-sm font-label uppercase tracking-widest text-sm hover:bg-primary-container transition-all flex items-center gap-2 group" href="#">
+                            Read the Story
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories & Filter (Asymmetric Layout) -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-16">
+<div class="flex flex-col md:flex-row justify-between items-end border-b border-outline-variant/20 pb-8 gap-6">
+<div class="max-w-md">
+<h2 class="text-3xl font-headline text-primary mb-2 italic">The Archive</h2>
+<p class="text-on-surface-variant font-body">Deep dives into the ritual, science, and soul of the perfect brew.</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2 rounded-full border border-primary bg-primary text-on-primary text-xs uppercase tracking-widest font-bold">All Stories</button>
+<button class="px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-xs uppercase tracking-widest font-bold hover:bg-surface-container transition-colors">Brewing Guides</button>
+<button class="px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-xs uppercase tracking-widest font-bold hover:bg-surface-container transition-colors">Education</button>
+<button class="px-5 py-2 rounded-full border border-outline-variant text-on-surface-variant text-xs uppercase tracking-widest font-bold hover:bg-surface-container transition-colors">Lifestyle</button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Articles -->
+<section class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Article 1: Pour Over -->
+<article class="flex flex-col group">
+<div class="aspect-square bg-surface-container-high rounded-md overflow-hidden mb-6">
+<img alt="Pour Over Technique" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="V60 coffee pour over brewing process" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBivvQUPZ6mncy8KfkJE5ObkXgJ9ruwBKKLwFfkZSm_cXJukZfT40pcChjNGZ6Jr-IFoqPhtBe5jVAXTMhcnZK6mtKuIeErD6-8nDB8H9UP-UOV33UGxfS0c4jW8MxFf_RPXv8fxFRSSqUNgNWSv7U_SoldC8GjODlRlzZU6cxA8rFqLX4LLBzCN1FINNI1of4WgZZr01BKcYfM6EUfmQPTNLRPCffXQuEelLqvWngmPLS26U6OKdHLtNB2beKlU3--9gppueqCCes"/>
+</div>
+<span class="text-secondary-fixed-dim font-bold tracking-[0.2em] uppercase text-[10px] mb-3">Brewing Guides</span>
+<h3 class="text-2xl font-headline text-primary mb-4 leading-snug group-hover:text-secondary transition-colors">
+                        The Perfect Pour-Over Technique
+                    </h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-grow">
+                        Precision meets patience. A definitive guide to mastering the V60 and Chemex rituals for home baristas.
+                    </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-on-surface-variant text-[10px] uppercase tracking-widest">6 min read</span>
+<a class="text-primary font-bold text-[10px] uppercase tracking-[0.2em] border-b-2 border-secondary-container" href="#">Explore</a>
+</div>
+</article>
+<!-- Article 2: Acidity -->
+<article class="flex flex-col group lg:mt-16">
+<div class="aspect-[4/5] bg-surface-container-high rounded-md overflow-hidden mb-6">
+<img alt="African Coffee Beans" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of raw and roasted coffee beans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3D2z_UOXztPrsvvf0DrvUuyW6GQ9RjiflFVlGyQSre9sm9IlcQsvqhvrRc2PXekhjYvB79aBsxDRsBW5GqTxw161-Y0GmTseN1dxDCzw-1hEyQouI80a0RIkdEyi3-xasqbYFUVT-xUA_cGP2TGDA_tyP9F2ariyDWRLSa0duUjngu5tcWeTZ9URknew_LQm62sExC4Hu6A12MNPyKlFm63ZPC-q7RgG5etMekMO1Qa-RvXWj8mGo4qApyqETn-n9TKcxOgwdokw"/>
+</div>
+<span class="text-secondary-fixed-dim font-bold tracking-[0.2em] uppercase text-[10px] mb-3">Education</span>
+<h3 class="text-2xl font-headline text-primary mb-4 leading-snug group-hover:text-secondary transition-colors">
+                        Understanding Acidity in African Coffees
+                    </h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-grow">
+                        From brightness to citrus notes, we deconstruct the complex chemical profile of the continent's finest beans.
+                    </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-on-surface-variant text-[10px] uppercase tracking-widest">8 min read</span>
+<a class="text-primary font-bold text-[10px] uppercase tracking-[0.2em] border-b-2 border-secondary-container" href="#">Explore</a>
+</div>
+</article>
+<!-- Article 3: Roasting Process -->
+<article class="flex flex-col group">
+<div class="aspect-square bg-surface-container-high rounded-md overflow-hidden mb-6">
+<img alt="Roasting Machine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artisanal coffee roasting equipment in action" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg72RCc3DhVD6IMLt5jvij-GaqiwMwu_gBy3181n_9qAJ03S5_mhCfgPxsHvHbL-ZxuYR4SX8lSXq9gWmuh9j6idOQq-T-wRy7WGXxYdyNrJ9yYvIxksb4VxW9BAFhx9Jsejnic52CwRMHCx80MRd1SSKBy9Blh0pP4I80Q6eGPM3bmNVGNkEnD3B1mYgSkHygsrFJiRIzTSUA6OdD4ZvPULGuJvYc8coyPXcOGXNGqIfZ-Dp_HUdSr-6NcV_ZDDYg4DDPOJeE6LY"/>
+</div>
+<span class="text-secondary-fixed-dim font-bold tracking-[0.2em] uppercase text-[10px] mb-3">Process</span>
+<h3 class="text-2xl font-headline text-primary mb-4 leading-snug group-hover:text-secondary transition-colors">
+                        The Art of the Light Roast
+                    </h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-grow">
+                        Preserving terroir through temperature. How our master roasters define the 'Estate &amp; Bean' signature profile.
+                    </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-on-surface-variant text-[10px] uppercase tracking-widest">5 min read</span>
+<a class="text-primary font-bold text-[10px] uppercase tracking-[0.2em] border-b-2 border-secondary-container" href="#">Explore</a>
+</div>
+</article>
+<!-- Article 4: Morning Ritual -->
+<article class="flex flex-col group">
+<div class="aspect-[4/3] bg-surface-container-high rounded-md overflow-hidden mb-6">
+<img alt="Morning Ritual" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Aesthetic coffee setup in a sunlit kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPy7beJMUYBLeT2VCrh_AJApRLDLpbbXcEXAPJ0E-48YcNw7ZRpfvUus_iHfGUBykFsDMr8-FF6GI1Ee0soNt4klSEYT7WW6Jvy5mUyWuQOUBnPZwg83X9_Qy0nBEBy3b_3TgY6KsJbcx95BS7PxWFWVsFr2VYZC41mTlfAwFJj-boDxM7u5rKC9wuhQM-1QjbMnTOeuU19IY2NGOA93hxFyoWceZWjbVyf0QU_MccrqeKz6gBg9m8rPuE4lK5EEnQLTH96s6-FpE"/>
+</div>
+<span class="text-secondary-fixed-dim font-bold tracking-[0.2em] uppercase text-[10px] mb-3">Lifestyle</span>
+<h3 class="text-2xl font-headline text-primary mb-4 leading-snug group-hover:text-secondary transition-colors">
+                        Designing the Perfect Morning Ritual
+                    </h3>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-grow">
+                        Finding stillness in the steam. Why the way you start your morning coffee defines the rest of your day.
+                    </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-on-surface-variant text-[10px] uppercase tracking-widest">4 min read</span>
+<a class="text-primary font-bold text-[10px] uppercase tracking-[0.2em] border-b-2 border-secondary-container" href="#">Explore</a>
+</div>
+</article>
+<!-- Quote Interstitial (Editorial Style) -->
+<div class="md:col-span-2 flex flex-col justify-center bg-surface-container-low p-12 rounded-lg relative overflow-hidden">
+<div class="relative z-10 max-w-xl">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-6xl mb-6" data-icon="format_quote">format_quote</span>
+<h4 class="text-3xl font-headline italic text-primary leading-tight mb-6">
+                            "Coffee is a language in itself, spoken through the clarity of the water and the depth of the bean."
+                        </h4>
+<p class="text-secondary font-bold tracking-[0.2em] uppercase text-xs">— Silas Thorne, Master Roaster</p>
+</div>
+<div class="absolute -right-20 -bottom-20 opacity-5 rotate-12">
+<span class="material-symbols-outlined text-[300px]" data-icon="local_cafe">local_cafe</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Subscription (Glassmorphism) -->
+<section class="max-w-screen-2xl mx-auto px-8 mt-32">
+<div class="bg-primary-container rounded-lg p-12 md:p-24 flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent"></div>
+<div class="relative z-10 max-w-2xl">
+<span class="text-on-primary-container font-bold tracking-[0.3em] uppercase text-xs mb-6 block">Stay Cultivated</span>
+<h2 class="text-4xl md:text-5xl font-headline text-on-primary mb-8 leading-tight">
+                        Weekly insights delivered to your morning.
+                    </h2>
+<form class="flex flex-col sm:flex-row gap-4 w-full">
+<input class="flex-grow bg-surface/10 border-none rounded-md px-6 py-4 text-on-primary placeholder:text-on-primary/40 focus:ring-1 focus:ring-secondary outline-none transition-all" placeholder="Email address" type="email"/>
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-sm font-label uppercase tracking-widest text-sm hover:opacity-90 transition-opacity" type="submit">Subscribe</button>
+</form>
+<p class="text-on-primary/60 text-[10px] uppercase tracking-widest mt-6">Unsubscribe at any time. Respect for your inbox.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-950 dark:bg-black w-full border-t border-stone-800">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="text-xl font-serif italic text-amber-500 mb-8 md:mb-0">Estate &amp; Bean.</div>
+<div class="flex space-x-8 mb-8 md:mb-0">
+<a class="font-sans text-sm uppercase tracking-widest text-stone-500 hover:text-white transition-colors" href="#">Sustainability</a>
+<a class="font-sans text-sm uppercase tracking-widest text-stone-500 hover:text-white transition-colors" href="#">Wholesale</a>
+<a class="font-sans text-sm uppercase tracking-widest text-stone-500 hover:text-white transition-colors" href="#">Contact</a>
+<a class="font-sans text-sm uppercase tracking-widest text-stone-500 hover:text-white transition-colors" href="#">Privacy</a>
+</div>
+<div class="font-sans text-[10px] uppercase tracking-widest text-stone-100 dark:text-stone-300">
+                © 2024 Estate &amp; Bean. The Art of the Roast.
+            </div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sustainability | The Artisanal Lens</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#f0ede8",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f6f3ee",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#594235",
+              "error-container": "#ffdad6",
+              "tertiary": "#1f170c",
+              "on-surface-variant": "#504442",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#785a1a",
+              "inverse-surface": "#31302d",
+              "secondary-container": "#fed488",
+              "on-tertiary-fixed": "#221a0f",
+              "on-surface": "#1c1c19",
+              "primary": "#25140a",
+              "on-secondary-fixed": "#261900",
+              "surface": "#fcf9f4",
+              "secondary-fixed": "#ffdea5",
+              "background": "#fcf9f4",
+              "surface-container-high": "#ebe8e3",
+              "surface-bright": "#fcf9f4",
+              "tertiary-container": "#342c1f",
+              "surface-dim": "#dcdad5",
+              "on-tertiary": "#ffffff",
+              "primary-container": "#3c281d",
+              "surface-tint": "#72594b",
+              "primary-fixed-dim": "#e0c0af",
+              "on-tertiary-fixed-variant": "#4f4537",
+              "on-primary-fixed": "#29170d",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed-variant": "#5d4201",
+              "inverse-primary": "#e0c0af",
+              "tertiary-fixed": "#efe0cd",
+              "error": "#ba1a1a",
+              "surface-variant": "#e5e2dd",
+              "outline-variant": "#d3c3c0",
+              "secondary": "#775a19",
+              "on-background": "#1c1c19",
+              "secondary-fixed-dim": "#e9c176",
+              "primary-fixed": "#fedcca",
+              "outline": "#827472",
+              "tertiary-fixed-dim": "#d3c4b2",
+              "surface-container-highest": "#e5e2dd",
+              "on-tertiary-container": "#9f9382",
+              "inverse-on-surface": "#f3f0eb",
+              "on-primary-container": "#ab8e7e"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        font-size: 20px;
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+        background-color: #fcf9f4;
+        color: #1c1c19;
+      }
+      h1, h2, h3, .font-serif {
+        font-family: 'Noto Serif', serif;
+      }
+      .tonal-transition-no-border {
+        border-bottom: none;
+      }
+      .tonal-shift-dark-grounding {
+        background-color: #25140a;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
+<a class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-50 tracking-tight" href="#">The Artisanal Lens</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Shop</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Origins</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Process</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Journal</a>
+<a class="text-yellow-700 dark:text-yellow-600 font-semibold border-b border-yellow-700" href="#">Sustainability</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Wholesale</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-stone-900 hover:opacity-80 transition-opacity" data-icon="shopping_bag">shopping_bag</button>
+<button class="material-symbols-outlined text-stone-900 hover:opacity-80 transition-opacity" data-icon="person">person</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<main class="pt-32 pb-20">
+<header class="max-w-7xl mx-auto px-8 mb-24 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-8">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold tracking-widest mb-6 uppercase">Our Ethos</span>
+<h1 class="text-6xl md:text-8xl font-headline font-bold text-primary leading-[1.1] -tracking-[0.03em] mb-8">
+                    Brewing for the <br/><span class="text-secondary italic">Next Generation.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed font-light">
+                    At Estate &amp; Bean, sustainability isn't a goal—it's the substrate. We view every bean as a promise to the soil it grew in and the hands that nurtured it.
+                </p>
+</div>
+<div class="md:col-span-4 hidden md:block">
+<div class="aspect-[3/4] rounded-md overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="Close up of coffee plant leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC63BrQZ3k7UBMH1Qot-M0MMj49ZFrAMtP3E17BFZeBKT3K9JvSbQHY3o0Rq-3aAVh0a8AWyJLK8cyFAgO6KeFVgt6pj_aVyRCkPzA8eDZ_VoIsUBCrZcFYH5TeAsBz1tlPYn4e9bS_ijs9cP9Ud19exi2hfDX9QP8Fbd6zbuSYftOF_gPWFgm3FUgUje4qNGgprN86hrrUhl-kKpLFjJnzdmuOOShlErse1PHQkPzaC-0F8pEdF6uQmYFideZO5FCBjUDOBGD37pg"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+</div>
+</header>
+<!-- Bento Grid: Core Pillars -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Ethical Sourcing -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-md bg-surface-container-lowest p-12 transition-all hover:bg-surface-container">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-icon="handshake">handshake</span>
+<h3 class="text-3xl font-headline mb-4">Ethical Sourcing</h3>
+<p class="text-on-surface-variant max-w-md leading-relaxed">
+                                We bypass commodity markets to build direct, long-term relationships. Our premiums go straight to farm-gate prices, ensuring farmers earn 40% above Fair Trade minimums.
+                            </p>
+</div>
+<div class="mt-12">
+<a class="inline-flex items-center text-sm font-semibold tracking-wider text-primary border-b border-primary/20 pb-1 group-hover:border-primary transition-all" href="#">
+                                LEARN ABOUT DIRECT TRADE <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 group-hover:opacity-20 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Hands holding coffee beans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY8z3StC1TR_NruIYfXTDInf-t5OyHS2fVUC4MY9HZjbnX0tYl8w1pZ5BUJ3H0SLfqfdZedf9APhcIKA61PXMcwgComv3lFE7M360H7Hk3KMhShflmfOQFdtGcewip7Ap6LmBPgGO5FAQYX8TH4p9A4kdwetcq21vR-PSLrQCKh2pvtUf1bjkyfdzhzp5IUiFtutQn73gj5A99fEaZwgERP9xzp8qgQgA1PM2eMFguJO3V89UqKcNe7FjA9TwBlwFmXr7rxg7DZdY"/>
+</div>
+</div>
+<!-- Regenerative Farming -->
+<div class="md:col-span-1 rounded-md bg-primary p-10 text-on-primary flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-secondary-fixed mb-6" data-icon="nature">nature</span>
+<h3 class="text-2xl font-headline mb-4">Regenerative Farming</h3>
+<p class="text-primary-fixed opacity-80 leading-relaxed font-light">
+                            Beyond organic. We support farms that utilize shade-grown techniques to preserve biodiversity and sequester carbon.
+                        </p>
+</div>
+<div class="mt-8 pt-8 border-t border-white/10 text-sm font-label italic">
+                        "Healing the land that gives us life."
+                    </div>
+</div>
+<!-- Zero-Waste Packaging -->
+<div class="md:col-span-1 rounded-md bg-surface-container-high p-10 flex flex-col justify-between relative overflow-hidden group">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="recycling">recycling</span>
+<h3 class="text-2xl font-headline mb-4">Zero-Waste Packaging</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Our bags are 100% home-compostable, from the valve to the ink. No microplastics, just plant-based polymers.
+                        </p>
+</div>
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl group-hover:bg-secondary/20 transition-colors"></div>
+</div>
+<!-- Impact Stats Card -->
+<div class="md:col-span-2 rounded-md bg-surface-container-low p-12 grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
+<div class="text-center md:text-left">
+<div class="text-5xl font-headline text-secondary mb-2">100%</div>
+<div class="text-xs tracking-widest text-on-surface-variant uppercase font-bold">Plastic Free</div>
+</div>
+<div class="text-center md:text-left">
+<div class="text-5xl font-headline text-secondary mb-2">12k</div>
+<div class="text-xs tracking-widest text-on-surface-variant uppercase font-bold">Trees Planted</div>
+</div>
+<div class="text-center md:text-left col-span-2 md:col-span-1">
+<div class="text-5xl font-headline text-secondary mb-2">$1.2M</div>
+<div class="text-xs tracking-widest text-on-surface-variant uppercase font-bold">To Farm Grants</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Environmental Impact Detail Section -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<div class="relative">
+<img class="rounded-md w-full aspect-square object-cover shadow-2xl" data-alt="Lush green coffee farm mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVv5qXqL9YRcLTqMx9XFrswHQKFahvEpHycAD1nWosworWiCWergZkDdxRrBM1Ocksz29lxo3Uh1vXQU9UsQ2ngiSQeAMEnlH7hcIYVEvFm6ntdZJq0_m58lx9WYlQxcSuVr_WiANM9jB2NI9SEPyX43XrdFVBPhfW7XHqHWSIpbgvLyofUfeKv4xh-gdrQna-M6hcDjuIPPk7x97N9WpEACItmwBw0JVCqdbPQLHGwheZOBwFBHawFeaZ7VNdBk4JKvCg1-MDs_w"/>
+<div class="absolute -bottom-6 -right-6 bg-surface p-8 rounded-md shadow-lg max-w-xs hidden lg:block">
+<p class="text-sm font-headline italic text-on-surface-variant">
+                                    "We've seen biodiversity return to our valley since partnering with Estate &amp; Bean."
+                                </p>
+<p class="text-xs mt-4 font-bold text-primary uppercase">— Alejandro V., Farm Owner</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="text-4xl md:text-5xl font-headline mb-8 text-primary">The Carbon Ritual</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<span class="text-secondary font-headline text-2xl">01</span>
+<div>
+<h4 class="font-bold text-lg mb-2">Solar Roasting</h4>
+<p class="text-on-surface-variant leading-relaxed font-light">
+                                        Our micro-roastery in Vermont is powered by a 50kW on-site solar array, offsetting 100% of our energy consumption during peak production.
+                                    </p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="text-secondary font-headline text-2xl">02</span>
+<div>
+<h4 class="font-bold text-lg mb-2">Circular Water Use</h4>
+<p class="text-on-surface-variant leading-relaxed font-light">
+                                        We utilize closed-loop filtration for our processing stations, saving over 450,000 gallons of water annually compared to traditional washing.
+                                    </p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="text-secondary font-headline text-2xl">03</span>
+<div>
+<h4 class="font-bold text-lg mb-2">Local Soil Support</h4>
+<p class="text-on-surface-variant leading-relaxed font-light">
+                                        100% of our coffee chaff and expired grounds are donated to local organic compost facilities to enrich community soil.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Future Goals Section -->
+<section class="max-w-7xl mx-auto px-8 py-32">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="text-4xl font-headline mb-6">The Road to 2030</h2>
+<p class="text-on-surface-variant leading-relaxed font-light">
+                    Sustainability is a moving horizon. Here is how we plan to keep pushing the boundaries of what a coffee company can contribute to the earth.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="p-10 border-l-2 border-secondary-container bg-surface-container-lowest">
+<h4 class="text-xl font-headline mb-4">Carbon Negative Fleet</h4>
+<p class="text-on-surface-variant mb-6 font-light">By 2026, our entire distribution network will be fully electric, powered by renewable energy credits.</p>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-secondary w-3/4 h-full"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">
+<span>Current: Hybrid</span>
+<span>Goal: Electric</span>
+</div>
+</div>
+<div class="p-10 border-l-2 border-secondary-container bg-surface-container-lowest">
+<h4 class="text-xl font-headline mb-4">Biodiversity Restoration</h4>
+<p class="text-on-surface-variant mb-6 font-light">Partnering with 'Earth Trust' to restore 500 acres of rainforest surrounding our partner estates.</p>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-secondary w-1/4 h-full"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">
+<span>Current: 120 Acres</span>
+<span>Goal: 500 Acres</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-8 mb-20">
+<div class="bg-primary-container rounded-md py-20 px-8 md:px-20 text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-headline text-surface mb-8">Join the Ritual. Protect the Origin.</h2>
+<p class="text-on-primary-container max-w-2xl mx-auto mb-12 text-lg font-light leading-relaxed">
+                        Every subscription supports our sustainable farming grants. Taste the difference that ethics makes.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="px-10 py-4 bg-secondary text-surface font-bold text-sm tracking-widest uppercase rounded-sm hover:bg-secondary/90 transition-all">Shop Sustainably</button>
+<button class="px-10 py-4 border border-on-primary-container text-on-primary-container font-bold text-sm tracking-widest uppercase rounded-sm hover:bg-on-primary-container/10 transition-all">Download 2023 Report</button>
+</div>
+</div>
+<!-- Artistic texture overlay -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-transparent"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 mt-20 bg-stone-900 dark:bg-black">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-xl font-serif text-stone-100 mb-4 block">The Artisanal Lens</span>
+<p class="font-sans text-sm tracking-wide text-stone-400 leading-relaxed">
+                    Curating the ritual of coffee through meticulous sourcing and sustainable craft.
+                </p>
+</div>
+<div>
+<h5 class="text-stone-100 font-bold text-xs tracking-widest uppercase mb-6">Explore</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Shop All Coffee</a></li>
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Wholesale Partner</a></li>
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Brewing Guides</a></li>
+<li><a class="text-stone-100 underline decoration-yellow-600 text-sm" href="#">Sustainability Report</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-stone-100 font-bold text-xs tracking-widest uppercase mb-6">Support</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Contact Us</a></li>
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Shipping Policy</a></li>
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-stone-100 font-bold text-xs tracking-widest uppercase mb-6">Newsletter</h5>
+<p class="text-stone-500 text-sm mb-4">Slow stories and fresh roasts in your inbox.</p>
+<div class="flex">
+<input class="bg-stone-800 border-none text-stone-200 text-sm px-4 py-2 w-full focus:ring-1 focus:ring-secondary rounded-l-sm" placeholder="Email address" type="email"/>
+<button class="bg-secondary text-stone-900 px-4 py-2 rounded-r-sm"><span class="material-symbols-outlined" data-icon="send">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-sans text-sm tracking-wide text-stone-400">© 2024 The Artisanal Lens. Curating the ritual of coffee.</p>
+<div class="flex space-x-6">
+<a class="text-stone-500 hover:text-yellow-500 transition-colors duration-200" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-stone-500 hover:text-yellow-500 transition-colors duration-200" href="#"><span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span></a>
+<a class="text-stone-500 hover:text-yellow-500 transition-colors duration-200" href="#"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+</div>
+</div>
+</footer>
+</body></html>

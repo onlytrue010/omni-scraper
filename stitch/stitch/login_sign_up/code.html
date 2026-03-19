@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#fed488",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed-variant": "#4f4537",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#ffdea5",
+              "on-surface": "#1c1c19",
+              "outline-variant": "#d3c3c0",
+              "on-secondary-fixed": "#261900",
+              "surface-dim": "#dcdad5",
+              "inverse-primary": "#e0c0af",
+              "surface-container-low": "#f6f3ee",
+              "on-background": "#1c1c19",
+              "primary-container": "#3c281d",
+              "inverse-on-surface": "#f3f0eb",
+              "on-secondary-fixed-variant": "#5d4201",
+              "on-secondary-container": "#785a1a",
+              "tertiary-fixed-dim": "#d3c4b2",
+              "on-error": "#ffffff",
+              "on-primary-container": "#ab8e7e",
+              "background": "#fcf9f4",
+              "tertiary-container": "#342c1f",
+              "primary-fixed": "#fedcca",
+              "tertiary-fixed": "#efe0cd",
+              "secondary-fixed-dim": "#e9c176",
+              "on-primary-fixed-variant": "#594235",
+              "secondary": "#775a19",
+              "surface-bright": "#fcf9f4",
+              "surface-tint": "#72594b",
+              "surface-container-highest": "#e5e2dd",
+              "on-primary-fixed": "#29170d",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#9f9382",
+              "inverse-surface": "#31302d",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#221a0f",
+              "error-container": "#ffdad6",
+              "primary": "#25140a",
+              "tertiary": "#1f170c",
+              "on-surface-variant": "#504442",
+              "surface-variant": "#e5e2dd",
+              "surface": "#fcf9f4",
+              "primary-fixed-dim": "#e0c0af",
+              "outline": "#827472",
+              "surface-container-high": "#ebe8e3",
+              "surface-container": "#f0ede8"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-transition-bg {
+        background: linear-gradient(to bottom, rgba(252, 249, 244, 0.95), rgba(252, 249, 244, 0.8));
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-[#25140a]/80 backdrop-blur-md">
+<nav class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-bold tracking-tighter text-[#25140a] dark:text-[#fcf9f4] font-['Noto_Serif'] antialiased tracking-tight" href="#">Estate &amp; Bean</a>
+<div class="hidden md:flex gap-8">
+<a class="font-['Noto_Serif'] text-[#504442] dark:text-[#ebe8e3] hover:text-[#25140a] dark:hover:text-[#ffffff] transition-colors" href="#">Shop</a>
+<a class="font-['Noto_Serif'] text-[#504442] dark:text-[#ebe8e3] hover:text-[#25140a] dark:hover:text-[#ffffff] transition-colors" href="#">Origin</a>
+<a class="font-['Noto_Serif'] text-[#504442] dark:text-[#ebe8e3] hover:text-[#25140a] dark:hover:text-[#ffffff] transition-colors" href="#">Brewing</a>
+<a class="font-['Noto_Serif'] text-[#504442] dark:text-[#ebe8e3] hover:text-[#25140a] dark:hover:text-[#ffffff] transition-colors" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#25140a] dark:text-[#fcf9f4] hover:opacity-80 transition-opacity">shopping_bag</button>
+<button class="material-symbols-outlined text-[#25140a] dark:text-[#fcf9f4] hover:opacity-80 transition-opacity">person</button>
+</div>
+</nav>
+</header>
+<main class="min-h-screen pt-20 md:pt-0 flex flex-col md:flex-row">
+<!-- Visual Column -->
+<div class="hidden md:block md:w-1/2 h-screen sticky top-0 bg-primary overflow-hidden">
+<div class="absolute inset-0 z-10 bg-gradient-to-r from-primary/40 to-transparent"></div>
+<img class="w-full h-full object-cover opacity-80" data-alt="Atmospheric coffee roasting room with steam and warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Te65V_8Fq7X9MhocpTBJAG8Q4v27T5s3KfiC-kV0TlT-q0hQpQHRfX6xyJm9zBSIEYufGRD2iGycTDO9vkLx0h5c7TqVNO3_dOT6ufAUA4CEEYhRY4dlRWY1PonqTvxKR3fC9_-qqVaxyNjkkvxqSLPRWNjORcU8Md1VuV3XH6-w-2_DC2CtaTpT-FCqb3rM-kokzPRB2LO9u04GswNnxzQHLwcGGTNR1Wr7qP1Geo3GjBi20d5u7ddstjB2P0Drg3yGwBBC-BM"/>
+<div class="absolute bottom-16 left-16 z-20 max-w-md">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase mb-4">The Ritual awaits</span>
+<h1 class="text-5xl font-headline text-on-primary font-extrabold leading-tight mb-6 tracking-tight">Why join the ritual?</h1>
+<ul class="space-y-6 text-on-primary/90">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container mt-1">verified</span>
+<div>
+<p class="font-bold text-lg">Exclusive Cupping Sessions</p>
+<p class="text-sm opacity-80">Join our master roasters for intimate, member-only virtual and in-person tastings.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container mt-1">star</span>
+<div>
+<p class="font-bold text-lg">First Access to Micro-lots</p>
+<p class="text-sm opacity-80">Securing limited releases from single-estate farms before they reach the public shop.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container mt-1">history_edu</span>
+<div>
+<p class="font-bold text-lg">Curated Journal Content</p>
+<p class="text-sm opacity-80">Deep dives into origin stories and advanced brewing guides for the dedicated enthusiast.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Form Column -->
+<div class="w-full md:w-1/2 flex flex-col justify-center items-center px-6 py-12 md:px-24 bg-surface">
+<div class="w-full max-w-md">
+<div class="mb-12">
+<h2 class="text-4xl font-headline font-bold text-primary mb-2">Welcome Back</h2>
+<p class="text-on-surface-variant font-body">Sign in to continue your artisanal journey.</p>
+</div>
+<!-- Social Login -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<button class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container-high hover:bg-surface-container-highest transition-colors rounded-md text-sm font-semibold text-primary">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="currentColor"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="currentColor"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="currentColor"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z" fill="currentColor"></path>
+</svg>
+                        Google
+                    </button>
+<button class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container-high hover:bg-surface-container-highest transition-colors rounded-md text-sm font-semibold text-primary">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z" fill="currentColor"></path>
+</svg>
+                        Facebook
+                    </button>
+</div>
+<div class="relative flex items-center mb-8">
+<div class="flex-grow border-t border-outline-variant opacity-30"></div>
+<span class="flex-shrink mx-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant opacity-60">or email</span>
+<div class="flex-grow border-t border-outline-variant opacity-30"></div>
+</div>
+<!-- Form -->
+<form class="space-y-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-primary mb-2 ml-1">Email Address</label>
+<input class="w-full px-6 py-4 bg-surface-container-high border-none rounded-md focus:ring-1 focus:ring-secondary/20 focus:bg-surface-container-highest transition-all outline-none text-primary font-body" placeholder="ritualist@estateandbean.com" type="email"/>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2 ml-1">
+<label class="block text-xs font-bold uppercase tracking-widest text-primary">Password</label>
+<a class="text-[10px] font-bold uppercase tracking-widest text-secondary hover:text-primary-container transition-colors" href="#">Forgot?</a>
+</div>
+<input class="w-full px-6 py-4 bg-surface-container-high border-none rounded-md focus:ring-1 focus:ring-secondary/20 focus:bg-surface-container-highest transition-all outline-none text-primary font-body" placeholder="••••••••" type="password"/>
+</div>
+<div class="pt-2">
+<button class="w-full bg-primary text-on-primary py-5 rounded-sm font-bold tracking-widest uppercase text-sm hover:bg-primary-container transition-all active:scale-[0.98] shadow-lg shadow-primary/5" type="submit">
+                            Enter the Ritual
+                        </button>
+</div>
+</form>
+<p class="mt-12 text-center text-sm text-on-surface-variant">
+                    New to the craft? 
+                    <a class="text-secondary font-bold hover:underline underline-offset-4 ml-1" href="#">Create an account</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 bg-[#25140a] dark:bg-[#1a0e07] text-[#fcf9f4]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-end w-full max-w-screen-2xl mx-auto">
+<div>
+<p class="font-['Noto_Serif'] text-lg text-[#fed488] mb-4">Estate &amp; Bean</p>
+<p class="font-['Manrope'] text-sm tracking-wide text-[#ebe8e3]/60 max-w-xs">Curating the ritual of coffee through origin, precision, and passion.</p>
+</div>
+<div class="flex gap-8 justify-center md:justify-start">
+<a class="font-['Manrope'] text-sm tracking-wide text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Privacy</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Terms</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Wholesale</a>
+<a class="font-['Manrope'] text-sm tracking-wide text-[#ebe8e3]/60 hover:text-[#ffffff] transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="text-right">
+<p class="font-['Manrope'] text-sm tracking-wide text-[#ebe8e3]/60">© 2024 Estate &amp; Bean. Curating the Ritual.</p>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 px-6 pb-safe md:hidden bg-[#fcf9f4] dark:bg-[#25140a] shadow-[0_-10px_30px_rgba(37,20,10,0.04)] z-50">
+<div class="flex flex-col items-center justify-center text-[#504442] dark:text-[#ebe8e3] opacity-60 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">local_cafe</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#504442] dark:text-[#ebe8e3] opacity-60 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">search</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest mt-1">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#504442] dark:text-[#ebe8e3] opacity-60 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest mt-1">Cart</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#775a19] dark:text-[#fed488] scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

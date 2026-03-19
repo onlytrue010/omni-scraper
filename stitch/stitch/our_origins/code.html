@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#fcf9f4",
+              "outline": "#827472",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#ebe8e3",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#d3c4b2",
+              "surface-variant": "#e5e2dd",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "background": "#fcf9f4",
+              "on-secondary-fixed-variant": "#5d4201",
+              "surface": "#fcf9f4",
+              "secondary": "#775a19",
+              "on-secondary-container": "#785a1a",
+              "primary-fixed": "#fedcca",
+              "surface-container-highest": "#e5e2dd",
+              "on-surface-variant": "#504442",
+              "on-secondary-fixed": "#261900",
+              "on-error-container": "#93000a",
+              "primary-container": "#3c281d",
+              "surface-dim": "#dcdad5",
+              "surface-tint": "#72594b",
+              "tertiary-container": "#342c1f",
+              "primary": "#25140a",
+              "outline-variant": "#d3c3c0",
+              "inverse-on-surface": "#f3f0eb",
+              "on-primary": "#ffffff",
+              "tertiary": "#1f170c",
+              "secondary-fixed-dim": "#e9c176",
+              "on-surface": "#1c1c19",
+              "on-error": "#ffffff",
+              "surface-container": "#f0ede8",
+              "on-primary-container": "#ab8e7e",
+              "inverse-primary": "#e0c0af",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#e0c0af",
+              "surface-container-low": "#f6f3ee",
+              "on-background": "#1c1c19",
+              "on-tertiary-fixed": "#221a0f",
+              "secondary-fixed": "#ffdea5",
+              "on-tertiary-container": "#9f9382",
+              "on-primary-fixed-variant": "#594235",
+              "tertiary-fixed": "#efe0cd",
+              "on-tertiary-fixed-variant": "#4f4537",
+              "secondary-container": "#fed488",
+              "inverse-surface": "#31302d",
+              "on-primary-fixed": "#29170d"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(252, 249, 244, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-50 tracking-tighter">Estate &amp; Bean</div>
+<div class="hidden md:flex items-center gap-12 font-serif text-lg tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Shop</a>
+<a class="text-amber-700 dark:text-amber-500 border-b border-amber-700 dark:border-amber-500 pb-1" href="#">Origins</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Process</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Journal</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-80 transition-opacity duration-300 text-stone-900 dark:text-stone-50">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:opacity-80 transition-opacity duration-300 text-stone-900 dark:text-stone-50">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section: Editorial & Immersive -->
+<header class="relative w-full h-[870px] overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<img alt="Mist rising over a lush coffee estate at dawn" class="w-full h-full object-cover" data-alt="Lush green coffee estate mountains at dawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDADWa-rxnlwx1qgP7Xx4J2qPbnyCGfEZU_l3nozgDrqQHuiyBZeElHqcDcLGA3zb7Rtqg5Om17hAtRVVSwBthbCqzYAeXVJk4AlIboYoAP9FMpS2RmoAxH6DR4eY5B_5SemrbkWXg40tP_te5CsZthQkBRvJKg8DLNkHRY_Rlimi6gFZdDkNc5iX_Z4bQsFevwtuM-DWUnG-XPFg5JB1QQROeeaqpBUj8ujX5iizi3EKr-RQVoCb5SoQklJE2MSxMjmGkVTF3iPUM"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/20 to-transparent"></div>
+</div>
+<div class="relative z-10 px-8 md:px-24 max-w-5xl">
+<span class="font-label text-sm uppercase tracking-[0.3em] text-secondary-fixed mb-4 block">The Global Journey</span>
+<h1 class="font-headline text-5xl md:text-8xl text-white leading-none tracking-tighter mb-8">Where Soul <br/><span class="italic font-normal">Meets Soil.</span></h1>
+<p class="font-body text-xl text-stone-200 max-w-xl leading-relaxed">Tracing every bean back to its volcanic roots, high-altitude winds, and the dedicated hands that nurture each harvest.</p>
+</div>
+</header>
+<!-- World Map: Interactive Highlights -->
+<section class="py-24 px-8 md:px-12 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16 text-center">
+<h2 class="font-headline text-4xl text-primary mb-4">Sourcing Regions</h2>
+<div class="h-1 w-24 bg-secondary mx-auto"></div>
+</div>
+<div class="relative w-full aspect-[16/9] md:aspect-[21/9] bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<!-- Placeholder for Map Visualization -->
+<div class="absolute inset-0 opacity-20 grayscale mix-blend-multiply">
+<img alt="Stylized world map showing coffee sourcing locations" class="w-full h-full object-cover" data-alt="Minimalist world map illustration highlighting coffee regions" data-location="World Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqUBmArG8lhpVKNiFBGxxdT_bmS4RzkGlPdOCBH_rLpNrEC9XV3ZlGNKqbtzrAtjlch9BYZVfFaB3Hb-SbtE1JAUZ36I9hDmy6Q4-JQ5l-5huiG2LQo0O1zUqC9QMd4rm1N5GgpzvkYON7uoDpRlBWqI-R5sVqIj76k9B5l89uo1teWyPPMqMc0uf_ku-mYgmmwbMq8CnyeKJFqzZD6y1OV5VO6zKT1xSGLq4RE1zldJnYMOqnin8t2PoAOOksAmmyZM_JKlHtWdc"/>
+</div>
+<!-- Region Markers -->
+<!-- Ethiopia -->
+<div class="absolute top-[45%] left-[58%] group">
+<div class="w-4 h-4 bg-secondary rounded-full animate-pulse"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface-container-lowest p-4 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity w-64 z-20">
+<span class="inline-block px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full mb-2">ORIGIN</span>
+<h4 class="font-headline text-lg text-primary">Yirgacheffe, Ethiopia</h4>
+<p class="text-sm text-on-surface-variant mt-1">Floral notes of jasmine and lemon. The birthplace of coffee.</p>
+</div>
+</div>
+<!-- Colombia -->
+<div class="absolute top-[55%] left-[28%] group">
+<div class="w-4 h-4 bg-secondary rounded-full animate-pulse"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface-container-lowest p-4 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity w-64 z-20">
+<span class="inline-block px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full mb-2">ORIGIN</span>
+<h4 class="font-headline text-lg text-primary">Huila, Colombia</h4>
+<p class="text-sm text-on-surface-variant mt-1">Caramel sweetness with a crisp apple acidity.</p>
+</div>
+</div>
+<!-- Sumatra -->
+<div class="absolute top-[60%] left-[80%] group">
+<div class="w-4 h-4 bg-secondary rounded-full animate-pulse"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface-container-lowest p-4 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity w-64 z-20">
+<span class="inline-block px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] font-bold rounded-full mb-2">ORIGIN</span>
+<h4 class="font-headline text-lg text-primary">Aceh, Sumatra</h4>
+<p class="text-sm text-on-surface-variant mt-1">Earthy, spicy, and full-bodied with cedar notes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Terroir: Editorial Layout -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto editorial-grid">
+<div class="col-span-12 md:col-span-5 flex flex-col justify-center">
+<span class="font-label text-sm uppercase tracking-widest text-secondary mb-6">Environment &amp; Flavor</span>
+<h2 class="font-headline text-5xl text-primary leading-tight mb-8">The Terroir: <br/>More Than Geography</h2>
+<p class="font-body text-lg text-on-surface-variant mb-6 leading-relaxed">Flavor is a dialogue between the tree and its environment. In Ethiopia, wild forests provide shade that slows maturation, intensifying sugars. In the Andes, thin air and volcanic soil produce the bright acidity that Colombian beans are prized for.</p>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">Every cup of Estate &amp; Bean is a timestamp of a season, a capture of a specific microclimate, and a tribute to the land's unique chemistry.</p>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7 relative">
+<div class="aspect-[4/5] bg-surface-container-high rounded-lg overflow-hidden relative">
+<img alt="Close up of volcanic coffee soil and vibrant green leaves" class="w-full h-full object-cover" data-alt="Close up of dark volcanic soil and green coffee plant leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuxX7OkfNgqPKe2-Ph1Utg5QL2iivTiIwEVLpHNBVmZVv0poqTTi0gEfX4Fp8_Djj-3cTZC0sbpcat9B1drBezXSQyq-UZKfxgxKAnurN4g2D2W01HmYhKFYzrGdz5u3ppTfyMK7ic1Hsky-0YX7I4NR7W7MXppc0fGFPS5AeW7P_pZrvWk7D3SvURXxxbbycezowLT5ZKES9KC96kGlXc-aFaxHZt3b4LK2EO_nQsdRep3BeReYhcd-SpRgesU-BmbgY1u3Lg-mc"/>
+</div>
+<!-- Overlapping element -->
+<div class="absolute -bottom-12 -left-12 hidden lg:block bg-primary p-12 max-w-xs shadow-2xl">
+<h4 class="text-white font-headline text-2xl mb-4 italic">"Nature dictates the profile; we only preserve it."</h4>
+<span class="text-secondary-fixed text-sm uppercase tracking-widest">— Master Roaster</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Partners: Bento-style Grid -->
+<section class="py-24 px-8 bg-primary">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-sm uppercase tracking-widest text-secondary-fixed mb-4 block">Faces Behind the Roast</span>
+<h2 class="font-headline text-4xl text-white">Our Sourcing Partners</h2>
+</div>
+<a class="text-secondary-fixed border-b border-secondary-fixed pb-1 uppercase text-xs tracking-[0.2em] font-bold hover:text-white hover:border-white transition-colors" href="#">See all smallholders</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Partner 1 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-md bg-primary-container">
+<img alt="A coffee farmer smiling while holding a basket of cherries" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" data-alt="Portrait of a smiling coffee farmer in a sunlit field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMDhIVdEmBrx4GBQB1vV6sv4lCiIUeP_Fy9alV5PMY5hS3_uXD2lxQ5_jYH2-NQ-VSkWP_8gHb7MXmBJ2nbIIevq1eDsXch9ccWUsxZj5lgO4G1lL2SbLwZpXA2Ujd3ntj635GvZeMaC1Ct9HfkTIy3pq73uloOOWL5bvBeqDRAYnvipUiaEsB4jFj0SlVASG0ogqMMhs2lNjd4fjHvUctwwVjOgbQDeYin1qhu9Pf2zTL8guysni76vCzsSoH0Uk2J3z_aZ3xFvQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline text-2xl text-white mb-2">The Mamo Family</h3>
+<p class="text-stone-300 text-sm">Sidama region, Ethiopia. Partners since 2012.</p>
+</div>
+</div>
+<!-- Partner 2 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-md bg-primary-container">
+<img alt="Close up of weathered hands sorting dried coffee beans" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" data-alt="Experienced hands sorting coffee beans in Colombia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm2p3Ydq0as2IJzAvrLS57gJmo-ApysSuDDU451-W6ipVamTpouVSwjnX_xRAeFXO3TV2gmSHqX997rslqaxdBcp7h_PfuAoshukub64g8U02gRUWByJT_EqV7cRLzg901kjNbGsj3_ahyAT7NcpnOFZ04VZRqVZzm1c7rgbG7tnRPM9kA60asoUOhPQfR2nL5FWX2kYRq-hnGv2UDux0Rxoix8Rb75BfXNXTOd3phGCeNsq5Ollll1pKajKcu4AqvisyobxKA8Hc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline text-2xl text-white mb-2">Alejandro &amp; Rosa</h3>
+<p class="text-stone-300 text-sm">Huila, Colombia. Specialty micro-lot pioneers.</p>
+</div>
+</div>
+<!-- Partner 3 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-md bg-primary-container">
+<img alt="Sumatran coffee plantation workers in the shade" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" data-alt="Workers in a lush Indonesian coffee plantation shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXxthZ6-GGQudTL5Lclf86mgMqC5Z3qg3i31CBlqLBs4QvpDDJvkmv_h93T7dn-uMfCy4bMxOnjiUrmdj8ZurKEgFSPzSqP0ugXYXCbUHPRuPvTuhGYKg7SlpgSc5ico1zRKUYOuqVI5dg0kO6HHOwfAXbsGGvq7YVdYFQm_BZiVHJ8EV2dDDirZgAACCkKXPGm7RSg-v9eYvzcOAFqCuOOXwQo5buMCCy1CGqLT4c9gJsYrjRWG2w1Utbqq5l7T1dzzgOVX6CdYE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline text-2xl text-white mb-2">Gayo Women's Guild</h3>
+<p class="text-stone-300 text-sm">Sumatra. A cooperative empowering female producers.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ethical Sourcing: Glassmorphism / Tonal Shift -->
+<section class="py-32 px-8 bg-surface-container-lowest">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="font-headline text-4xl text-primary mb-12">Our Commitments</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="handshake">handshake</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">Direct Trade Advantage</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">We bypass middle-men, ensuring 40% higher pay than fair-trade minimums directly reaches the farm owners.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="nature">nature</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">Regenerative Practice</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Supporting farmers in transitioning to organic pest management and native shade-tree planting.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="water_drop">water_drop</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">Water Conservation</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Funding closed-loop milling systems that reduce water waste by 80% during processing.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="school">school</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">Community Education</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Estate &amp; Bean invests in agricultural training schools in every region we source from.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-950 dark:bg-black w-full border-t border-stone-800">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="text-xl font-serif italic text-amber-500">Estate &amp; Bean</span>
+<p class="text-stone-500 font-sans text-xs uppercase tracking-[0.2em] mt-2">© 2024 Estate &amp; Bean. The Art of the Roast.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-sans text-sm uppercase tracking-widest text-stone-500 hover:text-white transition-colors" href="#">Sustainability</a>
+<a class="font-sans text-sm uppercase tracking-widest text-stone-500 hover:text-white transition-colors" href="#">Wholesale</a>
+<a class="font-sans text-sm uppercase tracking-widest text-stone-500 hover:text-white transition-colors" href="#">Contact</a>
+<a class="font-sans text-sm uppercase tracking-widest text-stone-500 hover:text-white transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

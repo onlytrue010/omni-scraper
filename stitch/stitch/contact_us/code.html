@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-container": "#f0ede8",
+                "on-error": "#ffffff",
+                "surface-container-low": "#f6f3ee",
+                "on-error-container": "#93000a",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed-variant": "#594235",
+                "error-container": "#ffdad6",
+                "tertiary": "#1f170c",
+                "on-surface-variant": "#504442",
+                "on-secondary": "#ffffff",
+                "on-secondary-container": "#785a1a",
+                "inverse-surface": "#31302d",
+                "secondary-container": "#fed488",
+                "on-tertiary-fixed": "#221a0f",
+                "on-surface": "#1c1c19",
+                "primary": "#25140a",
+                "on-secondary-fixed": "#261900",
+                "surface": "#fcf9f4",
+                "secondary-fixed": "#ffdea5",
+                "background": "#fcf9f4",
+                "surface-container-high": "#ebe8e3",
+                "surface-bright": "#fcf9f4",
+                "tertiary-container": "#342c1f",
+                "surface-dim": "#dcdad5",
+                "on-tertiary": "#ffffff",
+                "primary-container": "#3c281d",
+                "surface-tint": "#72594b",
+                "primary-fixed-dim": "#e0c0af",
+                "on-tertiary-fixed-variant": "#4f4537",
+                "on-primary-fixed": "#29170d",
+                "on-primary": "#ffffff",
+                "on-secondary-fixed-variant": "#5d4201",
+                "inverse-primary": "#e0c0af",
+                "tertiary-fixed": "#efe0cd",
+                "error": "#ba1a1a",
+                "surface-variant": "#e5e2dd",
+                "outline-variant": "#d3c3c0",
+                "secondary": "#775a19",
+                "on-background": "#1c1c19",
+                "secondary-fixed-dim": "#e9c176",
+                "primary-fixed": "#fedcca",
+                "outline": "#827472",
+                "tertiary-fixed-dim": "#d3c4b2",
+                "surface-container-highest": "#e5e2dd",
+                "on-tertiary-container": "#9f9382",
+                "inverse-on-surface": "#f3f0eb",
+                "on-primary-container": "#ab8e7e"
+              },
+              fontFamily: {
+                "headline": ["Noto Serif"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container">
+<!-- Header Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
+<span class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-50">The Artisanal Lens</span>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Shop</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Origins</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Process</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Journal</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Sustainability</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors" href="#">Wholesale</a>
+</div>
+<div class="flex items-center space-x-5">
+<span class="material-symbols-outlined text-stone-900 cursor-pointer hover:opacity-80 transition-opacity" data-icon="shopping_bag">shopping_bag</span>
+<span class="material-symbols-outlined text-stone-900 cursor-pointer hover:opacity-80 transition-opacity" data-icon="person">person</span>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-end">
+<div>
+<span class="text-secondary font-medium tracking-widest uppercase text-xs mb-4 block">Connect with us</span>
+<h1 class="text-6xl md:text-7xl font-serif text-primary tracking-tight leading-tight mb-8">Let's refine the ritual together.</h1>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed">Whether you are a home enthusiast or a wholesale partner, we invite you to share your thoughts on the craft.</p>
+</div>
+<div class="hidden md:block">
+<div class="aspect-[4/5] bg-surface-container-high rounded-md overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of artisanal coffee being poured into a ceramic cup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx8UrQCeKfEPNWXFchOP74GVbZaxmYewZAW9VC5VRK5GTYlZFenows-4vuIj5TRGcHa8vNcLVz5U5KwUDo6IIy8WWrbNr34BGlKHPTLY3iCI9NwxNGbcog7Ve9uQXAMHiomWG2-C6Q5Z_uXVUsxwxhEB8ABJNC_AthNffNZ5pVa7w_mTOqyucD1YFKQbRAD_NaZCW8TABLSU1HHiZ1pllhEWP-Yvy3h1AQvbNEpH4pINXlQrqSiNtG4xxMRLWWGwzS-9cxDcvYzEg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Contact Info Column -->
+<div class="lg:col-span-4 space-y-16">
+<!-- HQ -->
+<div class="space-y-4">
+<h3 class="text-xs font-bold uppercase tracking-widest text-secondary">The Roastery &amp; HQ</h3>
+<div class="font-serif text-2xl text-primary leading-snug">
+                        824 Espresso Lane<br/>
+                        Industrial District<br/>
+                        Portland, OR 97204
+                    </div>
+<a class="inline-flex items-center text-sm font-semibold text-secondary hover:opacity-80 transition-opacity" href="#">
+                        View on Map <span class="material-symbols-outlined ml-1 text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Support -->
+<div class="space-y-4">
+<h3 class="text-xs font-bold uppercase tracking-widest text-secondary">Inquiries</h3>
+<div class="space-y-2">
+<p class="text-sm text-on-surface-variant">General &amp; Orders</p>
+<a class="text-xl font-medium border-b border-outline-variant hover:border-secondary transition-colors pb-1" href="mailto:hello@estateandbean.com">hello@estateandbean.com</a>
+</div>
+<div class="space-y-2 pt-4">
+<p class="text-sm text-on-surface-variant">Wholesale Partnerships</p>
+<a class="text-xl font-medium border-b border-outline-variant hover:border-secondary transition-colors pb-1" href="mailto:partners@estateandbean.com">partners@estateandbean.com</a>
+</div>
+</div>
+<!-- Socials -->
+<div class="space-y-4">
+<h3 class="text-xs font-bold uppercase tracking-widest text-secondary">Follow the Journey</h3>
+<div class="flex flex-col space-y-3">
+<a class="text-on-surface hover:text-secondary transition-colors font-medium" href="#">Instagram</a>
+<a class="text-on-surface hover:text-secondary transition-colors font-medium" href="#">Pinterest</a>
+<a class="text-on-surface hover:text-secondary transition-colors font-medium" href="#">Vimeo</a>
+</div>
+</div>
+</div>
+<!-- Form Column -->
+<div class="lg:col-span-8 bg-surface-container-low p-8 md:p-16 rounded-md">
+<form class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-md px-4 py-4 focus:ring-1 focus:ring-secondary/20 focus:bg-surface-container-highest transition-all outline-none" placeholder="Elias Thorne" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-high border-none rounded-md px-4 py-4 focus:ring-1 focus:ring-secondary/20 focus:bg-surface-container-highest transition-all outline-none" placeholder="elias@domain.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Subject</label>
+<select class="w-full bg-surface-container-high border-none rounded-md px-4 py-4 focus:ring-1 focus:ring-secondary/20 focus:bg-surface-container-highest transition-all outline-none appearance-none">
+<option>General Inquiry</option>
+<option>Wholesale Interest</option>
+<option>Order Support</option>
+<option>Press &amp; Media</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Your Message</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-md px-4 py-4 focus:ring-1 focus:ring-secondary/20 focus:bg-surface-container-highest transition-all outline-none resize-none" placeholder="How can we assist your coffee journey?" rows="6"></textarea>
+</div>
+<button class="bg-primary text-on-primary px-12 py-5 rounded-sm font-semibold hover:bg-primary-container transition-all flex items-center group" type="submit">
+                        Send Message
+                        <span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1" data-icon="arrow_right_alt">arrow_right_alt</span>
+</button>
+</form>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-5xl mx-auto px-8 mt-40">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-serif text-primary mb-4">Common Inquiries</h2>
+<div class="w-12 h-0.5 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+<div class="space-y-3">
+<h4 class="font-serif text-xl text-primary">Shipping &amp; Delivery</h4>
+<p class="text-on-surface-variant leading-relaxed">We roast to order every Tuesday and Thursday. Please allow 3-5 business days for standard domestic shipping.</p>
+</div>
+<div class="space-y-3">
+<h4 class="font-serif text-xl text-primary">Wholesale Pricing</h4>
+<p class="text-on-surface-variant leading-relaxed">Our wholesale catalog is available for cafes, hotels, and boutiques. Minimum order quantities apply for bespoke roasting.</p>
+</div>
+<div class="space-y-3">
+<h4 class="font-serif text-xl text-primary">Subscription Changes</h4>
+<p class="text-on-surface-variant leading-relaxed">You can pause or adjust your coffee ritual frequency at any time through your personal account portal.</p>
+</div>
+<div class="space-y-3">
+<h4 class="font-serif text-xl text-primary">Origin Transparency</h4>
+<p class="text-on-surface-variant leading-relaxed">Every lot we source includes a detailed traceability report. Scan the QR code on your bag to meet the farmers.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-900 dark:bg-black w-full py-16 px-8 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-xl font-serif text-stone-100 mb-4 block">The Artisanal Lens</span>
+<p class="font-sans text-sm tracking-wide text-stone-400">© 2024 The Artisanal Lens. Curating the ritual of coffee.</p>
+</div>
+<div>
+<h4 class="text-stone-100 text-sm font-bold uppercase tracking-widest mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Shop Coffee</a></li>
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Brewing Gear</a></li>
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Our Origins</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-stone-100 text-sm font-bold uppercase tracking-widest mb-6">Service</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Contact</a></li>
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Shipping</a></li>
+<li><a class="text-stone-500 hover:text-stone-200 transition-colors text-sm" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-stone-100 text-sm font-bold uppercase tracking-widest mb-6">Newsletter</h4>
+<div class="relative">
+<input class="w-full bg-stone-800/50 border-none rounded-sm px-4 py-3 text-stone-100 placeholder:text-stone-600 focus:ring-1 focus:ring-yellow-600 outline-none transition-all" placeholder="Email Address" type="email"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 text-yellow-600 hover:text-yellow-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
