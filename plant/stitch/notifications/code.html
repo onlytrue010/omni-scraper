@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications | The Conservatory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#161f00",
+              "surface-container-high": "#ece8dd",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#fdf9ee",
+              "secondary-fixed": "#d9eaa3",
+              "primary-container": "#2d5a27",
+              "outline": "#72796e",
+              "on-background": "#1c1c15",
+              "primary-fixed-dim": "#a1d494",
+              "inverse-on-surface": "#f5f0e5",
+              "surface-dim": "#dddacf",
+              "outline-variant": "#c2c9bb",
+              "secondary-fixed-dim": "#bdce89",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#813d1b",
+              "secondary-container": "#d6e7a1",
+              "inverse-primary": "#a1d494",
+              "on-error": "#ffffff",
+              "on-surface": "#1c1c15",
+              "inverse-surface": "#323129",
+              "on-tertiary-fixed": "#360f00",
+              "background": "#fdf9ee",
+              "primary-fixed": "#bcf0ae",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#3e4c16",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f7f3e8",
+              "on-surface-variant": "#42493e",
+              "on-tertiary-fixed-variant": "#753413",
+              "surface": "#fdf9ee",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary-fixed": "#ffdbcd",
+              "surface-variant": "#e6e2d7",
+              "surface-tint": "#3b6934",
+              "on-tertiary-container": "#ffb18e",
+              "on-primary-container": "#9dd090",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#002201",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e6e2d7",
+              "surface-container": "#f2eee3",
+              "secondary": "#56642b",
+              "on-error-container": "#93000a",
+              "tertiary": "#642706",
+              "primary": "#154212",
+              "on-secondary-container": "#5a682f",
+              "on-primary-fixed-variant": "#23501e"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fdf9ee] dark:bg-stone-900">
+<div class="flex justify-between items-center px-6 h-20 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="md:hidden p-2 text-[#1c1c15] opacity-60">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-2xl font-bold text-[#154212] dark:text-emerald-500 font-['Plus_Jakarta_Sans'] tracking-tight">The Conservatory</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#1c1c15] opacity-60 hover:bg-[#f5f0e1] dark:hover:bg-stone-800 transition-colors px-3 py-1 rounded-lg" href="#">Dashboard</a>
+<a class="text-[#1c1c15] opacity-60 hover:bg-[#f5f0e1] dark:hover:bg-stone-800 transition-colors px-3 py-1 rounded-lg" href="#">Library</a>
+<a class="text-[#154212] font-semibold" href="#">Notifications</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-[#154212] dark:text-emerald-500 hover:bg-[#f5f0e1] dark:hover:bg-stone-800 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border-2 border-primary-fixed">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Portrait of a smiling woman outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlfzw90IgRF-1D_kcdtyxCdsXZtYLTT4B-zoVnbwIkDfVOZG2u6BHPlibuzzcJj7EaMLAbH6GGmkeD0_FWaonAVsuReDYqL38q2-AifzxPzAMr5qul4LUeUIkTl3S1v91sWBrl2XXdsH4V_k4gY7FT4VkpCi8cfeKCUbCw2iZp4HOaBb9FtJ-7YWFd42aBNbpsed8QfTHFnyeNKK031zopXDP0pdbwLArXhnAcOJxHRH53fuMAnKcY7ewavQyxT3RV2FgdwCD7uArN"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-24 md:pb-12 max-w-4xl mx-auto px-6">
+<!-- Page Header -->
+<div class="mb-10">
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary mb-2">Updates &amp; Alerts</p>
+<h2 class="text-4xl font-extrabold text-primary tracking-tight">Journal Entries</h2>
+</div>
+<!-- Bento Grid Layout for Summary -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+<div class="md:col-span-2 p-6 rounded-xl bg-surface-container-low flex items-center justify-between overflow-hidden relative group">
+<div class="relative z-10">
+<h3 class="text-xl font-bold text-primary mb-1">Thirsty Friends</h3>
+<p class="text-on-surface-variant text-sm">3 plants need your attention today.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-9xl" data-icon="water_drop">water_drop</span>
+</div>
+<button class="relative z-10 px-4 py-2 bg-primary text-white rounded-full text-xs font-bold hover:scale-105 transition-transform active:scale-95">Care Now</button>
+</div>
+<div class="p-6 rounded-xl bg-tertiary-container text-on-tertiary-container flex flex-col justify-between">
+<span class="material-symbols-outlined text-3xl" data-icon="potted_plant">potted_plant</span>
+<div>
+<p class="text-2xl font-bold">24</p>
+<p class="text-xs uppercase tracking-widest opacity-80">Active Growth</p>
+</div>
+</div>
+</div>
+<!-- Section: Today -->
+<section class="mb-10">
+<div class="flex items-center gap-4 mb-6">
+<h3 class="font-bold text-lg text-on-surface">Today</h3>
+<div class="h-[1px] flex-grow bg-outline-variant opacity-20"></div>
+</div>
+<div class="space-y-4">
+<!-- Care Alert: Watering -->
+<div class="group p-5 rounded-xl bg-surface-container-lowest shadow-[0_8px_24px_rgba(28,28,21,0.04)] hover:shadow-lg transition-shadow duration-300">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="water_drop">water_drop</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-on-surface leading-tight">Watering Time: Fiddle Leaf Fig</h4>
+<span class="text-[11px] font-medium text-on-surface-variant opacity-60">10m ago</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">The soil in 'Figgy Smalls' is dry. Give it 500ml of filtered water.</p>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 bg-primary text-white text-xs font-bold rounded-full hover:shadow-md transition-shadow">Done</button>
+<button class="px-4 py-1.5 bg-surface-container-high text-on-surface-variant text-xs font-bold rounded-full hover:bg-surface-variant transition-colors">Snooze</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Community Update -->
+<div class="group p-5 rounded-xl bg-surface-container-lowest shadow-[0_8px_24px_rgba(28,28,21,0.04)] hover:shadow-lg transition-shadow duration-300">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="Portrait of a young person with short hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2P4UBYheefO6H8hQNZC8Tlf9LdHy74Re97UhtXYx53rZCi29FdJEnSQdkMxvGksfPNfP7R7j-tbnX8C0FsNxrhC4R6IPDRqyjZmc1GfPOm9DfzlPyligBIxmcXhHPY69VC5A5gAXdSrr17vyAs9e7_-tjoAMuM7QTpH0PZyeD5HtXpbmWbOBXPCD89_7s2pxZN19ddw27_2rDVwGdPnNFgmX9XSS7bogEKKi1RkiYCb1DB0Hvpa9JZpAC0cm1yLlkUm4oDJgiAKl3"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-on-surface leading-tight">Sarah posted in "Tropical Terrors"</h4>
+<span class="text-[11px] font-medium text-on-surface-variant opacity-60">2h ago</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">"Does anyone know why my Monstera is getting these yellow spots?"</p>
+<button class="text-primary text-xs font-bold hover:underline">Reply to Sarah</button>
+</div>
+<div class="w-16 h-16 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0">
+<img alt="Post thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up of yellowing monstera plant leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdXXwPjn1LvE1ExQsntDOWjPxm8wmeLpB3IGUIZy2gmBiHTfnNQ6H_FdDzANO7JbxmNSHFi-upkAI-y6ZPPnUJo44e9rj9y5d6oM42JEzYESgfU2PNUsTSbRk4grErEYo_-3oYiU9yCCzHAxSudOBm5OcjwlM7vNBlyNVK6tPhdRIEe1B5vF_4cTt8rn3TpMsf3F54MCc7gKmPBgFK88NimZMX5bIu3y9KFiKdS4zA1QUxPk4HAB41KaT75YH1VvDH_RM_n4HoUvXc"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Yesterday -->
+<section class="mb-10">
+<div class="flex items-center gap-4 mb-6">
+<h3 class="font-bold text-lg text-on-surface opacity-60">Yesterday</h3>
+<div class="h-[1px] flex-grow bg-outline-variant opacity-10"></div>
+</div>
+<div class="space-y-4">
+<!-- Care Alert: Fertilizing -->
+<div class="group p-5 rounded-xl bg-surface-container-low opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center flex-shrink-0 opacity-80">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="grass">grass</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-on-surface leading-tight">Monthly Nutrition Pack</h4>
+<span class="text-[11px] font-medium text-on-surface-variant opacity-60">1d ago</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">It's time to feed your 'Snake Plant Collection'. Use 10-10-10 fertilizer.</p>
+<button class="px-4 py-1.5 border border-primary text-primary text-xs font-bold rounded-full hover:bg-primary hover:text-white transition-colors">Record Feeding</button>
+</div>
+</div>
+</div>
+<!-- System Notification -->
+<div class="group p-5 rounded-xl bg-surface-container-low opacity-80">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="verified">verified</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-on-surface leading-tight">Level Up: Master Gardener</h4>
+<span class="text-[11px] font-medium text-on-surface-variant opacity-60">1d ago</span>
+</div>
+<p class="text-sm text-on-surface-variant">Congratulations! You've maintained a 30-day care streak. New badges available.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Earlier -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<h3 class="font-bold text-lg text-on-surface opacity-40">Earlier this week</h3>
+<div class="h-[1px] flex-grow bg-outline-variant opacity-10"></div>
+</div>
+<div class="space-y-4">
+<!-- Care Alert: Misting -->
+<div class="group p-5 rounded-xl bg-surface-container-low opacity-60 hover:opacity-100 transition-opacity">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 opacity-60">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="cloud_queue">cloud_queue</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-bold text-on-surface leading-tight">Humidity Check</h4>
+<span class="text-[11px] font-medium text-on-surface-variant opacity-60">4d ago</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Calathea 'Medallion' needs a misting. Humidity is currently 42%.</p>
+<button class="text-secondary text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="history">history</span>
+                                View History
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-6 pt-3 bg-[#fdf9ee]/80 dark:bg-stone-900/80 backdrop-blur-xl border-t border-[#154212]/5 rounded-t-[2rem] z-50 shadow-[0_-8px_24px_rgba(28,28,21,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans']">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="herbology">immunology</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans']">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#154212] text-white rounded-full w-12 h-12 -mt-4 shadow-lg active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans']">Profile</span>
+</a>
+</nav>
+</body></html>

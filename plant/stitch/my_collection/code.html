@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Collection | The Conservatory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#161f00",
+              "surface-container-high": "#ece8dd",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#fdf9ee",
+              "secondary-fixed": "#d9eaa3",
+              "primary-container": "#2d5a27",
+              "outline": "#72796e",
+              "on-background": "#1c1c15",
+              "primary-fixed-dim": "#a1d494",
+              "inverse-on-surface": "#f5f0e5",
+              "surface-dim": "#dddacf",
+              "outline-variant": "#c2c9bb",
+              "secondary-fixed-dim": "#bdce89",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#813d1b",
+              "secondary-container": "#d6e7a1",
+              "inverse-primary": "#a1d494",
+              "on-error": "#ffffff",
+              "on-surface": "#1c1c15",
+              "inverse-surface": "#323129",
+              "on-tertiary-fixed": "#360f00",
+              "background": "#fdf9ee",
+              "primary-fixed": "#bcf0ae",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#3e4c16",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f7f3e8",
+              "on-surface-variant": "#42493e",
+              "on-tertiary-fixed-variant": "#753413",
+              "surface": "#fdf9ee",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary-fixed": "#ffdbcd",
+              "surface-variant": "#e6e2d7",
+              "surface-tint": "#3b6934",
+              "on-tertiary-container": "#ffb18e",
+              "on-primary-container": "#9dd090",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#002201",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e6e2d7",
+              "surface-container": "#f2eee3",
+              "secondary": "#56642b",
+              "on-error-container": "#93000a",
+              "tertiary": "#642706",
+              "primary": "#154212",
+              "on-secondary-container": "#5a682f",
+              "on-primary-fixed-variant": "#23501e"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-card-shadow {
+            box-shadow: 0 8px 24px rgba(28, 28, 21, 0.06);
+        }
+        .text-shadow-sm {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fdf9ee] dark:bg-stone-900">
+<div class="flex justify-between items-center px-6 h-20 w-full max-w-7xl mx-auto">
+<div class="text-2xl font-bold text-[#154212] dark:text-emerald-500 font-['Plus_Jakarta_Sans'] tracking-tight">
+                The Conservatory
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-[#1c1c15] opacity-60 font-['Plus_Jakarta_Sans'] tracking-tight hover:bg-[#f5f0e1] dark:hover:bg-stone-800 transition-colors px-3 py-2 rounded-lg" href="#">Dashboard</a>
+<a class="text-[#154212] font-semibold font-['Plus_Jakarta_Sans'] tracking-tight px-3 py-2 rounded-lg" href="#">Collections</a>
+<a class="text-[#1c1c15] opacity-60 font-['Plus_Jakarta_Sans'] tracking-tight hover:bg-[#f5f0e1] dark:hover:bg-stone-800 transition-colors px-3 py-2 rounded-lg" href="#">Library</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="material-symbols-outlined text-[#154212] p-2 hover:bg-[#f5f0e1] rounded-full transition-colors" data-icon="search">search</button>
+<button class="material-symbols-outlined text-[#154212] p-2 hover:bg-[#f5f0e1] rounded-full transition-colors" data-icon="notifications">notifications</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border-2 border-primary/10">
+<img alt="User profile avatar" data-alt="Portrait of a woman with a natural aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9iEBhCN5euQb2sXXRbmStmIhF_vIurhaPFMx5h23eP6CD4lP2Uq2KX_2JGaTRcxjG3Lz6q95Ncjccc9mWjOgfiasqYtfvkkDhNELL4nbErsexqWLy7DJbeS9J_BFp2uuukVNoIcx8ZM0S6ske4xN_9LDO1252mKmS6CljbeNTW6mcaDUyo3Wp-79sy-Bm9NhipULGAfczvmdMTauZq-q2MsN16llaV7ixygXHwWLAIfPBbEyDATezs5KS4OmRf5JZ6orEi0y9agem"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex pt-20 pb-24 md:pb-0">
+<!-- SideNavBar (Hidden on Mobile) -->
+<aside class="hidden md:flex flex-col p-4 space-y-2 h-[calc(100vh-5rem)] w-64 border-r border-stone-200/20 sticky top-20 bg-[#fdf9ee] dark:bg-stone-950">
+<div class="mb-8 px-4 py-6 bg-surface-container-low rounded-2xl">
+<p class="text-[#154212] font-extrabold text-xl font-['Plus_Jakarta_Sans']">Plant Guardian</p>
+<p class="text-xs text-on-surface-variant font-medium opacity-70">Level 4 Botanist</p>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center space-x-3 px-4 py-3 text-[#1c1c15] hover:translate-x-1 transition-transform font-['Plus_Jakarta_Sans'] text-sm font-medium rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#1c1c15] hover:translate-x-1 transition-transform font-['Plus_Jakarta_Sans'] text-sm font-medium rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span>Schedules</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#1c1c15] hover:translate-x-1 transition-transform font-['Plus_Jakarta_Sans'] text-sm font-medium rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span>Library</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 bg-[#154212] text-white rounded-xl shadow-lg transition-transform font-['Plus_Jakarta_Sans'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+<span>Collections</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#1c1c15] hover:translate-x-1 transition-transform font-['Plus_Jakarta_Sans'] text-sm font-medium rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 max-w-7xl mx-auto px-6 py-8">
+<!-- Hero / Header Section -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-secondary font-label mb-2 block">Your Sanctuary</span>
+<h1 class="text-5xl md:text-6xl font-headline font-extrabold text-primary tracking-tighter leading-none mb-4">My Collection</h1>
+<p class="text-on-surface-variant max-w-xl text-lg leading-relaxed">A curated digital ledger of your living companions. Monitor health, growth cycles, and seasonal requirements.</p>
+</div>
+<button class="flex items-center space-x-2 bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded-full shadow-xl hover:scale-105 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="font-bold tracking-tight">Add New Plant</span>
+</button>
+</div>
+</section>
+<!-- Stats Tonal Section (No Borders) -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+<div class="bg-surface-container-low p-6 rounded-3xl">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Total Flora</p>
+<p class="text-3xl font-bold text-primary">24</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Needs Water</p>
+<p class="text-3xl font-bold text-tertiary">3</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Healthy</p>
+<p class="text-3xl font-bold text-primary">21</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Last Update</p>
+<p class="text-lg font-bold text-primary leading-tight mt-1">2 Hours Ago</p>
+</div>
+</section>
+<!-- Plant Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+<!-- Plant Card 1: Monstera -->
+<article class="group relative bg-surface-container-lowest rounded-[2rem] organic-card-shadow transition-all duration-300 hover:-translate-y-2">
+<div class="relative h-64 w-full overflow-hidden rounded-t-[2rem]">
+<img alt="Monstera Deliciosa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a vibrant green Monstera leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6X5zE0B2F4Hu6XE_bUG-0e77CIbxBJYv3gl9DVawAkpUYc33i4M1Uju-wCzstRAlneCTAClij_jGRfdcItEZl-Fz1lBiENz-YxCCRG3-YhkXbrul0UteAbF-QkPRoVEwjR1fEcTZOxx3WgA7UsDAotTQRbbZFsQAM3GsSaL-pyhGALmtH_Uwll5MZ4XKT0z18zjBqVx5KoUQsyWPPlBDRXjKRj-VbA31vHjiCNw8o_YDuuTW6W51RaGpKWWM6eSnwovDQrsdAvUve"/>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-white text-[10px] font-bold uppercase tracking-widest text-shadow-sm">Happy</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-primary mb-1">Monstera Deliciosa</h3>
+<p class="text-sm font-medium text-on-surface-variant italic mb-6">Swiss Cheese Plant</p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-sm" data-icon="wb_sunny">wb_sunny</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-800">
+<span class="material-symbols-outlined text-sm" data-icon="water_drop">water_drop</span>
+</div>
+</div>
+<button class="text-primary font-bold text-sm flex items-center group-hover:underline">
+                                Details <span class="material-symbols-outlined ml-1 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Plant Card 2: Fiddle Leaf Fig -->
+<article class="group relative bg-surface-container-lowest rounded-[2rem] organic-card-shadow transition-all duration-300 hover:-translate-y-2">
+<div class="relative h-64 w-full overflow-hidden rounded-t-[2rem]">
+<img alt="Ficus Lyrata" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Stately Fiddle Leaf Fig plant in a minimal room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxUXLaLX1xr3bHTLT8tdYy_I3F7ZZ9WpmXJAox233OXD2mGiADAQ5gxtv2hpDoTg58Ahyo9G-YqA2LiyZhI_CFiIFh8rqV81BmtdLbT5pjbopjOdHBRlgxB4DEY3J4nvUTw3hKzXZL0ZfRB22Z5ppHL_uAWFupTh-MiZUNjBuP4Nu06CVE490FkCRuRRZgONv0wbxg5A7Ec-J1iegsnNIaqLMuShmp1e0YwzkmLhFMSrIzznK77jNAuI8fx0GkUeMDbbQFPx51A2Xf"/>
+<div class="absolute top-4 right-4 bg-tertiary/20 backdrop-blur-md rounded-full px-4 py-1.5 flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-white text-[10px] font-bold uppercase tracking-widest text-shadow-sm">Thirsty</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-primary mb-1">Ficus Lyrata</h3>
+<p class="text-sm font-medium text-on-surface-variant italic mb-6">Fiddle Leaf Fig</p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-sm" data-icon="wb_sunny">wb_sunny</span>
+</div>
+</div>
+<button class="text-primary font-bold text-sm flex items-center group-hover:underline">
+                                Details <span class="material-symbols-outlined ml-1 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Plant Card 3: Snake Plant -->
+<article class="group relative bg-surface-container-lowest rounded-[2rem] organic-card-shadow transition-all duration-300 hover:-translate-y-2">
+<div class="relative h-64 w-full overflow-hidden rounded-t-[2rem]">
+<img alt="Sansevieria" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of structured snake plant leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD84uX0wH8X3K8mBEF1PDj6kYuVM0ITCh9Z0sqL9Nq_tNHttm_jhQoW5sMomI3GFZGPAqTxS-Bv2pJ1FvPLZtIUZJbBUL3L9FspjrfO-GvLB3wPkE9g9PPHpBcJlvRhE7xJ9jTtHdPFATZUgy-nEdscy0JAR15axu4VNTAEZo9EJt8ymYqXMwQ--0O_vm5Hs3Qmj3mkT-DHXQwpsSH9pgC_xx7nLQiCj2a9yOPhqlvQp94cEv1M-RXt4RjBOaS0CJQhsVJ09c3pNbRq"/>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-white text-[10px] font-bold uppercase tracking-widest text-shadow-sm">Thriving</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-primary mb-1">Sansevieria</h3>
+<p class="text-sm font-medium text-on-surface-variant italic mb-6">Snake Plant</p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-sm" data-icon="dark_mode">dark_mode</span>
+</div>
+</div>
+<button class="text-primary font-bold text-sm flex items-center group-hover:underline">
+                                Details <span class="material-symbols-outlined ml-1 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Plant Card 4: Pothos -->
+<article class="group relative bg-surface-container-lowest rounded-[2rem] organic-card-shadow transition-all duration-300 hover:-translate-y-2">
+<div class="relative h-64 w-full overflow-hidden rounded-t-[2rem]">
+<img alt="Epipremnum" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Trailing pothos plant on a high shelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0y9OKgQ2lFPzgr1RlYr_UiAl_1WhuEzSQX_YA1UKrOMqLudbfSHzf0Ubkt8wO1fRxwz1pbHoz38yPTihvTd01BHmeF76WYdHcmsUjbJGOljZd_iCxfI9RUXXexPP4NZf1BCkjWSwuTrr_5ewwSnYlFX4w0shbi4Mn31fDQ8ofB_SQ082V6KysjgfFPO6dV8KZEB2m3ShvCouPLSYIVUlVwsc-bPYM2EH5pTZNBTWWc4bqWut5QS7iPJfR8pKYQRH2NLF-m08EE7PT"/>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md rounded-full px-4 py-1.5 flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-white text-[10px] font-bold uppercase tracking-widest text-shadow-sm">Growing</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-primary mb-1">Epipremnum</h3>
+<p class="text-sm font-medium text-on-surface-variant italic mb-6">Golden Pothos</p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-800">
+<span class="material-symbols-outlined text-sm" data-icon="water_drop">water_drop</span>
+</div>
+</div>
+<button class="text-primary font-bold text-sm flex items-center group-hover:underline">
+                                Details <span class="material-symbols-outlined ml-1 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Add New Plant Empty State Card -->
+<button class="flex flex-col items-center justify-center border-4 border-dashed border-outline-variant/30 rounded-[2rem] p-12 bg-surface-container-low hover:bg-surface-container transition-colors group">
+<div class="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="add_circle">add_circle</span>
+</div>
+<p class="text-xl font-bold text-primary mb-2">Grow Something New</p>
+<p class="text-on-surface-variant text-center max-w-[200px] text-sm">Expand your sanctuary with a new botanical resident.</p>
+</button>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-6 pt-3 bg-[#fdf9ee]/80 dark:bg-stone-900/80 backdrop-blur-xl border-t border-[#154212]/5 shadow-[0_-8px_24px_rgba(28,28,21,0.06)] z-50">
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans']">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="herbology">immunology</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans']">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#154212] text-white rounded-full w-12 h-12 -mt-4 shadow-lg active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans']">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button (FAB) - Semantic Context: On mobile, FAB for adding plants -->
+<button class="md:hidden fixed bottom-24 right-6 w-16 h-16 rounded-full bg-primary text-white shadow-2xl flex items-center justify-center active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>

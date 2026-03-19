@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Conservatory - Explore Plants</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#161f00",
+              "surface-container-high": "#ece8dd",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#fdf9ee",
+              "secondary-fixed": "#d9eaa3",
+              "primary-container": "#2d5a27",
+              "outline": "#72796e",
+              "on-background": "#1c1c15",
+              "primary-fixed-dim": "#a1d494",
+              "inverse-on-surface": "#f5f0e5",
+              "surface-dim": "#dddacf",
+              "outline-variant": "#c2c9bb",
+              "secondary-fixed-dim": "#bdce89",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#813d1b",
+              "secondary-container": "#d6e7a1",
+              "inverse-primary": "#a1d494",
+              "on-error": "#ffffff",
+              "on-surface": "#1c1c15",
+              "inverse-surface": "#323129",
+              "on-tertiary-fixed": "#360f00",
+              "background": "#fdf9ee",
+              "primary-fixed": "#bcf0ae",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#3e4c16",
+              "error": "#ba1a1a",
+              "surface-container-low": "#f7f3e8",
+              "on-surface-variant": "#42493e",
+              "on-tertiary-fixed-variant": "#753413",
+              "surface": "#fdf9ee",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary-fixed": "#ffdbcd",
+              "surface-variant": "#e6e2d7",
+              "surface-tint": "#3b6934",
+              "on-tertiary-container": "#ffb18e",
+              "on-primary-container": "#9dd090",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#002201",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e6e2d7",
+              "surface-container": "#f2eee3",
+              "secondary": "#56642b",
+              "on-error-container": "#93000a",
+              "tertiary": "#642706",
+              "primary": "#154212",
+              "on-secondary-container": "#5a682f",
+              "on-primary-fixed-variant": "#23501e"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-24 md:pb-0 md:pt-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fdf9ee] dark:bg-stone-900 font-['Plus_Jakarta_Sans'] tracking-tight">
+<div class="flex justify-between items-center px-6 h-20 w-full max-w-7xl mx-auto">
+<h1 class="text-2xl font-bold text-[#154212] dark:text-emerald-500">The Conservatory</h1>
+<div class="flex items-center space-gap-4">
+<button class="p-2 hover:bg-[#f5f0e1] dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200 rounded-full text-[#1c1c15] opacity-60">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-[#f5f0e1] dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200 rounded-full text-[#154212] font-semibold">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<div class="ml-2 w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close up portrait of smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1irHi4o4tim_Br95Zy-XvMe5N9eVA_qiYQSIFVr1VweDQlh0GZIEUES0X9mLlAkeUtjodEn4Df9emOnqNqWSvtIDSjm23rWOCS2wouxwE4IROOT_oX-9DbjAosdD0NnrhySDWQowSQYZJdNBmatiJ5nbqSQBpsscxfFDokw7NxYMLt2EozuXI1tIRmZfW5SsMDHPn991PpEADCZZ7k-WExlOKGayu4aYcrhykTNzLKETiSQdxtiyaQrCpgZYhiCzLxEMzhtXnB6uU"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-8">
+<!-- Hero Search Section -->
+<section class="mb-12">
+<div class="max-w-3xl mx-auto text-center space-y-6">
+<h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Find your next companion</h2>
+<div class="relative group">
+<div class="absolute inset-y-0 left-6 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-primary/40 text-2xl" data-icon="search">search</span>
+</div>
+<input class="w-full h-16 pl-16 pr-6 bg-surface-container-lowest rounded-full border-none shadow-[0_8px_32px_rgba(21,66,18,0.06)] focus:ring-2 focus:ring-primary/20 text-lg placeholder:text-on-surface-variant/40 font-medium transition-all" placeholder="Search species, care tips, or plant names..." type="text"/>
+</div>
+<div class="flex flex-wrap justify-center gap-2 pt-2">
+<span class="px-4 py-1.5 bg-surface-container-low text-on-surface-variant text-xs font-bold uppercase tracking-widest rounded-full cursor-pointer hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Monstera</span>
+<span class="px-4 py-1.5 bg-surface-container-low text-on-surface-variant text-xs font-bold uppercase tracking-widest rounded-full cursor-pointer hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Snake Plant</span>
+<span class="px-4 py-1.5 bg-surface-container-low text-on-surface-variant text-xs font-bold uppercase tracking-widest rounded-full cursor-pointer hover:bg-secondary-container hover:text-on-secondary-container transition-colors">Succulents</span>
+</div>
+</div>
+</section>
+<!-- Search by Category (Bento Style) -->
+<section class="mb-16">
+<div class="flex justify-between items-end mb-8">
+<div>
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary mb-1">Curation</p>
+<h3 class="text-2xl font-bold tracking-tight">Search by Category</h3>
+</div>
+<button class="text-primary font-bold text-sm hover:underline">Explore All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="md:col-span-2 group relative h-64 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="Lush green Monstera leaves in soft sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfieh3dkmjb0ILX9WQcvXrlkOJ9IfMoVTPoZpcD9l3h8POuymPGcXf7FoebI14THJpMkES5ygwYdJdfDyK4qjhqppzzjd-BmBEYp9uVma654mPZEmM-IeEIpXKDdeOyEcqL3jVh6utC47qnkVxctlEeb1ohFVZUMl5NxGUSucqCohsVMIJHg58yMBwouttr4Cj185ZoYafjOMKrdFmqnnt3IF5uM9Csh7JVOzPT2R1b8KYQCgUKrPNrt_mAsAMlStmBvtIM08_qaR4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8 text-white">
+<span class="material-symbols-outlined mb-2 text-3xl" data-icon="light_mode">light_mode</span>
+<h4 class="text-2xl font-bold">Low Light Legends</h4>
+<p class="text-sm opacity-90">Thrive in even the dimmest corners.</p>
+</div>
+</div>
+<div class="group relative h-64 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="Small cat sitting next to safe household plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH5nV3VpbWy4KminZEGCvlSGJX5DQWdzuK9OIzjdV8Xdz3axe3lhiXLRiqgx9wzBgxiNbbYoXtwE9p2sKEij94doIg7hpGRSuAyyBJEUtPN4vNRZyQABlxAaY5--kWV4XBFvUFwgxRUwviRYUVRzxAp3iJBQEJg4GorX_Ak3wHyfqYH_PbX7hEE3vOKozH57rwZOkGqtEb1JdMs1MrlMgDNSjlw7sXOaU1f9jIhqUj7GRusDdqb3vIcizhFUGg8vC10XahiS16WAoZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary/80 to-transparent flex flex-col justify-end p-8 text-white">
+<span class="material-symbols-outlined mb-2 text-3xl" data-icon="pets">pets</span>
+<h4 class="text-xl font-bold">Pet Friendly</h4>
+<p class="text-xs opacity-90">Non-toxic and safe for fur babies.</p>
+</div>
+</div>
+<div class="group relative h-64 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="Air purifying plant in a modern glass vase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4cgIVLQslOKeSvbumPFThfW6Cu2tiVUg75I-16lXwPWAuFx6FpNzB0yuya4fsHkxRglFCW3qKVKbdGF7Z7QIKPOP2HnjKARlPAFUXD10apvadUdoi5RsVrdx42gjoBa_o7H7bDcO8UQz6bqWNICxBh2fRSvv2igbLR9Rhld18zmOsUBfc6p_4BLgdlaxfH3QbtdLVooH_JaJHxvSJheKQE7wuSOQjXCiE7GW0gG28a17aoVTmbIpCSK1crEME57pFKzVnrW8MIqzX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent flex flex-col justify-end p-8 text-white">
+<span class="material-symbols-outlined mb-2 text-3xl" data-icon="air">air</span>
+<h4 class="text-xl font-bold">Air Purifying</h4>
+<p class="text-xs opacity-90">Natural filters for your living space.</p>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Trending Species -->
+<div class="lg:col-span-2">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-bold tracking-tight">Trending Species</h3>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container border border-outline/10 flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container border border-outline/10 flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Plant Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Vibrant green Pilea plant in a ceramic pot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfeUNE_qSh2aIvZGIearZ8RJ5IwqNgsuqvpVhUM_878ZEjatk-lFS_oREYvcHkI3tuPvD13RFLZpVvNaS2O1CO1twz083H03wHaRiebZ0tQxcScXUv6YFIbIaBR0iMBNZ2I-mpSc3RxxV3wfDVdnW5aKD0f-77-WnsUhC9Z8XnEMkrINHvjZUkdgMm9bLTfYq1p8OgReZpLsGCgpJy5UXrCa7eabaoPbKRg_NSTGDH3YZ-PzauWFs14qW0roR1XSi5WwrbVYYF_3-0"/>
+<span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-primary">Rare Find</span>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-on-surface">Pilea Peperomioides</h4>
+<span class="material-symbols-outlined text-primary/40" data-icon="favorite">favorite</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">"The Chinese Money Plant"</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container/50 text-on-secondary-container text-[10px] font-bold rounded-full">INTERMEDIATE</span>
+<span class="px-3 py-1 bg-primary-container/10 text-primary text-[10px] font-bold rounded-full">BRIGHT INDIRECT</span>
+</div>
+</div>
+</div>
+<!-- Plant Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Elegant Calathea plant with striped leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk48U1i4EAtAf28r5hQrh2nkf16eDiNKrUKWXmtHxjwjcqWBOd_zIeDR-Z3v-ezI-dX6MbLfuDtU6DmxHd9uCaPmPsPT72hKrDBetWmWBYg9UkgWgy3JOwewomqJmJY0-Jy0GA6jaTYMdI2-XX4qmABLSZm7hnOrnRDlBqSfDHojOkNzm-ieO2SqeCWsodqygfCIE-lj6_voNHHdcO0WoHaO6TO8D9XJM9HiF9i2raNYuxPGHPcO1kF2CW-jIRriXNCZQwK_7k___o"/>
+<span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-secondary">Trending</span>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-on-surface">Calathea Ornata</h4>
+<span class="material-symbols-outlined text-primary/40" data-icon="favorite">favorite</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">"Pinstripe Plant"</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container/50 text-on-secondary-container text-[10px] font-bold rounded-full">EXPERT</span>
+<span class="px-3 py-1 bg-primary-container/10 text-primary text-[10px] font-bold rounded-full">HUMIDITY LOVER</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recently Viewed -->
+<div class="space-y-8">
+<h3 class="text-2xl font-bold tracking-tight">Recently Viewed</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-xl group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Small succulent in a geometric pot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBamZEZBm73Ry3xfPerVzI6hBVCgzm_7_O9X65ixevQO_Cz1rrn-2rMImIrk32cwtwLwnjGV6ufvurqzu-O_jSu-kMUZ3O9725IpKE-ZC7c8BG1rw7BPN6EpqQbkjS8bTUs-6xGqi2jMerW6lRpCTJWUlid-Qjc3CJdDlyspiUIJ8JdE7joLjrvzEvCnfJ2JueZG1j9KJupK8Cx1HW4ejoOgDKnMaz6Er7MwNcwSduX0S660bCf0CpnBcdSRW6gZYSv1aBq0mkkMDC9"/>
+</div>
+<div class="flex-grow">
+<h5 class="font-bold text-on-surface">Echeveria</h5>
+<p class="text-xs text-on-surface-variant italic">Blue Prince</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-xl group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Dark green ZZ plant leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAk-G_C_DpFFzRiO3lXzfBBnUejRAy68dobbAyDlP2bp2MKbrPKvDWJwEvRE5iGsLt1HyMgNHehDfUMhvew420qhCgBOmabWFD7s61ozrx4lAcQ6DVJPmOOVoNY1dcqnIK424mK7NTaHKNQI8nL-mysJuIKbx11HGBwCwfVVXjqOhK2itUX7oKYxPGGVTJqqzmqOPzG_qJ5u0J4mqWEV2_pNWMUv5tBD3ITPry5YgYI9fLCNzttLFCWp5MO6upVwhqJXLYdX3EJ9_y"/>
+</div>
+<div class="flex-grow">
+<h5 class="font-bold text-on-surface">Zamioculcas</h5>
+<p class="text-xs text-on-surface-variant italic">Raven ZZ</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-xl group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Trailing heart-shaped ivy leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwONGa1yg8gEJMwM-3DwgDb3TdXtqOshoOtR_pLdO2L4tUsd0RhCV3fAQqyaRu4k2joLM1W-O7iha4WW3GtKgKoEA23UsLfRcWue2qpXk0S2kKdQ5i2A43FXVPw3dFaSugAeCRF0c7OfUAxYP_jPLF2OHNw2dxgJARgnTvw1Adi7SKqRGxsTcX1HmGv1xrH7WEFGkhxsFRs3xgpDygMx0uFc8zDLBpPfWlvLB9B_VJXN7bMmUruXVl4Wr0h-oauxN2_QKRNrjwB5Jg"/>
+</div>
+<div class="flex-grow">
+<h5 class="font-bold text-on-surface">Hedera Helix</h5>
+<p class="text-xs text-on-surface-variant italic">English Ivy</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40 group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- CTA Suggestion Card -->
+<div class="bg-primary p-8 rounded-[2rem] text-white relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="text-xl font-bold mb-2">Can't find a species?</h4>
+<p class="text-sm opacity-80 mb-6 leading-relaxed">Our botanists are constantly adding new plants to the database.</p>
+<button class="bg-white text-primary px-6 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform">Request Species</button>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl opacity-10 rotate-12" data-icon="potted_plant">potted_plant</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-6 pt-3 bg-[#fdf9ee]/80 dark:bg-stone-900/80 backdrop-blur-xl border-t border-[#154212]/5 shadow-[0_-8px_24px_rgba(28,28,21,0.06)] rounded-t-[2rem] z-50">
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans'] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="herbology">immunology</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans'] mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#154212] text-white rounded-full w-12 h-12 -mt-4 shadow-lg active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans'] mt-1">Care</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest font-['Plus_Jakarta_Sans'] mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

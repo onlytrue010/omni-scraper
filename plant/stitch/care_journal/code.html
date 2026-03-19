@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Care Journal - The Conservatory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#3e4c16",
+              "surface-container-low": "#f7f3e8",
+              "on-primary": "#ffffff",
+              "surface-dim": "#dddacf",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e6e2d7",
+              "on-secondary-container": "#5a682f",
+              "surface-container": "#f2eee3",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary": "#642706",
+              "on-primary-container": "#9dd090",
+              "surface-container-highest": "#e6e2d7",
+              "surface-bright": "#fdf9ee",
+              "background": "#fdf9ee",
+              "on-tertiary-container": "#ffb18e",
+              "on-tertiary-fixed": "#360f00",
+              "tertiary-container": "#813d1b",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#42493e",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#002201",
+              "error-container": "#ffdad6",
+              "primary-container": "#2d5a27",
+              "on-primary-fixed-variant": "#23501e",
+              "tertiary-fixed": "#ffdbcd",
+              "on-error-container": "#93000a",
+              "secondary": "#56642b",
+              "inverse-on-surface": "#f5f0e5",
+              "surface-tint": "#3b6934",
+              "error": "#ba1a1a",
+              "inverse-surface": "#323129",
+              "primary-fixed": "#bcf0ae",
+              "on-secondary-fixed": "#161f00",
+              "surface-container-high": "#ece8dd",
+              "inverse-primary": "#a1d494",
+              "primary-fixed-dim": "#a1d494",
+              "outline": "#72796e",
+              "secondary-fixed": "#d9eaa3",
+              "outline-variant": "#c2c9bb",
+              "surface": "#fdf9ee",
+              "on-background": "#1c1c15",
+              "secondary-fixed-dim": "#bdce89",
+              "secondary-container": "#d6e7a1",
+              "primary": "#154212",
+              "on-tertiary-fixed-variant": "#753413",
+              "on-surface": "#1c1c15",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .leaf-breakout {
+            transform: translateY(-20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-32">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#fdf9ee]/80 dark:bg-[#1c1c15]/80 backdrop-blur-md shadow-[0_8px_24px_rgba(28,28,21,0.06)] dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<span class="text-2xl font-bold text-[#154212] dark:text-[#d1e6c9] tracking-tight font-headline">The Conservatory</span>
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] text-sm tracking-tight">
+<a class="text-[#56642b] dark:text-[#a3ad8a] hover:bg-[#f2efe4] px-3 py-1 rounded-full transition-colors" href="#">Conservatory</a>
+<a class="text-[#154212] dark:text-[#d1e6c9] font-semibold" href="#">Journal</a>
+<a class="text-[#56642b] dark:text-[#a3ad8a] hover:bg-[#f2efe4] px-3 py-1 rounded-full transition-colors" href="#">Community</a>
+<a class="text-[#56642b] dark:text-[#a3ad8a] hover:bg-[#f2efe4] px-3 py-1 rounded-full transition-colors" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer p-2 rounded-full hover:bg-surface-container-low transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 pt-24 md:pt-32">
+<!-- Header Section -->
+<header class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-secondary font-semibold tracking-widest uppercase text-xs mb-2 block">Personal Archives</span>
+<h1 class="text-5xl font-extrabold text-primary tracking-tight font-headline">Care Journal</h1>
+</div>
+<div class="flex gap-3">
+<button class="bg-primary text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                        New Entry
+                    </button>
+</div>
+</div>
+</header>
+<!-- Bento Grid: Stats & Monthly Summary -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<!-- Monthly Summary Main Card -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-[2rem] shadow-[0_8px_32px_rgba(28,28,21,0.04)] flex flex-col justify-between relative overflow-hidden group">
+<div class="relative z-10">
+<h2 class="text-2xl font-bold text-primary mb-2">October Summary</h2>
+<p class="text-on-surface-variant max-w-md">Your indoor garden has flourished this month. You've been particularly attentive to hydration needs.</p>
+<div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div>
+<span class="text-3xl font-extrabold text-primary block">48</span>
+<span class="text-xs uppercase tracking-widest font-bold text-secondary">Total Waterings</span>
+</div>
+<div>
+<span class="text-3xl font-extrabold text-primary block">12</span>
+<span class="text-xs uppercase tracking-widest font-bold text-secondary">New Leaves</span>
+</div>
+<div>
+<span class="text-3xl font-extrabold text-tertiary block">04</span>
+<span class="text-xs uppercase tracking-widest font-bold text-secondary">Fertilizations</span>
+</div>
+</div>
+</div>
+<!-- Decorative Plant Element -->
+<div class="absolute -top-12 -right-12 w-48 h-48 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[12rem] text-primary" data-icon="potted_plant">potted_plant</span>
+</div>
+</div>
+<!-- Health Milestone Card -->
+<div class="bg-surface-container p-8 rounded-[2rem] flex flex-col">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold self-start mb-6">LATEST MILESTONE</span>
+<div class="flex-grow">
+<h3 class="text-xl font-bold text-primary mb-3">Thriving Monstera</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Your Swiss Cheese Plant reached "Peak Health" status today after consistent misting routines.</p>
+</div>
+<div class="mt-6 flex -space-x-3 overflow-hidden">
+<img alt="" class="inline-block h-10 w-10 rounded-full ring-4 ring-surface" data-alt="Monstera Deliciosa closeup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9blJ6qmH_W9epi8Zgd7jOM5i3rBoc7LpB8I2doET1wxeEb1-LNI2G35Ucq1pxuTU415cZQS6wa8lcdFbpfw1WdnDzVAxgX6FTtWiAczak4Qut5MasCN61cLCaOAz17wAYlmovYYlOYl0AzoG-qgI8TfjnYT8i8_XKkmZaMtnd4UoASOfa-zF9YjqYxMQYPEyKbnf7yIOtxWOko27CWkJCWIDGQoFDNu32Zm6sFCxYAp82IaYdUr8WfhNG5FrXOm7scqH9muNrl075"/>
+<div class="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold ring-4 ring-surface">
+                        +3
+                    </div>
+</div>
+</div>
+</section>
+<!-- Chronological Timeline Section -->
+<section class="max-w-4xl mx-auto">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold text-primary">Activity Log</h2>
+<div class="flex items-center gap-2 text-secondary font-medium text-sm">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                    Filter by Action
+                </div>
+</div>
+<!-- Timeline Items -->
+<div class="space-y-4">
+<!-- Day Group -->
+<div class="mb-10">
+<div class="sticky top-24 z-20 py-4 mb-4 bg-background/95 backdrop-blur-sm">
+<span class="text-xs font-extrabold text-secondary tracking-[0.2em] uppercase">Today — Monday, Oct 23</span>
+</div>
+<div class="space-y-4">
+<!-- Activity Card 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex items-center gap-6 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="water_drop">water_drop</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg">Monstera watered</h4>
+<span class="text-xs text-on-surface-variant font-medium">09:14 AM</span>
+</div>
+<p class="text-on-surface-variant text-sm">Soil was dry to the second knuckle. Added 500ml of filtered water.</p>
+</div>
+</div>
+<!-- Activity Card 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex items-center gap-6 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-tertiary shrink-0 group-hover:bg-tertiary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="eco">eco</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg">Snake Plant fertilized</h4>
+<span class="text-xs text-on-surface-variant font-medium">08:30 AM</span>
+</div>
+<p class="text-on-surface-variant text-sm">Applied organic 10-10-10 liquid fertilizer as per seasonal schedule.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Day Group 2 -->
+<div class="mb-10">
+<div class="sticky top-24 z-20 py-4 mb-4 bg-background/95 backdrop-blur-sm">
+<span class="text-xs font-extrabold text-secondary tracking-[0.2em] uppercase">Yesterday — Sunday, Oct 22</span>
+</div>
+<div class="space-y-4">
+<!-- Activity Card 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex items-center gap-6 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-secondary shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="airpurifier_gen">air_purifier_gen</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg">Calathea misted</h4>
+<span class="text-xs text-on-surface-variant font-medium">04:45 PM</span>
+</div>
+<p class="text-on-surface-variant text-sm">Increased humidity around the leaves to prevent brown edges.</p>
+</div>
+</div>
+<!-- Activity Card 4 (Breakout Image Style) -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col sm:flex-row">
+<div class="sm:w-48 h-48 sm:h-auto overflow-hidden relative">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Potted succulent collection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBV12ZCBO3zjpZEBGjIVYJ9aYGdaQ5Y7A0qYeNLmNBDXoK4XWW_Z9-yMPKbHfDpuvHbQovYznTfCkLLg13KeK0OYv_hEZ_hu8ts4StN5C0z2cdtsTQ70yfto6V51HbT4BI_Md3PCb1oJHpP-fdhPJPVfvoEti2-ZQ5mpy1ylmhx2RMH_mG4jfzlYv9t0jNNKnikiCvxsoff6WZS9GB1-1xUI8OVWbZL3T_60-PdCsXo9PdwPlOhvK_eeLnx0l65PRWBOy7dWjQnIiJ"/>
+</div>
+<div class="p-5 flex items-center gap-6 flex-grow">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-3xl" data-icon="camera">camera</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg">Growth check: Succulents</h4>
+<span class="text-xs text-on-surface-variant font-medium">11:20 AM</span>
+</div>
+<p class="text-on-surface-variant text-sm">Photographed the Jade plant progress. Significant vertical growth noted.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- View More Button -->
+<div class="flex justify-center mt-12 mb-20">
+<button class="text-primary font-bold px-8 py-3 rounded-full hover:bg-surface-container transition-colors flex items-center gap-2">
+                    Show older entries
+                    <span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full z-50">
+<div class="bg-[#fdf9ee]/90 backdrop-blur-xl shadow-[0_-8px_32px_rgba(28,28,21,0.08)] flex justify-around items-center px-4 pb-6 pt-3 rounded-t-[2rem]">
+<a class="flex flex-col items-center justify-center text-[#56642b] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="potted_plant">potted_plant</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest">Conservatory</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#154212] text-white rounded-full px-5 py-2 mb-1 active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest">Journal</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="groups">groups</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest">Profile</span>
+</a>
+</div>
+</div>
+</body></html>

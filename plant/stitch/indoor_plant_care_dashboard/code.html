@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#bcf0ae",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#ece8dd",
+              "on-tertiary-fixed": "#360f00",
+              "inverse-surface": "#323129",
+              "surface": "#fdf9ee",
+              "error": "#ba1a1a",
+              "surface-variant": "#e6e2d7",
+              "on-error-container": "#93000a",
+              "primary-container": "#2d5a27",
+              "secondary": "#56642b",
+              "secondary-fixed": "#d9eaa3",
+              "on-tertiary-container": "#ffb18e",
+              "on-primary-container": "#9dd090",
+              "tertiary-container": "#813d1b",
+              "surface-tint": "#3b6934",
+              "on-surface-variant": "#42493e",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e6e2d7",
+              "outline-variant": "#c2c9bb",
+              "inverse-on-surface": "#f5f0e5",
+              "primary-fixed-dim": "#a1d494",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#f2eee3",
+              "outline": "#72796e",
+              "on-surface": "#1c1c15",
+              "tertiary": "#642706",
+              "secondary-fixed-dim": "#bdce89",
+              "on-tertiary-fixed-variant": "#753413",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#23501e",
+              "on-secondary-fixed": "#161f00",
+              "on-background": "#1c1c15",
+              "surface-bright": "#fdf9ee",
+              "tertiary-fixed": "#ffdbcd",
+              "on-secondary-container": "#5a682f",
+              "primary": "#154212",
+              "on-primary-fixed": "#002201",
+              "tertiary-fixed-dim": "#ffb596",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#a1d494",
+              "on-secondary-fixed-variant": "#3e4c16",
+              "secondary-container": "#d6e7a1",
+              "surface-dim": "#dddacf",
+              "background": "#fdf9ee",
+              "surface-container-low": "#f7f3e8"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-card-shadow {
+            box-shadow: 0 8px 24px rgba(28, 28, 21, 0.06);
+        }
+        body {
+            background-color: #fdf9ee;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1c1c15;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 z-50 bg-[#fdf9ee] dark:bg-stone-950 shadow-[8px_0_24px_rgba(28,28,21,0.04)] flex flex-col gap-y-1 py-8">
+<div class="px-8 mb-10">
+<h1 class="text-xl font-extrabold tracking-tighter text-[#154212] dark:text-emerald-400">Conservatory</h1>
+<p class="text-xs font-medium text-stone-500 uppercase tracking-widest mt-1">The Living Journal</p>
+</div>
+<nav class="flex flex-col gap-y-1">
+<a class="bg-[#154212] text-white dark:bg-emerald-800 dark:text-emerald-50 rounded-full px-4 py-3 mx-4 flex items-center gap-3 transition-transform active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium">My Collection</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 px-4 py-3 mx-4 flex items-center gap-3 hover:bg-[#154212]/5 dark:hover:bg-emerald-900/20 transition-colors rounded-full transition-transform active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium">Schedules</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 px-4 py-3 mx-4 flex items-center gap-3 hover:bg-[#154212]/5 dark:hover:bg-emerald-900/20 transition-colors rounded-full transition-transform active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium">Plant Library</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 px-4 py-3 mx-4 flex items-center gap-3 hover:bg-[#154212]/5 dark:hover:bg-emerald-900/20 transition-colors rounded-full transition-transform active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-6 pt-10 border-t border-stone-100 dark:border-stone-800/30">
+<div class="flex items-center gap-3 p-2 bg-white/50 rounded-2xl">
+<img alt="User avatar" class="w-10 h-10 rounded-full object-cover" data-alt="Close up portrait of a smiling woman outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8kjV6Itqdi0l-bN5tZp2Av7lai49gnkwO-y1dDE0LSZPbua_rD7PH1xWYQk_j_mYKufzLXBTekwknM2fPOI4GiKdRCIbsHqi4SkF-ayNv1WIlDnr2xf9ZIzOJVs3Rx2OT6seqLs1YCewhpF4suxMIMQAosT5qnbr_-9LBvZHyLOvGwzQheH7TKAgnAraJ0OVxmd_ZpNJ-epcYcR43ZwcuVainxUqpQN3cm9zv7Oi9XMPhwVWXkUS_tn4sohyXztj1tGRe9JmGloQk"/>
+<div>
+<p class="text-sm font-bold text-on-surface">Elena Rose</p>
+<p class="text-[10px] text-stone-500 font-medium">Botanist Level 12</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-white/70 backdrop-blur-md shadow-[0_8px_24px_rgba(28,28,21,0.06)] flex items-center justify-between px-8 py-4">
+<div class="flex items-center gap-4 bg-stone-100 dark:bg-stone-800 rounded-full px-4 py-2 w-96 focus-within:scale-[1.01] transition-transform duration-300">
+<span class="material-symbols-outlined text-stone-400" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full font-['Plus_Jakarta_Sans']" placeholder="Search your conservatory..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-emerald-900">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="h-8 w-[1px] bg-stone-200"></div>
+<p class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-emerald-900">My Collection</p>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="ml-64 pt-24 pb-12 px-8 min-h-screen">
+<!-- Hero Section & Health Summary -->
+<section class="grid grid-cols-12 gap-8 mb-12">
+<div class="col-span-12 lg:col-span-8 relative overflow-hidden bg-primary-container rounded-2xl p-10 text-white flex flex-col justify-center min-h-[320px]">
+<div class="absolute right-0 bottom-0 top-0 w-1/2 opacity-40">
+<img alt="Monstera leaves" class="w-full h-full object-cover" data-alt="Lush green monstera leaves with natural sunlight filtering through" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgboFbjyAHldL4f23jHb8F6gTY3PJOlzLOfi52XmvyzZDSY3u7KbO3gito8jZRewW57I4jHkR1al3VZwSug3bsNkOHyZYEcIYBQpGkq8IVAXq94h6osq63auuA5MvqP9vCCNkGdUHhoLj_UsT02T3dlt20_U5FD_vLA3_jhQ8EwlsIlS4enm_YRHIt-1fNChETiTG1Jig6iK_Mf64KkQZnGVUGeV-BzhNaj_5RRhGQLLonu9xgF97YEZ5-XXYoX-FDW-O7HBjghmAX"/>
+</div>
+<div class="relative z-10 max-w-md">
+<h2 class="text-4xl font-bold font-headline mb-4 leading-tight">Your Conservatory is thriving.</h2>
+<p class="text-on-primary-container font-medium text-lg mb-8">4 plants need water today, and your Fiddle Leaf Fig is ready for fertilization.</p>
+<button class="bg-primary-fixed text-on-primary-fixed px-8 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform duration-300 flex items-center gap-2 w-fit">
+<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+                        Start Care Routine
+                    </button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+<!-- Plant Health Summary -->
+<div class="bg-surface-container-low rounded-2xl p-6 flex flex-col justify-between h-full">
+<h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-700" data-icon="thermostat">thermostat</span>
+                        Environment
+                    </h3>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium text-stone-500">Living Room Temp</span>
+<span class="text-2xl font-bold">24°C</span>
+</div>
+<div class="w-full bg-stone-200 rounded-full h-1.5">
+<div class="bg-emerald-600 h-1.5 rounded-full" style="width: 65%"></div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium text-stone-500">Humidity Level</span>
+<span class="text-2xl font-bold">58%</span>
+</div>
+<div class="w-full bg-stone-200 rounded-full h-1.5">
+<div class="bg-emerald-400 h-1.5 rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<div class="mt-6 p-3 bg-secondary-container/30 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="cloud_done">cloud_done</span>
+<p class="text-xs font-semibold text-on-secondary-container">Optimal for tropical plants.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-12 gap-8">
+<!-- My Collection Gallery (Bento Grid Style) -->
+<section class="col-span-12 lg:col-span-8">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold font-headline">My Collection</h2>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">See All <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Monstera Card -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-6 organic-card-shadow overflow-hidden transition-transform duration-500 hover:-translate-y-2">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-xl font-bold">Monstera Deliciosa</h3>
+<p class="text-xs font-semibold uppercase tracking-wider text-emerald-700">Living Room</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold">HAPPY</span>
+</div>
+<div class="space-y-4 relative z-10">
+<div>
+<div class="flex justify-between text-[10px] font-bold mb-1 uppercase text-stone-500">
+<span>Soil Moisture</span>
+<span>72%</span>
+</div>
+<div class="w-full bg-stone-100 rounded-full h-2">
+<div class="bg-emerald-800 h-2 rounded-full" style="width: 72%"></div>
+</div>
+</div>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-stone-300 text-lg" data-icon="light_mode">light_mode</span>
+<span class="material-symbols-outlined text-emerald-800 text-lg" data-icon="water_drop">water_drop</span>
+<span class="material-symbols-outlined text-stone-300 text-lg" data-icon="pest_control">pest_control</span>
+</div>
+</div>
+<div class="absolute -right-6 -bottom-6 w-32 h-32 opacity-20 group-hover:opacity-40 transition-opacity duration-500">
+<img alt="Monstera leaf" class="w-full h-full object-contain rotate-12" data-alt="Close up of a single large green monstera leaf with holes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnrf_rucbAJ033cHLa-8nWXh9ceZCeoeNIRItes1g53PR7eYsKYJ_ueAYLAVQn388pSyTkE8fwALngXJatrGIeRw3N8tLeOZc3S1ZfbMwBsAxaNrC0hBMHDy4TEmwBh_OaMo423MFN2W2PnKoM9CUnta6EVRhUnreAamk2XJA8bIWF612tOkUIDK-lkLAsN7l9utB7FIEjiu2ifx4vLYVeTelMibfwvhpf1y4pMDqyB4bM_8FKicjk-RM3tg4rWgYeuln6nR8pWy6k"/>
+</div>
+</div>
+<!-- Snake Plant Card -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-6 organic-card-shadow overflow-hidden transition-transform duration-500 hover:-translate-y-2">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-xl font-bold">Snake Plant</h3>
+<p class="text-xs font-semibold uppercase tracking-wider text-emerald-700">Bedroom</p>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-full text-[10px] font-bold">THIRSTY</span>
+</div>
+<div class="space-y-4 relative z-10">
+<div>
+<div class="flex justify-between text-[10px] font-bold mb-1 uppercase text-stone-500">
+<span>Soil Moisture</span>
+<span>15%</span>
+</div>
+<div class="w-full bg-stone-100 rounded-full h-2">
+<div class="bg-tertiary h-2 rounded-full" style="width: 15%"></div>
+</div>
+</div>
+<button class="bg-primary text-white w-full py-2 rounded-full text-xs font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="water_drop">water_drop</span>
+                                Water Now
+                            </button>
+</div>
+<div class="absolute -right-4 -bottom-4 w-28 h-28 opacity-20 group-hover:opacity-40 transition-opacity duration-500">
+<img alt="Snake plant" class="w-full h-full object-contain" data-alt="Upward growing sharp leaves of a snake plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkOfVgVRmCyfi0lSNC5elMWTeMNqVL9oHZR44oe0KU96gKQVB9UtOAeB3Rn1JOZhuVJe91EvWV3mKQwlw2mgOpzv0uIyN48E1zU5-wjOAa_9kXx4tJe_5efAqmF1Pw7var_YHiqwljIWpSMPeSDOxZddeVsq8ql96d3ybQh5qshHOANs3FJauY5T6BDNPh8xqJQNp5jA-cfRs_9yt1tAMx9N9oOf6IHVsytQ0TF24uqV7zYJVxg-tfoEKlwRLMpRKXU8Z8IfV9d0mb"/>
+</div>
+</div>
+<!-- Pothos Card (Large Column Span) -->
+<div class="md:col-span-2 group relative bg-surface-container-lowest rounded-2xl p-8 organic-card-shadow overflow-hidden flex flex-row items-center transition-transform duration-500 hover:-translate-y-2">
+<div class="flex-1 pr-8">
+<div class="mb-6">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold">HAPPY</span>
+<h3 class="text-2xl font-extrabold mt-2">Golden Pothos</h3>
+<p class="text-sm font-medium text-stone-500 mt-1">"The Immortal Vine"</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-stone-50 p-4 rounded-xl">
+<p class="text-[10px] font-bold text-stone-400 uppercase">Last Watering</p>
+<p class="text-sm font-bold">2 Days ago</p>
+</div>
+<div class="bg-stone-50 p-4 rounded-xl">
+<p class="text-[10px] font-bold text-stone-400 uppercase">Growth Rate</p>
+<p class="text-sm font-bold text-emerald-700">+12% this month</p>
+</div>
+</div>
+</div>
+<div class="w-1/3 h-48 relative">
+<img alt="Pothos plant" class="w-full h-full object-cover rounded-2xl" data-alt="Draping vines of a golden pothos plant in a hanging pot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPqu7cPEoqX6But7YXUuoeT1LlSTfkDP9_9q6nolhIr-IHpeoL2ECbU33Lkj8G34Uj8h7avaen-vhnIFRsqfT0_K4xqLwpfefAoI6C5SRGQL4ifLIiqbPClfSyPeMPzLLpmIRABQ4I3n3zkmRd2uxjtxzq2wexCGg6Mw7-7kpz8NS-ugtSDnqiVNfZtuWDPO3j3MKritp2HG19V_Oet8qGzBS8I-aoyEt2zIwjDFmlcZV1HaM-2ZBsWbArOdwjs_wjK37Fxgp9J9cd"/>
+<div class="absolute -top-4 -right-4 bg-white p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-yellow-500" data-icon="emoji_events">emoji_events</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sidebar Widgets -->
+<aside class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Reminders Widget -->
+<section class="bg-surface-container-high rounded-2xl p-6">
+<h3 class="text-lg font-bold mb-4">Due this week</h3>
+<div class="space-y-4">
+<div class="bg-white/60 p-4 rounded-xl flex items-center gap-4">
+<div class="bg-tertiary-fixed w-10 h-10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="eco">eco</span>
+</div>
+<div>
+<p class="text-sm font-bold">Fertilize Fiddle Leaf</p>
+<p class="text-[10px] font-medium text-stone-500">Due tomorrow • Liquid Gold Feed</p>
+</div>
+</div>
+<div class="bg-white/60 p-4 rounded-xl flex items-center gap-4">
+<div class="bg-secondary-fixed w-10 h-10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="content_cut">content_cut</span>
+</div>
+<div>
+<p class="text-sm font-bold">Prune Spider Plant</p>
+<p class="text-[10px] font-medium text-stone-500">In 3 days • Brown tips removal</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Care Calendar -->
+<section class="bg-surface-container-lowest rounded-2xl p-6 organic-card-shadow">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold">Care Calendar</h3>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-full bg-stone-50 flex items-center justify-center text-stone-400 hover:text-primary"><span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span></button>
+<button class="w-8 h-8 rounded-full bg-stone-50 flex items-center justify-center text-stone-400 hover:text-primary"><span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 mb-4">
+<div class="text-[10px] font-bold text-center text-stone-400 uppercase">M</div>
+<div class="text-[10px] font-bold text-center text-stone-400 uppercase">T</div>
+<div class="text-[10px] font-bold text-center text-stone-400 uppercase">W</div>
+<div class="text-[10px] font-bold text-center text-stone-400 uppercase">T</div>
+<div class="text-[10px] font-bold text-center text-stone-400 uppercase">F</div>
+<div class="text-[10px] font-bold text-center text-stone-400 uppercase">S</div>
+<div class="text-[10px] font-bold text-center text-stone-400 uppercase">S</div>
+</div>
+<div class="grid grid-cols-7 gap-2">
+<div class="aspect-square flex items-center justify-center text-xs font-medium text-stone-300">12</div>
+<div class="aspect-square flex items-center justify-center text-xs font-medium text-stone-300">13</div>
+<div class="aspect-square flex items-center justify-center text-xs font-bold bg-primary text-white rounded-full">14</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs font-medium group relative cursor-pointer">
+                            15
+                            <div class="flex gap-[2px] mt-1">
+<div class="w-1 h-1 rounded-full bg-blue-400"></div>
+<div class="w-1 h-1 rounded-full bg-orange-400"></div>
+</div>
+</div>
+<div class="aspect-square flex items-center justify-center text-xs font-medium">16</div>
+<div class="aspect-square flex items-center justify-center text-xs font-medium">17</div>
+<div class="aspect-square flex items-center justify-center text-xs font-medium">18</div>
+</div>
+<div class="mt-6 pt-6 border-t border-stone-100">
+<div class="flex items-center gap-3 text-xs font-semibold text-stone-600">
+<span class="w-2 h-2 rounded-full bg-blue-400"></span> Watering
+                            <span class="w-2 h-2 rounded-full bg-orange-400 ml-2"></span> Fertilization
+                        </div>
+</div>
+</section>
+<!-- Plant Profile Section (Fiddle Leaf Fig Detail) -->
+<section class="bg-[#154212] rounded-2xl p-0 overflow-hidden text-white relative">
+<div class="h-40 w-full overflow-hidden">
+<img alt="Fiddle Leaf Fig" class="w-full h-full object-cover" data-alt="Detailed view of large violin shaped fiddle leaf fig leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZscqUHuUPAmYeCnzoxh6bwGgLDI1DssbaDtYBUSWhfRy7vA-a6KMz6T8-C9cx2GpOlq6Qvaqkg0fRRpkqa0ifR3YuCP1ERDtLC124-5jZfx49q28V6cK-iDwE3k-e23bRMejKs9rbvNIBiO081uHr_QUmj-F3gtsiiUfZokMTfEXDAz7MjdIMnN5iV1jSPFVlBcurWU_ZlNQjnKK6MhklQEZJrRYGzXlxUuZrGbWs4ytO-q2UR0vhKzjXo0U0RGDM4d8UYRgGxi6Y"/>
+</div>
+<div class="p-6 relative">
+<div class="absolute -top-10 left-6 bg-white rounded-2xl p-3 shadow-2xl">
+<img alt="Mini avatar" class="w-14 h-14 object-cover rounded-lg" data-alt="Small square thumbnail of a green plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYPZKOt46gmjcERb2xkELosNVABP_KKNtvx_6YgIamUGoYWRgFXZIxxKNDoKPSyuqzJb3WygP8lyrZoksvpDxdrAIczMdJDOCQZL3gPoZvek1UH7rUmOaeRL1QaDXDi9gziw6L2DFI2vQ1jhnSBqNtHKT8zvwcBqtV17AXLROUOBEUjwOwakHMftpzOge7fvmG02LBKDrh0rv4jxo2uXcoyC_QVk8Vfzv1p1ErJtv8deKbewB7zMVPDTd2-2buGPhMQnPNuTwqJijR"/>
+</div>
+<div class="mt-8">
+<h4 class="text-xl font-bold">Fiddle Leaf Fig</h4>
+<p class="text-on-primary-container text-xs font-medium">Ficus lyrata</p>
+</div>
+<div class="mt-6 grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<p class="text-[10px] uppercase font-bold text-on-primary-container opacity-70">Sunlight</p>
+<p class="text-xs font-bold">Bright Indirect</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] uppercase font-bold text-on-primary-container opacity-70">Watering</p>
+<p class="text-xs font-bold">Every 10 days</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] uppercase font-bold text-on-primary-container opacity-70">Last Fed</p>
+<p class="text-xs font-bold">Oct 12, 2023</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] uppercase font-bold text-on-primary-container opacity-70">Potting</p>
+<p class="text-xs font-bold">Terracotta</p>
+</div>
+</div>
+<button class="mt-6 w-full py-3 bg-white/10 hover:bg-white/20 rounded-full text-sm font-bold transition-colors">
+                            View Full Journal
+                        </button>
+</div>
+</section>
+</aside>
+</div>
+</main>
+<!-- FAB for adding plant (Hidden on some views as per rules) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</body></html>

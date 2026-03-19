@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Conservatory - Community Forum</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .organic-shadow {
+            box-shadow: 0 8px 24px rgba(28, 28, 21, 0.06);
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e6e2d7;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#3e4c16",
+              "surface-container-low": "#f7f3e8",
+              "on-primary": "#ffffff",
+              "surface-dim": "#dddacf",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e6e2d7",
+              "on-secondary-container": "#5a682f",
+              "surface-container": "#f2eee3",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary": "#642706",
+              "on-primary-container": "#9dd090",
+              "surface-container-highest": "#e6e2d7",
+              "surface-bright": "#fdf9ee",
+              "background": "#fdf9ee",
+              "on-tertiary-container": "#ffb18e",
+              "on-tertiary-fixed": "#360f00",
+              "tertiary-container": "#813d1b",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#42493e",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#002201",
+              "error-container": "#ffdad6",
+              "primary-container": "#2d5a27",
+              "on-primary-fixed-variant": "#23501e",
+              "tertiary-fixed": "#ffdbcd",
+              "on-error-container": "#93000a",
+              "secondary": "#56642b",
+              "inverse-on-surface": "#f5f0e5",
+              "surface-tint": "#3b6934",
+              "error": "#ba1a1a",
+              "inverse-surface": "#323129",
+              "primary-fixed": "#bcf0ae",
+              "on-secondary-fixed": "#161f00",
+              "surface-container-high": "#ece8dd",
+              "inverse-primary": "#a1d494",
+              "primary-fixed-dim": "#a1d494",
+              "outline": "#72796e",
+              "secondary-fixed": "#d9eaa3",
+              "outline-variant": "#c2c9bb",
+              "surface": "#fdf9ee",
+              "on-background": "#1c1c15",
+              "secondary-fixed-dim": "#bdce89",
+              "secondary-container": "#d6e7a1",
+              "primary": "#154212",
+              "on-tertiary-fixed-variant": "#753413",
+              "on-surface": "#1c1c15",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface min-h-screen pb-24 md:pb-0 pt-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fdf9ee]/80 dark:bg-[#1c1c15]/80 backdrop-blur-md shadow-[0_8px_24px_rgba(28,28,21,0.06)] dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold text-[#154212] dark:text-[#d1e6c9] tracking-tight font-headline">The Conservatory</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-[#56642b] dark:text-[#a3ad8a] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-[#f2efe4] px-3 py-1 rounded-full transition-colors" href="#">Conservatory</a>
+<a class="text-[#56642b] dark:text-[#a3ad8a] font-['Plus_Jakarta_Sans'] text-sm tracking-tight hover:bg-[#f2efe4] px-3 py-1 rounded-full transition-colors" href="#">Journal</a>
+<a class="text-[#154212] dark:text-[#d1e6c9] font-semibold font-['Plus_Jakarta_Sans'] text-sm tracking-tight" href="#">Community</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-surface-container-high rounded-full px-4 py-2 gap-2">
+<span class="material-symbols-outlined text-outline text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 text-on-surface placeholder-outline" placeholder="Search the conservatory..." type="text"/>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#f2efe4] transition-colors">
+<span class="material-symbols-outlined text-[#154212]">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-10">
+<!-- Hero Section / Header -->
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<span class="text-secondary font-semibold tracking-widest text-[10px] uppercase block mb-2">Our Digital Garden</span>
+<h1 class="text-5xl md:text-6xl font-extrabold text-primary tracking-tight leading-tight font-headline">The Community Forum</h1>
+<p class="mt-4 text-on-surface-variant text-lg leading-relaxed">Exchange wisdom, share your latest blooms, and grow together in our curated botanical space.</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-4 rounded-full font-bold shadow-lg hover:opacity-90 transition-all flex items-center gap-2 self-start md:self-auto">
+<span class="material-symbols-outlined">add_circle</span>
+                Start a Discussion
+            </button>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Trending Sidebar -->
+<aside class="md:col-span-4 lg:col-span-3 space-y-8">
+<section class="bg-surface-container-low rounded-xl p-6">
+<h3 class="text-sm font-bold text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">trending_up</span>
+                        Trending Topics
+                    </h3>
+<ul class="space-y-4">
+<li>
+<a class="group block" href="#">
+<span class="text-on-surface font-semibold text-sm group-hover:text-primary transition-colors">Pest Control</span>
+<span class="block text-xs text-on-surface-variant mt-1">124 active members</span>
+</a>
+</li>
+<li>
+<a class="group block" href="#">
+<span class="text-on-surface font-semibold text-sm group-hover:text-primary transition-colors">Propagation Tips</span>
+<span class="block text-xs text-on-surface-variant mt-1">89 posts today</span>
+</a>
+</li>
+<li>
+<a class="group block" href="#">
+<span class="text-on-surface font-semibold text-sm group-hover:text-primary transition-colors">Rare Aroid Swap</span>
+<span class="block text-xs text-on-surface-variant mt-1">21 live listings</span>
+</a>
+</li>
+<li>
+<a class="group block" href="#">
+<span class="text-on-surface font-semibold text-sm group-hover:text-primary transition-colors">Lighting &amp; Humidity</span>
+<span class="block text-xs text-on-surface-variant mt-1">56 active threads</span>
+</a>
+</li>
+</ul>
+<button class="mt-8 text-primary text-xs font-bold uppercase tracking-widest hover:underline">See all topics</button>
+</section>
+<section class="bg-tertiary-container text-tertiary-fixed rounded-xl p-6 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-lg font-bold leading-tight mb-2">The Weekend Swap is Live!</h3>
+<p class="text-xs opacity-80 mb-4">Join the community in trading rare cuttings from across the globe.</p>
+<span class="bg-tertiary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Join Event</span>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl opacity-10 rotate-12">local_florist</span>
+</section>
+</aside>
+<!-- Main Feed -->
+<div class="md:col-span-8 lg:col-span-9 space-y-10">
+<!-- Filter Tabs -->
+<div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+<button class="bg-primary text-white px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap">Latest Activity</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-surface-variant transition-colors">Top Voted</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-surface-variant transition-colors">Unanswered</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-surface-variant transition-colors">Following</button>
+</div>
+<!-- Discussion Cards -->
+<div class="space-y-12">
+<!-- Post 1 -->
+<article class="relative group">
+<div class="flex flex-col md:flex-row gap-8 bg-surface-container-lowest p-6 rounded-2xl organic-shadow hover:translate-y-[-4px] transition-transform duration-300">
+<div class="md:w-1/3 h-64 md:h-auto rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of a variegated monstera leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtlARq75tAN4QoopOXiGxuXCuA-IKXCckMHONaVJYA6CL8znuaWU7oQRAHO93q3WOrR7QrRPQzaa2Syi9wzXXoutl4N7zeXaptiB3996sG04ezoSb4LRVMFwJDtXnSFu9Nd9fgNEIhoS5j2eyzI2H3ur6HcYcIypbAqqkrRZ45ItwcINavsMIv5u5t1CQBZkxwl4O5n5qrB1h32HWUmtFnrZOA1ry6HaeGO-OLXvhCeLvCIbjPRIawq-S6jokH8FJi7PwornATxmfI"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-[10px] font-bold text-primary">842</span>
+</div>
+</div>
+<div class="md:w-2/3 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZG12qtzGetkOGrimonFBucrjp0IJ2uU4hP2odGnQk_tq0yJjOzfgROuLcOYmuiefEl0XYCHPSCv1JRswDXgJXn-dvaud90xlA4WFvglP10PSacCZ2ei3unj2rZFRbEClo6qnFQbny3rUopc-1pAPFzj00lOVHdIr3_1nJIvx1SkFSSuWnwA_48Tl3R__gjZy9dYU6v21oKIYEBod8VYxpMwk1CqGwFJFwcParilZdasNWvRKCcgGjkzTvcpqFKJNmiy4y4U9At7PS"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Elena Green</p>
+<p class="text-[10px] text-on-surface-variant">2 hours ago in <span class="text-secondary font-semibold">Rare Aroids</span></p>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-on-surface mb-3 leading-tight group-hover:text-primary transition-colors">My Monstera Albo finally threw a half-moon leaf!</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed line-clamp-3">After six months of hovering over the humidity levels and checking the node weekly, it finally happened. The newest leaf is almost perfectly split down the middle. Any advice on keeping the white part from browning?</p>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-surface-container pt-4">
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+<span class="text-xs font-semibold">124 Comments</span>
+</button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">share</span>
+<span class="text-xs font-semibold">Share</span>
+</button>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Post 2 -->
+<article class="relative group">
+<div class="flex flex-col md:flex-row-reverse gap-8 bg-surface-container-lowest p-6 rounded-2xl organic-shadow hover:translate-y-[-4px] transition-transform duration-300">
+<div class="md:w-1/3 h-64 md:h-auto rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Multiple propagation tubes with cuttings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqrHZqCrbCQJQ5QQycunOHNXKRsJ_nAZceCmCuHC0XiZBYrj_7SVHlwOZepAKnA9vYdsLpWL3cvJnJs42O8W6gNrOl6iqjE3T9jyASWphXDREj0zQoGhOnrlCbNf46TGImwahyLEPHPQEPb9lVsFtFj-36silrg1epBWxerRyupKBxHlA3kzOZiRdSAiiMUNtzYrK7Hs9lD5gY0yRyc97x82o-DQoEo64eyophkvq_UMxnejgKe5RxNeR2TJOKhHEqk1h4yxQ358Il"/>
+</div>
+<div class="md:w-2/3 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAauM2N9TAT-HiZJdVE5qLLw1CW36lISA1sIHcVmeK-oSjsZv0Cq_rWZN-VE2ZeLYcFY8kcoUHW64kH5ym9jz1RbTSugIZRAf74e0IxyLdkkrmoUtxM40N0CgvzXYZHONHFbaguCPZ8oFdy_Wb66HbDqhFETM0cYhej64CxjmcGv9GyIlOCjjCOOqRabhcVJQERTYfwhvoNWrqrR7eXFTj4DrG5MXQnUe0S1HPCPczzh_O_UyrH7JklRGiM68Ow0SqW7HBkv1xozmjR"/>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Julian Thorne</p>
+<p class="text-[10px] text-on-surface-variant">5 hours ago in <span class="text-secondary font-semibold">Propagation Tips</span></p>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-on-surface mb-3 leading-tight group-hover:text-primary transition-colors">The LECA experiment: 3 months later</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed line-clamp-3">I moved all my water propagation projects into semi-hydroponics using LECA. The root growth has been significantly more robust than traditional soil transitions. I've documented the nutrient mix I used below...</p>
+</div>
+<div class="mt-6 flex items-center justify-between border-t border-surface-container pt-4">
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+<span class="text-xs font-semibold">45 Comments</span>
+</button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+<span class="text-xs font-semibold">218 Likes</span>
+</button>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Text-only Post 3 -->
+<article class="bg-surface-container-low p-8 rounded-2xl organic-shadow">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xs uppercase">AM</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Annie Moss</p>
+<p class="text-xs text-on-surface-variant">8 hours ago in <span class="text-secondary font-semibold">Pest Control</span></p>
+</div>
+</div>
+<h2 class="text-xl font-bold text-on-surface mb-4">Urgent: Thrips on my Calathea. Is Neem Oil enough?</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">I just spotted those dreaded silver streaks and tiny black specks. I have Neem Oil and castile soap ready, but I've heard Calatheas are sensitive. Should I dilute it more than usual or go straight to systemic granules?</p>
+<div class="flex gap-2 mb-6">
+<span class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-[10px] font-bold uppercase">Urgent Advice</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase">Calathea Care</span>
+</div>
+<div class="flex items-center gap-6 border-t border-surface-variant pt-4">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+<span class="text-xs font-semibold">89 Comments</span>
+</button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-xs font-semibold">12 Likes</span>
+</button>
+</div>
+</article>
+</div>
+<div class="py-12 flex justify-center">
+<button class="border border-outline/30 text-on-surface-variant px-10 py-3 rounded-full font-bold hover:bg-surface-container transition-colors">Load More Conversations</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#fdf9ee]/90 dark:bg-[#1c1c15]/90 backdrop-blur-xl shadow-[0_-8px_32px_rgba(28,28,21,0.08)] z-50 rounded-t-[2rem]">
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-[#a3ad8a] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Conservatory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-[#a3ad8a] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Journal</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#154212] dark:bg-[#2d5a27] text-white rounded-full px-5 py-2 mb-1 active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-[#a3ad8a] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button (FAB) for Start Discussion -->
+<button class="md:hidden fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl z-40 active:scale-95 duration-200">
+<span class="material-symbols-outlined">add</span>
+</button>
+</body></html>

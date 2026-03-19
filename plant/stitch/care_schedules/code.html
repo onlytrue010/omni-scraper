@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#813d1b",
+              "surface-bright": "#fdf9ee",
+              "surface-container-high": "#ece8dd",
+              "surface": "#fdf9ee",
+              "secondary-fixed": "#d9eaa3",
+              "background": "#fdf9ee",
+              "on-primary-fixed": "#002201",
+              "primary-fixed-dim": "#a1d494",
+              "on-tertiary-fixed-variant": "#753413",
+              "surface-tint": "#3b6934",
+              "primary-container": "#2d5a27",
+              "surface-dim": "#dddacf",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#5a682f",
+              "tertiary": "#642706",
+              "on-surface-variant": "#42493e",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#23501e",
+              "error-container": "#ffdad6",
+              "surface-container-low": "#f7f3e8",
+              "on-error-container": "#93000a",
+              "surface-container": "#f2eee3",
+              "on-error": "#ffffff",
+              "primary": "#154212",
+              "on-secondary-fixed": "#161f00",
+              "on-surface": "#1c1c15",
+              "secondary-container": "#d6e7a1",
+              "on-tertiary-fixed": "#360f00",
+              "inverse-surface": "#323129",
+              "primary-fixed": "#bcf0ae",
+              "outline": "#72796e",
+              "secondary-fixed-dim": "#bdce89",
+              "secondary": "#56642b",
+              "on-background": "#1c1c15",
+              "on-primary-container": "#9dd090",
+              "surface-container-highest": "#e6e2d7",
+              "on-tertiary-container": "#ffb18e",
+              "inverse-on-surface": "#f5f0e5",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary-fixed": "#ffdbcd",
+              "inverse-primary": "#a1d494",
+              "on-secondary-fixed-variant": "#3e4c16",
+              "on-primary": "#ffffff",
+              "outline-variant": "#c2c9bb",
+              "surface-variant": "#e6e2d7",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fdf9ee;
+            color: #1c1c15;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (Shared Component) -->
+<nav class="fixed left-0 top-0 h-full w-64 z-50 bg-[#fdf9ee] dark:bg-stone-950 shadow-[8px_0_24px_rgba(28,28,21,0.04)] flex flex-col gap-y-1 py-8 font-['Plus_Jakarta_Sans'] text-sm font-medium">
+<div class="px-8 mb-10">
+<h1 class="text-xl font-extrabold tracking-tighter text-[#154212] dark:text-emerald-400">Conservatory</h1>
+<p class="text-xs text-stone-500 font-medium">The Living Journal</p>
+</div>
+<div class="flex flex-col gap-y-1">
+<a class="text-stone-600 dark:text-stone-400 px-4 py-3 mx-2 flex items-center gap-3 hover:bg-[#154212]/5 dark:hover:bg-emerald-900/20 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+                My Collection
+            </a>
+<a class="bg-[#154212] text-white dark:bg-emerald-800 dark:text-emerald-50 rounded-full px-4 py-3 mx-2 flex items-center gap-3 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+                Schedules
+            </a>
+<a class="text-stone-600 dark:text-stone-400 px-4 py-3 mx-2 flex items-center gap-3 hover:bg-[#154212]/5 dark:hover:bg-emerald-900/20 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+                Plant Library
+            </a>
+<a class="text-stone-600 dark:text-stone-400 px-4 py-3 mx-2 flex items-center gap-3 hover:bg-[#154212]/5 dark:hover:bg-emerald-900/20 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</div>
+<div class="mt-auto px-6">
+<div class="p-4 bg-surface-container-low rounded-xl flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="User profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEcpe0YJXNanhqLgMRUmPSiUz_3CEXo5EfXRmIJd9RmmuBK-Wu9ItoXyhomTaUVU8wxR-lmk19ciFlED_QHvpymhXIBTrYEjWF-G8V4dF_jOdfC3m8wOn0u2SefKXDsZPH-j63HHLWY_0_U7TVLRWymG-wtCEOqnAJFooCXrtvW2uSGP4Sh7ARdxxKzzJNGnT85mcbWrzdclCqw_R5m7tXmUw2OjPrY9V7PcK8oWdDEbsefyWI4B9kOdofJ43F56toMzcP-y1bAv7I"/>
+<div>
+<p class="text-xs font-bold">Elena Vance</p>
+<p class="text-[10px] text-stone-500">Master Gardener</p>
+</div>
+</div>
+</div>
+</nav>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-white/70 backdrop-blur-md shadow-[0_8px_24px_rgba(28,28,21,0.06)] flex items-center justify-between px-8 py-4 font-['Plus_Jakarta_Sans'] tracking-tight text-sm">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-lg">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-xl pl-10 pr-4 py-2 focus:ring-1 focus:ring-primary/20 text-sm" placeholder="Search tasks or plants..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+<span class="w-2 h-2 bg-tertiary rounded-full -ml-3 mb-3"></span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<span class="text-primary font-bold">The Curated Conservatory</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 pb-12 px-8 min-h-screen">
+<!-- Header Section -->
+<div class="mb-10">
+<p class="text-secondary font-bold text-xs uppercase tracking-widest mb-2">Care Journal</p>
+<h2 class="text-4xl font-headline font-extrabold text-primary tracking-tight">Maintenance Schedule</h2>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-8 items-start">
+<!-- Left Column: Calendar & Filters (Col 8) -->
+<div class="col-span-8 space-y-8">
+<!-- Monthly Calendar View -->
+<section class="bg-surface-container-low rounded-[2rem] p-8 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-4">
+<h3 class="text-xl font-bold text-primary">October 2023</h3>
+<div class="flex gap-1">
+<button class="p-1 hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-1 hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-2">
+<span class="px-4 py-1.5 bg-surface-container-lowest text-stone-600 rounded-full text-xs font-semibold shadow-sm">Month</span>
+<span class="px-4 py-1.5 text-stone-400 rounded-full text-xs font-semibold hover:bg-surface-container-highest transition-colors">Week</span>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-px bg-outline-variant/10 rounded-xl overflow-hidden">
+<!-- Days Header -->
+<div class="bg-surface-container-low py-3 text-center text-[10px] font-bold text-stone-400 uppercase tracking-widest">Sun</div>
+<div class="bg-surface-container-low py-3 text-center text-[10px] font-bold text-stone-400 uppercase tracking-widest">Mon</div>
+<div class="bg-surface-container-low py-3 text-center text-[10px] font-bold text-stone-400 uppercase tracking-widest">Tue</div>
+<div class="bg-surface-container-low py-3 text-center text-[10px] font-bold text-stone-400 uppercase tracking-widest">Wed</div>
+<div class="bg-surface-container-low py-3 text-center text-[10px] font-bold text-stone-400 uppercase tracking-widest">Thu</div>
+<div class="bg-surface-container-low py-3 text-center text-[10px] font-bold text-stone-400 uppercase tracking-widest">Fri</div>
+<div class="bg-surface-container-low py-3 text-center text-[10px] font-bold text-stone-400 uppercase tracking-widest">Sat</div>
+<!-- Calendar Grid (Sample) -->
+<!-- Row 1 -->
+<div class="bg-surface-container-low min-h-[100px] p-2 opacity-40">28</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 opacity-40">29</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 opacity-40">30</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold">1</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold">2</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold relative">
+                            3
+                            <div class="mt-1 space-y-1">
+<div class="h-1.5 w-1.5 bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold">4</div>
+<!-- Row 2 -->
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold">5</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold">6</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold">7</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold bg-primary/5">
+                            8
+                            <div class="mt-2 space-y-1">
+<div class="px-1.5 py-0.5 bg-primary/10 text-primary text-[8px] rounded uppercase font-bold">Watering</div>
+<div class="px-1.5 py-0.5 bg-tertiary/10 text-tertiary text-[8px] rounded uppercase font-bold">Mist</div>
+</div>
+</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold">9</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold">10</div>
+<div class="bg-surface-container-low min-h-[100px] p-2 font-bold">11</div>
+</div>
+</section>
+<!-- Upcoming Overview -->
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-white p-6 rounded-[1.5rem] shadow-sm flex items-center gap-4 border-l-4 border-primary">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div>
+<p class="text-stone-500 text-xs font-bold uppercase tracking-wide">Next Watering</p>
+<p class="text-xl font-bold text-primary">Tomorrow, 08:00 AM</p>
+</div>
+</div>
+<div class="bg-white p-6 rounded-[1.5rem] shadow-sm flex items-center gap-4 border-l-4 border-tertiary">
+<div class="w-12 h-12 rounded-full bg-tertiary/5 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<p class="text-stone-500 text-xs font-bold uppercase tracking-wide">Next Fertilizing</p>
+<p class="text-xl font-bold text-primary">Oct 14th</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Today's Chores (Col 4) -->
+<div class="col-span-4 sticky top-24">
+<section class="bg-surface-container-high rounded-[2rem] p-8 min-h-[600px] flex flex-col">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-bold text-primary">Today</h3>
+<span class="bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold">3 REMAINING</span>
+</div>
+<div class="space-y-4 flex-1">
+<!-- Chore Item 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl group cursor-pointer hover:shadow-md transition-all active:scale-95">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-primary">Watering: Monstera Deliciosa</h4>
+<p class="text-xs text-stone-500 mt-1">250ml filtered water</p>
+<div class="mt-3 flex gap-2">
+<span class="text-[9px] font-bold uppercase px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded-full">Living Room</span>
+<span class="text-[9px] font-bold uppercase px-2 py-0.5 bg-stone-100 text-stone-500 rounded-full">Urgent</span>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant group-hover:border-primary transition-colors flex items-center justify-center">
+<div class="w-3 h-3 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div>
+</div>
+</div>
+</div>
+<!-- Chore Item 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl group cursor-pointer hover:shadow-md transition-all active:scale-95">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary/5 flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined">shutter_speed</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-primary">Mist: Fiddle Leaf Fig</h4>
+<p class="text-xs text-stone-500 mt-1">Increase humidity to 60%</p>
+<div class="mt-3 flex gap-2">
+<span class="text-[9px] font-bold uppercase px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded-full">Office</span>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant group-hover:border-primary transition-colors flex items-center justify-center">
+<div class="w-3 h-3 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div>
+</div>
+</div>
+</div>
+<!-- Chore Item 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl group cursor-pointer hover:shadow-md transition-all active:scale-95">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">cleaning_services</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-primary">Leaf Cleaning: Pothos</h4>
+<p class="text-xs text-stone-500 mt-1">Remove dust from large leaves</p>
+<div class="mt-3 flex gap-2">
+<span class="text-[9px] font-bold uppercase px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded-full">Bedroom</span>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant group-hover:border-primary transition-colors flex items-center justify-center">
+<div class="w-3 h-3 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div>
+</div>
+</div>
+</div>
+<!-- Completed Item -->
+<div class="opacity-50 grayscale p-5 rounded-2xl flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center text-stone-400 flex-shrink-0">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-stone-500 line-through">Watering: Snake Plant</h4>
+<p class="text-xs text-stone-400 mt-1">Completed at 07:15 AM</p>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<button class="mt-8 w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white rounded-full font-bold shadow-lg shadow-primary/20 flex items-center justify-center gap-2 hover:translate-y-[-2px] transition-transform active:scale-95">
+<span class="material-symbols-outlined">add_task</span>
+                        Schedule New Care Task
+                    </button>
+</section>
+</div>
+</div>
+<!-- Weekly Progress Section -->
+<section class="mt-12 bg-white rounded-[2rem] p-10 shadow-sm relative overflow-hidden">
+<div class="relative z-10 grid grid-cols-12 gap-12 items-center">
+<div class="col-span-4">
+<h3 class="text-2xl font-bold text-primary mb-4">Conservatory Health</h3>
+<p class="text-stone-500 text-sm leading-relaxed mb-6">You've completed 85% of your scheduled tasks this week. Your collection is thriving!</p>
+<div class="flex gap-4">
+<div class="text-center">
+<p class="text-2xl font-extrabold text-primary tracking-tight">12</p>
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Done</p>
+</div>
+<div class="h-8 w-px bg-outline-variant/30 self-center"></div>
+<div class="text-center">
+<p class="text-2xl font-extrabold text-stone-300 tracking-tight">2</p>
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Missed</p>
+</div>
+</div>
+</div>
+<div class="col-span-8">
+<div class="h-32 flex items-end justify-between gap-4 px-4">
+<div class="w-full bg-surface-container rounded-t-xl h-[60%] relative group">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-primary text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">6/8</div>
+</div>
+<div class="w-full bg-surface-container rounded-t-xl h-[80%] relative group"></div>
+<div class="w-full bg-primary/20 rounded-t-xl h-[95%] relative group">
+<div class="absolute bottom-0 left-0 w-full bg-primary rounded-t-xl h-[90%]"></div>
+</div>
+<div class="w-full bg-surface-container rounded-t-xl h-[40%] relative group"></div>
+<div class="w-full bg-surface-container rounded-t-xl h-[70%] relative group"></div>
+<div class="w-full bg-surface-container rounded-t-xl h-[85%] relative group"></div>
+<div class="w-full bg-surface-container rounded-t-xl h-[50%] relative group"></div>
+</div>
+<div class="flex justify-between mt-4 px-4 text-[10px] font-bold text-stone-400 uppercase tracking-widest">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+</div>
+</div>
+<!-- Abstract background plant element -->
+<div class="absolute -right-20 -bottom-20 opacity-10 pointer-events-none rotate-45 scale-150">
+<span class="material-symbols-outlined text-[300px] text-primary" data-icon="potted_plant">potted_plant</span>
+</div>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#3e4c16",
+              "surface-container-low": "#f7f3e8",
+              "on-primary": "#ffffff",
+              "surface-dim": "#dddacf",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e6e2d7",
+              "on-secondary-container": "#5a682f",
+              "surface-container": "#f2eee3",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary": "#642706",
+              "on-primary-container": "#9dd090",
+              "surface-container-highest": "#e6e2d7",
+              "surface-bright": "#fdf9ee",
+              "background": "#fdf9ee",
+              "on-tertiary-container": "#ffb18e",
+              "on-tertiary-fixed": "#360f00",
+              "tertiary-container": "#813d1b",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#42493e",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#002201",
+              "error-container": "#ffdad6",
+              "primary-container": "#2d5a27",
+              "on-primary-fixed-variant": "#23501e",
+              "tertiary-fixed": "#ffdbcd",
+              "on-error-container": "#93000a",
+              "secondary": "#56642b",
+              "inverse-on-surface": "#f5f0e5",
+              "surface-tint": "#3b6934",
+              "error": "#ba1a1a",
+              "inverse-surface": "#323129",
+              "primary-fixed": "#bcf0ae",
+              "on-secondary-fixed": "#161f00",
+              "surface-container-high": "#ece8dd",
+              "inverse-primary": "#a1d494",
+              "primary-fixed-dim": "#a1d494",
+              "outline": "#72796e",
+              "secondary-fixed": "#d9eaa3",
+              "outline-variant": "#c2c9bb",
+              "surface": "#fdf9ee",
+              "on-background": "#1c1c15",
+              "secondary-fixed-dim": "#bdce89",
+              "secondary-container": "#d6e7a1",
+              "primary": "#154212",
+              "on-tertiary-fixed-variant": "#753413",
+              "on-surface": "#1c1c15",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-clip {
+            clip-path: ellipse(100% 85% at 50% 15%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fdf9ee]/80 dark:bg-[#1c1c15]/80 backdrop-blur-md shadow-[0_8px_24px_rgba(28,28,21,0.06)] dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:bg-[#f2efe4] p-2 rounded-full transition-colors Active: scale-95 duration-200">arrow_back</button>
+<h1 class="text-2xl font-bold text-[#154212] dark:text-[#d1e6c9] tracking-tight font-headline">The Conservatory</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8 items-center text-[#56642b] font-['Plus_Jakarta_Sans'] text-sm tracking-tight">
+<a class="text-[#154212] font-semibold" href="#">Conservatory</a>
+<a class="hover:bg-[#f2efe4] px-2 py-1 rounded transition-colors" href="#">Journal</a>
+<a class="hover:bg-[#f2efe4] px-2 py-1 rounded transition-colors" href="#">Community</a>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:bg-[#f2efe4] p-2 rounded-full transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative w-full h-[614px] overflow-hidden">
+<img alt="Fiddle Leaf Fig" class="w-full h-full object-cover" data-alt="Magnificent Fiddle Leaf Fig plant in a sunlit corner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3Whnva9uZjpeNGunmAkxUuHMOrFKwkY3Bqn6bk5ZSV_05dQbqlph6AhYHEQIBLs0hlG5CZ3aQcSdOPkvxBxBQkhxVHwjq7KMSncbr6f5loPiYGDT62qqL8z0ej98w8hwWb6I9qE4KzMJ45FbVPb9eXa3wMTZzNX49PuYyKa-jewHrWvNsCmfsNK4O0s8l_yyDB3Bzpu2uq0Ae8Pgr2aDRgLCmddxpv63zs9MG2oV0w8Sen6XPtC7lyGofDqDKMeQrJgEkejjUhXAo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest mb-4 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        Thriving
+                    </div>
+<h2 class="text-5xl md:text-7xl font-bold text-primary font-headline tracking-tighter mb-2">Fiddle Leaf Fig</h2>
+<p class="text-secondary font-medium italic text-lg opacity-80">Ficus lyrata</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-full font-bold shadow-lg flex items-center gap-3 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">water_drop</span>
+                        Water Now
+                    </button>
+</div>
+</div>
+</section>
+<!-- Care Requirements Bento Grid -->
+<section class="px-6 md:px-12 mt-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Light Card -->
+<div class="bg-surface-container-low rounded-[2rem] p-8 flex flex-col justify-between hover:shadow-xl transition-shadow duration-500">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-6">light_mode</span>
+<div>
+<h3 class="text-label-md uppercase tracking-widest text-secondary font-bold mb-2">Light</h3>
+<p class="text-2xl font-headline font-semibold text-on-surface">Bright Indirect</p>
+<p class="text-sm text-on-surface-variant mt-2">Place near a north or east-facing window for optimal growth.</p>
+</div>
+</div>
+<!-- Water Card -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-8 flex flex-col justify-between shadow-[0_8px_32px_rgba(28,28,21,0.04)] border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">opacity</span>
+<div>
+<h3 class="text-label-md uppercase tracking-widest text-secondary font-bold mb-2">Water</h3>
+<p class="text-2xl font-headline font-semibold text-on-surface">Every 10 days</p>
+<p class="text-sm text-on-surface-variant mt-2">Wait until the top 2 inches of soil are dry before watering again.</p>
+</div>
+</div>
+<!-- Health Summary -->
+<div class="bg-primary text-white rounded-[2rem] p-8 flex flex-col justify-between overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="text-label-md uppercase tracking-widest opacity-70 font-bold mb-2">Status</h3>
+<p class="text-4xl font-headline font-bold mb-4">Happy</p>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-on-primary-container">trending_up</span>
+<span class="text-sm font-medium">3 new leaves this month</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[10rem] absolute -right-8 -bottom-8 opacity-10 rotate-12" style="font-variation-settings: 'FILL' 1;">eco</span>
+<button class="w-full py-3 bg-white/10 backdrop-blur-md rounded-xl font-bold hover:bg-white/20 transition-colors z-10">Full Vitals</button>
+</div>
+</div>
+</section>
+<!-- Care History & Growth Gallery -->
+<section class="px-6 md:px-12 mt-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Timeline (Left) -->
+<div class="lg:col-span-5">
+<div class="flex items-center justify-between mb-10">
+<h3 class="text-3xl font-bold font-headline text-primary tracking-tight">Care History</h3>
+<button class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2">
+                        View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="space-y-0">
+<!-- Timeline Item -->
+<div class="flex gap-6 pb-8 group">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary z-10 outline outline-8 outline-background">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div class="w-0.5 h-full bg-surface-container-highest group-last:hidden"></div>
+</div>
+<div class="pt-1">
+<p class="text-on-surface font-bold text-lg">Watered</p>
+<p class="text-secondary font-medium">Oct 24, 2023 • 9:30 AM</p>
+<p class="text-sm text-on-surface-variant mt-2 max-w-xs">Standard cycle, 1.5L filtered water added.</p>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="flex gap-6 pb-8 group">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary z-10 outline outline-8 outline-background">
+<span class="material-symbols-outlined">science</span>
+</div>
+<div class="w-0.5 h-full bg-surface-container-highest group-last:hidden"></div>
+</div>
+<div class="pt-1">
+<p class="text-on-surface font-bold text-lg">Fertilized</p>
+<p class="text-secondary font-medium">Oct 12, 2023 • 11:15 AM</p>
+<p class="text-sm text-on-surface-variant mt-2 max-w-xs">10-10-10 organic plant food applied.</p>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="flex gap-6 pb-8 group">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary z-10 outline outline-8 outline-background">
+<span class="material-symbols-outlined">content_cut</span>
+</div>
+<div class="w-0.5 h-full bg-surface-container-highest group-last:hidden"></div>
+</div>
+<div class="pt-1">
+<p class="text-on-surface font-bold text-lg">Pruned</p>
+<p class="text-secondary font-medium">Sep 28, 2023 • 4:00 PM</p>
+<p class="text-sm text-on-surface-variant mt-2 max-w-xs">Removed two yellowed leaves from bottom tier.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Growth Gallery (Right) -->
+<div class="lg:col-span-7">
+<div class="flex items-center justify-between mb-10">
+<h3 class="text-3xl font-bold font-headline text-primary tracking-tight">Growth Journal</h3>
+<div class="flex gap-2">
+<button class="p-2 rounded-full bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">add_a_photo</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 h-[500px]">
+<div class="relative overflow-hidden rounded-[2.5rem] row-span-2 group">
+<img alt="Leaf Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Macro shot of a vibrant green fiddle leaf with clear veins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiz-uXDgidmEGFMJPOSVjpyLdhOZj26AwI_7mEIxe9GPdhHPrM_oN4uvD4AeLx8xafDWjVlRlKYPVi5AtGczimwHYL357Ippo6ZGbPtksiH8CkRthtajJrOzPLdlYp5pjSOGfZon1m5ei4srWJbqsifxooZJd1ADpaXq9-pQJlCVdQwy_vWxb2dQFXz2wl5_HfgKJAXXztIMRlx3JO8J5ZFUyG6hEdHx7_TINsygpKSr_cbSZwJ9rB-DaiVci3iwPZoLGgYMzAVosn"/>
+<div class="absolute bottom-6 left-6 text-white bg-black/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold">New Leaf • Oct 20</div>
+</div>
+<div class="relative overflow-hidden rounded-[2.5rem] group">
+<img alt="Full Plant" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="The Fiddle Leaf Fig standing tall in its pot in September" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-vvHjZYs6Ixabv4PdemtNjyQnYj_tiW_kUMMcx6BiblzRNCQZ47MH7hhgnQgvCSvi3TGViBu35e4gn3_0WESqYTmsdKeEDkulnidcSZWoAUb6BIk6w1COW0kkDvfbaK3Am0nyJlpJg2uDAVZlvqBtpCSN2iT7MH9YHCP_PamcWiBSe05cAlmjStFo8jQ-Xfju2Uj0kgqFzJOsopj1lE2Fg55IeWzoqIYwQt0UBA7t9HdajD5B2BRuFVGoVct8if6TWzKOOgwKcp9b"/>
+<div class="absolute bottom-6 left-6 text-white bg-black/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold">Sept Growth</div>
+</div>
+<div class="relative overflow-hidden rounded-[2.5rem] group">
+<img alt="Roots and Soil" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Healthy soil and base of the plant trunk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSNXEBSnNT-eQbnvVy6kPNJAiZ2plKW9IkhHVGTjPd9VPHoH0b2QNxvfKu3m-eQpjhGRL00eDT0Iim1ENQlaiCdzr86bbKn1OQySCPqT2SSOK2h2kUMRSe1mnUv54SNFSQDOaSbb0q6AOkR5zvHug1x7-nYtXCKvzsW0QncIUMDA0NY0i2yaWHkVtGk74ySmabu9eXRBtP092nt2GBldmLqo11SU-dD_uNb0pvCVgxdqXd5PvHq1T_sVgJJmf-k4CD5wH0IoOS5bNR"/>
+<div class="absolute bottom-6 left-6 text-white bg-black/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold">Repotting Day</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#fdf9ee]/90 dark:bg-[#1c1c15]/90 backdrop-blur-xl shadow-[0_-8px_32px_rgba(28,28,21,0.08)] md:hidden z-50 rounded-t-[2rem]">
+<a class="flex flex-col items-center justify-center bg-[#154212] dark:bg-[#2d5a27] text-white rounded-full px-5 py-2 mb-1 transition-opacity Active: scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Conservatory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-[#a3ad8a] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Journal</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-[#a3ad8a] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56642b] dark:text-[#a3ad8a] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

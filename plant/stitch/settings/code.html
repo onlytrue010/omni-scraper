@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - The Curated Conservatory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#813d1b",
+              "surface-bright": "#fdf9ee",
+              "surface-container-high": "#ece8dd",
+              "surface": "#fdf9ee",
+              "secondary-fixed": "#d9eaa3",
+              "background": "#fdf9ee",
+              "on-primary-fixed": "#002201",
+              "primary-fixed-dim": "#a1d494",
+              "on-tertiary-fixed-variant": "#753413",
+              "surface-tint": "#3b6934",
+              "primary-container": "#2d5a27",
+              "surface-dim": "#dddacf",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#5a682f",
+              "tertiary": "#642706",
+              "on-surface-variant": "#42493e",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#23501e",
+              "error-container": "#ffdad6",
+              "surface-container-low": "#f7f3e8",
+              "on-error-container": "#93000a",
+              "surface-container": "#f2eee3",
+              "on-error": "#ffffff",
+              "primary": "#154212",
+              "on-secondary-fixed": "#161f00",
+              "on-surface": "#1c1c15",
+              "secondary-container": "#d6e7a1",
+              "on-tertiary-fixed": "#360f00",
+              "inverse-surface": "#323129",
+              "primary-fixed": "#bcf0ae",
+              "outline": "#72796e",
+              "secondary-fixed-dim": "#bdce89",
+              "secondary": "#56642b",
+              "on-background": "#1c1c15",
+              "on-primary-container": "#9dd090",
+              "surface-container-highest": "#e6e2d7",
+              "on-tertiary-container": "#ffb18e",
+              "inverse-on-surface": "#f5f0e5",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary-fixed": "#ffdbcd",
+              "inverse-primary": "#a1d494",
+              "on-secondary-fixed-variant": "#3e4c16",
+              "on-primary": "#ffffff",
+              "outline-variant": "#c2c9bb",
+              "surface-variant": "#e6e2d7",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fdf9ee;
+            color: #1c1c15;
+        }
+        /* Custom Toggle Switch */
+        .toggle-dot { transition: all 0.3s ease-in-out; }
+        input:checked ~ .toggle-dot { transform: translateX(100%); background-color: white; }
+        input:checked ~ .toggle-bg { background-color: #154212; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- SideNavBar (JSON Derived) -->
+<aside class="fixed left-0 top-0 h-full w-64 z-50 bg-[#fdf9ee] dark:bg-stone-950 shadow-[8px_0_24px_rgba(28,28,21,0.04)] flex flex-col gap-y-1 py-8">
+<div class="px-8 mb-10">
+<h1 class="text-xl font-extrabold tracking-tighter text-[#154212] dark:text-emerald-400">Conservatory</h1>
+<p class="text-stone-500 dark:text-stone-400 text-xs font-medium uppercase tracking-widest mt-1">The Living Journal</p>
+</div>
+<nav class="flex flex-col gap-y-1">
+<a class="text-stone-600 dark:text-stone-400 px-4 py-3 mx-2 flex items-center gap-3 hover:bg-[#154212]/5 dark:hover:bg-emerald-900/20 transition-colors font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+                My Collection
+            </a>
+<a class="text-stone-600 dark:text-stone-400 px-4 py-3 mx-2 flex items-center gap-3 hover:bg-[#154212]/5 dark:hover:bg-emerald-900/20 transition-colors font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+                Schedules
+            </a>
+<a class="text-stone-600 dark:text-stone-400 px-4 py-3 mx-2 flex items-center gap-3 hover:bg-[#154212]/5 dark:hover:bg-emerald-900/20 transition-colors font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+                Plant Library
+            </a>
+<!-- Active State: Settings -->
+<a class="bg-[#154212] text-white dark:bg-emerald-800 dark:text-emerald-50 rounded-full px-4 py-3 mx-2 flex items-center gap-3 font-medium text-sm active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto px-6">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low">
+<img alt="User avatar" class="w-10 h-10 rounded-full object-cover" data-alt="Close up portrait of a young woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw8ylhmMDIk5h77TM6wO_HFAeX-fGZTJMUfbDjraVz_PsE2CAstByH8xgsiGhlFD_CNcxh6urFu77dQZOjZrgGdwuk8LLr_I8pmKDW-Brilm-Sk_scB3F-qDpiGDoI_5_XRMYuQtfKL1MyO1nCLXh7TRXx0fQjOw_Fs9xP9jbptFerUzyzmiqjQeiSzkGXII5R9XFaLJOmT4AnuDFQqR0oFFmoZLPk6VkbGZ6Ii3Nh7eDFc9Un52bNQE69RCHEzTSywj_79Z00C-0M"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Elena Thorne</p>
+<p class="text-xs text-stone-500 truncate">Green Thumb Pro</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar (JSON Derived) -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-white/70 dark:bg-stone-900/70 backdrop-blur-md shadow-[0_8px_24px_rgba(28,28,21,0.06)] flex items-center justify-between px-8 py-4">
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold text-emerald-900 dark:text-emerald-400 font-['Plus_Jakarta_Sans'] tracking-tight">The Curated Conservatory</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined text-stone-500 hover:bg-stone-100 p-2 rounded-full cursor-pointer transition-all" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-tertiary rounded-full border-2 border-white"></span>
+</div>
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover" data-alt="User profile thumbnail image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA_4f9hiVJ-ue66dXlAKBJxob0SOOGiP892adOPvqEDkmXjH07bgycxtYQS1S0JhoccGUIiqtGmEQj-USKah_QA3wx7R1R3Z8ZzE5pMMj1d05CAw8okBvkaI3S0caCDodnf2iGkQglytvyGhsVvqJrBAcFKfOgOmSkLiIkCUIGUzhFPjZgSMEdU1HKXm2Kdn7D7jxt6ZoZZZScE00awQnleMref45Zao1ptjG0SiVmiNsvCWOIfeqxDROktX99R7eoOvcgrBVo1c5o"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 pb-12 px-12 max-w-5xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12">
+<span class="text-secondary font-bold text-xs uppercase tracking-widest block mb-2">Preferences</span>
+<h2 class="text-4xl font-extrabold text-primary tracking-tight mb-4">Account Settings</h2>
+<p class="text-on-surface-variant max-w-xl leading-relaxed">
+                Configure your digital conservatory experience. Adjust your profile, fine-tune notification alerts, and personalize the interface to match your botanical aesthetic.
+            </p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Sidebar Navigation for Settings -->
+<aside class="space-y-2">
+<button class="w-full flex items-center gap-3 px-6 py-4 rounded-xl bg-surface-container-highest text-primary font-bold transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                    Profile Management
+                </button>
+<button class="w-full flex items-center gap-3 px-6 py-4 rounded-xl hover:bg-surface-container-low text-on-surface-variant font-medium transition-all">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+                    Care Alerts
+                </button>
+<button class="w-full flex items-center gap-3 px-6 py-4 rounded-xl hover:bg-surface-container-low text-on-surface-variant font-medium transition-all">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+                    Appearance
+                </button>
+<button class="w-full flex items-center gap-3 px-6 py-4 rounded-xl hover:bg-surface-container-low text-on-surface-variant font-medium transition-all">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+                    Privacy &amp; Security
+                </button>
+</aside>
+<!-- Main Settings Form Area -->
+<div class="md:col-span-2 space-y-8">
+<!-- Profile Section -->
+<section class="bg-surface-container-lowest rounded-3xl p-8 shadow-[0_8px_24px_rgba(28,28,21,0.02)]">
+<h3 class="text-xl font-bold text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+                        Profile Management
+                    </h3>
+<div class="flex items-center gap-6 mb-8">
+<div class="relative">
+<img alt="Profile picture large" class="w-24 h-24 rounded-full object-cover border-4 border-surface-container-high" data-alt="Detailed portrait of the user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp4e1CutBU5JxymSzio93k6iZQ8M8s9fQQ786WC5qMi2i7NeZRa5rm965U8DSh-xkfHpyCqwFlUF-bVy8xYM50Hc_TgqbLzz5aIwxGfCjjq9ge8M1W0kiT7E4HwXWOVaTBQFyIaNKdbMfjN3qKke0RpKA9NxP4_g95Hay-v0E09bqipvNgctRTDL1NfrBx73F6QuuGd2VQBcEyD2KB0dAo5LBhWPYe6W2fCslMkb9UKPNtEwjRiNkI33mYE-qUSB5_d1VZtjQTLLLh"/>
+<button class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</button>
+</div>
+<div>
+<h4 class="font-bold text-lg">Elena Thorne</h4>
+<p class="text-on-surface-variant text-sm">Joined March 2023 • 24 Active Plants</p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-secondary uppercase tracking-wider ml-1">Full Name</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 text-on-surface" type="text" value="Elena Thorne"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-secondary uppercase tracking-wider ml-1">Email Address</label>
+<input class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 text-on-surface" type="email" value="elena.thorne@conservatory.io"/>
+</div>
+<div class="sm:col-span-2 space-y-2">
+<label class="text-xs font-bold text-secondary uppercase tracking-wider ml-1">Bio / Gardening Style</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 text-on-surface" rows="3">Collector of rare Aroids and champion of "low-light" survivors. My apartment is more jungle than home.</textarea>
+</div>
+</div>
+</section>
+<!-- Notification Section -->
+<section class="bg-surface-container-lowest rounded-3xl p-8 shadow-[0_8px_24px_rgba(28,28,21,0.02)]">
+<h3 class="text-xl font-bold text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+                        Care Notifications
+                    </h3>
+<p class="text-on-surface-variant text-sm mb-8">Choose how you want to be reminded about your plants' needs.</p>
+<div class="space-y-6">
+<!-- Notification Item 1 -->
+<div class="flex items-center justify-between py-2">
+<div>
+<p class="font-bold text-on-surface">Push Notifications</p>
+<p class="text-xs text-on-surface-variant">Instant alerts for watering and misting schedules</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only" type="checkbox"/>
+<div class="toggle-bg w-11 h-6 bg-surface-container-highest rounded-full transition-colors"></div>
+<div class="toggle-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full shadow-sm transition-transform"></div>
+</label>
+</div>
+<!-- Notification Item 2 -->
+<div class="flex items-center justify-between py-2">
+<div>
+<p class="font-bold text-on-surface">Email Summaries</p>
+<p class="text-xs text-on-surface-variant">Weekly digest of plant growth and health trends</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only" type="checkbox"/>
+<div class="toggle-bg w-11 h-6 bg-surface-container-highest rounded-full transition-colors"></div>
+<div class="toggle-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full shadow-sm transition-transform"></div>
+</label>
+</div>
+<!-- Notification Item 3 -->
+<div class="flex items-center justify-between py-2">
+<div>
+<p class="font-bold text-on-surface">Critical Health Alerts</p>
+<p class="text-xs text-on-surface-variant">Urgent alerts if environmental sensors detect issues</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only" type="checkbox"/>
+<div class="toggle-bg w-11 h-6 bg-surface-container-highest rounded-full transition-colors"></div>
+<div class="toggle-dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full shadow-sm transition-transform"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Appearance Section -->
+<section class="bg-surface-container-lowest rounded-3xl p-8 shadow-[0_8px_24px_rgba(28,28,21,0.02)]">
+<h3 class="text-xl font-bold text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+                        Appearance
+                    </h3>
+<p class="text-on-surface-variant text-sm mb-8">Customize the look and feel of your journal.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<button class="border-2 border-primary bg-surface-container-low rounded-2xl p-4 text-left group transition-all">
+<div class="w-full h-20 bg-surface-bright rounded-lg mb-3 shadow-sm overflow-hidden flex flex-col p-2 gap-1">
+<div class="h-2 w-1/2 bg-primary/20 rounded-full"></div>
+<div class="h-2 w-3/4 bg-stone-200 rounded-full"></div>
+<div class="mt-auto flex gap-1">
+<div class="w-4 h-4 rounded-full bg-primary"></div>
+<div class="w-4 h-4 rounded-full bg-secondary"></div>
+</div>
+</div>
+<p class="font-bold text-sm text-primary">Verdant Hearth</p>
+<p class="text-[10px] text-stone-500">Classic Conservatory Light</p>
+</button>
+<button class="border-2 border-transparent hover:border-surface-container-highest bg-stone-900 rounded-2xl p-4 text-left group transition-all">
+<div class="w-full h-20 bg-stone-950 rounded-lg mb-3 shadow-sm overflow-hidden flex flex-col p-2 gap-1 border border-stone-800">
+<div class="h-2 w-1/2 bg-emerald-500/20 rounded-full"></div>
+<div class="h-2 w-3/4 bg-stone-800 rounded-full"></div>
+<div class="mt-auto flex gap-1">
+<div class="w-4 h-4 rounded-full bg-emerald-500"></div>
+<div class="w-4 h-4 rounded-full bg-stone-700"></div>
+</div>
+</div>
+<p class="font-bold text-sm text-stone-200">Midnight Greenhouse</p>
+<p class="text-[10px] text-stone-500">High Contrast Dark Mode</p>
+</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium">Measurement Units</span>
+<div class="flex bg-surface-container-highest rounded-full p-1">
+<button class="px-4 py-1 text-xs font-bold bg-white rounded-full shadow-sm text-primary">Metric</button>
+<button class="px-4 py-1 text-xs font-bold text-on-surface-variant">Imperial</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Buttons -->
+<div class="flex items-center justify-end gap-4 pt-4">
+<button class="px-8 py-3 text-sm font-bold text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-full">
+                        Reset Changes
+                    </button>
+<button class="px-10 py-3 text-sm font-bold text-white bg-gradient-to-r from-primary to-primary-container rounded-full shadow-lg hover:shadow-primary/20 active:scale-95 transition-all">
+                        Save Preferences
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Content Decoration -->
+<div class="fixed bottom-12 right-12 pointer-events-none opacity-20 -rotate-12 translate-x-1/4">
+<span class="material-symbols-outlined text-[12rem] text-primary" data-icon="eco">eco</span>
+</div>
+</body></html>
